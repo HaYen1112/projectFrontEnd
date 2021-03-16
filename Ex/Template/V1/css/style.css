@@ -18,6 +18,32 @@
 	border-radius: 50%;
 	margin-top: 20px;
 }
+
+.banner{
+	background-color:  rgb(255, 255, 255);
+}
+.dongho{
+	color:black;
+}
+.caption1{
+	color:black !important;
+}
+
+.d_block{
+	background-color: orange;
+}
+.col-md-121{
+	background-color: orange;
+}
+.d_inline_m{
+	background-color:rgb(252, 149, 54);
+}
+.clearfix {
+	background-color :rgb(252, 149, 54);
+}
+.col-md-3{
+	height: 0px;
+}
 .chat-popup {
 	display: none;
 	position: fixed;
@@ -999,7 +1025,7 @@ a:not([class*="_hover"]):hover [class|="icon"][class*="color_"],
 .categories_list li:hover > a,.categories_list li:hover > a > *,
 .color_scheme,.color_scheme_hover:hover,.color_scheme_hover:hover [class*="color_"],
 .dropdown_2_container.login:hover > [class*="icon_wrap_"] > [class|="icon"]{
-	color:#41bedd;
+	/* color:#ffffff; */
 }
 mark,
 #open_switcher,
@@ -1034,8 +1060,9 @@ mark,
 .tabs_nav .active + li a{
 	border-left-color:#41bedd;
 }
+/* sửa màu cho phần menu after thành màu trắng */
 .main_menu > li > a:after{
-	background:#3fb8d6;
+	background:#ffffff;
 }
 /* other colors */
 .color_default{
@@ -1095,16 +1122,19 @@ mark,
 .color_light_2{
 	color:#f7f9f9;
 }
+.color_dark :hover{
+	color: #ffffff ;
+}
 .color_dark,
 .tweet_text a:hover,
 .color_dark_hover:hover,
 .select_list li:hover,
 [class*="button_type_"].color_dark,
 .breadcrumbs li a.color_default:hover{
-	color:#b5b5b5;
+	color:#000000;
 }
 .breadcrumbs li a.color_default:hover{
-	border-color:#34383d;	
+	border-color:#000000;	
 }
 [class*="button_type_"].color_dark,
 .accordion_item:not(.active) dt [class*="icon_wrap"]{
@@ -1400,7 +1430,7 @@ html{
 body{
 	font: 500 16px/1.5em "Open Sans","sans-serif";
 	color:#606366;
-	background: #2c2b44;
+	background: #050250;
 	overflow-x:hidden;
 	background-attachment: fixed;
 }
@@ -1559,7 +1589,8 @@ blockquote > p:last-of-type:after{
 }
 .header_top_part{
 	padding:6px 0 8px;
-	background: url(../images/bg_header.png);
+	background-color:rgb(7, 3, 65);
+
 }
 [role="banner"] [class*="_part"]{
 	width:inherit;
@@ -1678,7 +1709,7 @@ blockquote > p:last-of-type:after{
 .sub_menu a{
 	padding:9px 18px;
 	white-space:nowrap;
-	background: url(../images/bg_menu.png);
+	background-color: orange;
 }
 .sub_menu .container3d > a{
 	padding-right:36px;
@@ -1757,7 +1788,9 @@ doesnotexist:-o-prefocus, .main_menu li:hover > .sub_menu,.dropdown:hover .sub_m
 .r_slider{
 	width:100%;
 	position:relative;
+	background-color: white;
 }
+
 [class*="ios_nav_"],.ls-nav-prev,.ls-nav-next{
 	position:absolute;
 }
@@ -3900,7 +3933,7 @@ figcaption.blog_post .blog_side_container{
 textarea,
 .select_title,
 input:not([type="submit"]){
-	border:1px solid #e1e4e6;
+	border:1px solid #2b086b;
 	height:40px;
 	padding:5px 15px;
 }
@@ -5379,8 +5412,9 @@ only screen and (min-resolution: 144 dpi){
 .des{
 	padding-left: 15px;
     padding-top: 5px;
-    padding-bottom: 5px;
-	background:url(../images/bg_sp.png);
+	padding-bottom: 5px;
+	background-color: rgb(9, 9, 80);
+	/* background:url(../images/bg_sp.png); */
 }
 .msp{
 	font-size: 14px;
@@ -5396,11 +5430,12 @@ only screen and (min-resolution: 144 dpi){
 	color: #e29d04;
 }
 .bg_footer{
-	background: url(../images/bg_footer.png);
+	/* background: url(../images/bg_footer.png); */
 }
 .bg_cart{
 	width: 65%;
-    background: url(../images/bg_cart.png);
+	background-color: rgb(252, 149, 54);
+    /* background: url(../images/bg_cart.png); */
     padding-top: 15px;
     text-align: center;
     padding-bottom: 15px;
