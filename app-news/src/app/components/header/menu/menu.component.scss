@@ -1,8 +1,18 @@
-
+$widthIconMenu : 70%;
+$heightIconMenu : 40%;
 .header_content{
   position: relative;
   background-color: #009cd7;
   height:100px;
+  .icon_menu{
+    font-size:25px;
+    color: white;
+    margin-left: 0px;
+    float: left;
+    margin-left:45px;
+    margin-top:12px;
+    margin-bottom: 5px;
+  }
   .menu_left{
     // background-color:antiquewhite;
     width: 600px;
@@ -18,9 +28,9 @@
       margin-top:12px;
       border-right: #bac9cf 1.5px solid;
       .categories_icon{
-        width: 100%;
-        height:50%;
-        background-color: #4ca6cc;
+        width: $widthIconMenu;
+        height:$heightIconMenu;
+        margin-left:61px;
       }
       .categoriesWords{
         width: 100%;
@@ -28,7 +38,7 @@
         // background-color: #d3e6ee;
         margin-top: 10px;
         a{
-          margin-left:20px;
+          margin-left:17px;
           margin-top: 20px !important;
           color: white !important;
         }
@@ -43,9 +53,10 @@
       margin-top:12px;
       border-right: #bac9cf 1.5px solid;
       .utilities_icon{
-        width: 100%;
-        height:50%;
-        background-color: #4ca6cc;
+        width: $widthIconMenu;
+        height:$heightIconMenu;
+        margin-left: 48px;
+
       }
       .utilitiesWords{
         width: 100%;
@@ -53,7 +64,7 @@
         // background-color: #d3e6ee;
         margin-top: 10px;
         a{
-          margin-left:20px;
+          margin-left:27px;
           margin-top: 20px !important;
           color: white !important;
         }
@@ -68,9 +79,9 @@
       margin-top:12px;
       border-right: #bac9cf 1.5px solid;
       .forYou_icon{
-        width: 100%;
-        height:50%;
-        background-color: #4ca6cc;
+        width: $widthIconMenu;
+        height:$heightIconMenu;
+        margin-left: 65px;
       }
       .forYouWords{
         width: 100%;
@@ -78,7 +89,7 @@
         // background-color: #d3e6ee;
         margin-top: 10px;
         a{
-          margin-left:20px;
+          margin-left:16px;
           margin-top: 20px !important;
           color: white !important;
         }
@@ -93,9 +104,9 @@
       margin-top:12px;
 
       .job_icon{
-        width: 100%;
-        height:50%;
-        background-color: #4ca6cc;
+        width: $widthIconMenu;
+        height:$heightIconMenu;
+
       }
       .jobWords{
         width: 100%;
@@ -125,7 +136,7 @@
     margin-left: 68px;
     float: left;
 
-    .categories{
+    .search{
       width: 110px;
       height:70%;
       // background-color:#009cd7;
@@ -133,12 +144,12 @@
       float:left;
       margin-top:12px;
       border-right: #bac9cf 1.5px solid;
-      .categories_icon{
-        width: 100%;
-        height:50%;
-        background-color: #4ca6cc;
+      .search_icon{
+        width: $widthIconMenu;
+        height:$heightIconMenu;
+
       }
-      .categoriesWords{
+      .searchWords{
         width: 100%;
         height:40%;
         // background-color: #d3e6ee;
@@ -150,7 +161,7 @@
         }
       }
     }
-    .utilities{
+    .needToKnow{
       width: 150px;
       height:70%;
       // background-color:#009cd7;
@@ -158,12 +169,12 @@
       float:left;
       margin-top:12px;
       border-right: #bac9cf 1.5px solid;
-      .utilities_icon{
-        width: 100%;
-        height:50%;
-        background-color: #4ca6cc;
+      .needToKnow_icon{
+        width: $widthIconMenu;
+        height:$heightIconMenu;
+       margin-left: 67px;
       }
-      .utilitiesWords{
+      .needToKnowWords{
         width: 100%;
         height:40%;
         // background-color: #d3e6ee;
@@ -175,7 +186,7 @@
         }
       }
     }
-    .forYou{
+    .contact{
       width: 120px;
       height:70%;
       // background-color:#009cd7;
@@ -183,24 +194,24 @@
       float:left;
       margin-top:12px;
       border-right: #bac9cf 1.5px solid;
-      .forYou_icon{
-        width: 100%;
-        height:50%;
-        background-color: #4ca6cc;
+      .contact_icon{
+        width: $widthIconMenu;
+        height:$heightIconMenu;
+        margin-left: 49px;
       }
-      .forYouWords{
+      .contactWords{
         width: 100%;
         height:40%;
         // background-color: #d3e6ee;
         margin-top: 10px;
         a{
-          margin-left:20px;
+          margin-left:30px;
           margin-top: 20px !important;
           color: white !important;
         }
       }
     }
-    .job{
+    .login{
       width: 140px;
       height:70%;
       // background-color:#009cd7;
@@ -208,18 +219,18 @@
       float:left;
       margin-top:12px;
 
-      .job_icon{
-        width: 100%;
-        height:50%;
-        background-color: #4ca6cc;
+      .login_icon{
+        width: $widthIconMenu;
+        height:$heightIconMenu;
+        margin-left: 63px;
       }
-      .jobWords{
+      .loginWords{
         width: 100%;
         height:40%;
         // background-color: #d3e6ee;
         margin-top: 10px;
         a{
-          margin-left:20px;
+          margin-left:29px;
           margin-top: 20px !important;
           color: white !important;
         }
