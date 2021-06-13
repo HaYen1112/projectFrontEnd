@@ -1,0 +1,269 @@
+.header_content {
+  position: relative;
+  background-color: #009cd7;
+  height: 100px;
+}
+
+.header_content .icon_menu {
+  font-size: 25px;
+  color: white;
+  margin-left: 0px;
+  float: left;
+  margin-left: 45px;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+
+.header_content .menu_left {
+  width: 600px;
+  height: 100%;
+  margin-left: 0px;
+  float: left;
+}
+
+.header_content .menu_left .categories {
+  width: 140px;
+  height: 70%;
+  margin-right: 0px;
+  float: left;
+  margin-top: 12px;
+  border-right: #bac9cf 1.5px solid;
+}
+
+.header_content .menu_left .categories .categories_icon {
+  width: 70%;
+  height: 40%;
+  margin-left: 61px;
+}
+
+.header_content .menu_left .categories .categoriesWords {
+  width: 100%;
+  height: 40%;
+  margin-top: 10px;
+}
+
+.header_content .menu_left .categories .categoriesWords a {
+  margin-left: 17px;
+  margin-top: 20px !important;
+  color: white !important;
+}
+
+.header_content .menu_left .utilities {
+  width: 120px;
+  height: 70%;
+  margin-right: 0px;
+  float: left;
+  margin-top: 12px;
+  border-right: #bac9cf 1.5px solid;
+}
+
+.header_content .menu_left .utilities .utilities_icon {
+  width: 70%;
+  height: 40%;
+  margin-left: 48px;
+}
+
+.header_content .menu_left .utilities .utilitiesWords {
+  width: 100%;
+  height: 40%;
+  margin-top: 10px;
+}
+
+.header_content .menu_left .utilities .utilitiesWords a {
+  margin-left: 27px;
+  margin-top: 20px !important;
+  color: white !important;
+}
+
+.header_content .menu_left .forYou {
+  width: 150px;
+  height: 70%;
+  margin-right: 0px;
+  float: left;
+  margin-top: 12px;
+  border-right: #bac9cf 1.5px solid;
+}
+
+.header_content .menu_left .forYou .forYou_icon {
+  width: 70%;
+  height: 40%;
+  margin-left: 65px;
+}
+
+.header_content .menu_left .forYou .forYouWords {
+  width: 100%;
+  height: 40%;
+  margin-top: 10px;
+}
+
+.header_content .menu_left .forYou .forYouWords a {
+  margin-left: 16px;
+  margin-top: 20px !important;
+  color: white !important;
+}
+
+.header_content .menu_left .job {
+  width: 140px;
+  height: 70%;
+  margin-right: 0px;
+  float: left;
+  margin-top: 12px;
+}
+
+.header_content .menu_left .job .job_icon {
+  width: 70%;
+  height: 40%;
+}
+
+.header_content .menu_left .job .jobWords {
+  width: 100%;
+  height: 40%;
+  margin-top: 10px;
+}
+
+.header_content .menu_left .job .jobWords a {
+  margin-left: 20px;
+  margin-top: 20px !important;
+  color: white !important;
+}
+
+.header_content .menu_center {
+  width: 400px;
+  height: 100%;
+  margin-left: 0px;
+  float: left;
+}
+
+.header_content .menu_center .nameApp-News {
+  width: 242px;
+  height: 43px;
+  margin-left: 86px;
+  margin-top: 19px;
+}
+
+.header_content .menu_center .nameApp-News h1 {
+  color: white;
+}
+
+.header_content .menu_center .nameApp-News-bottom {
+  width: 412px;
+  height: 22px;
+}
+
+.header_content .menu_center .nameApp-News-bottom a {
+  color: white;
+}
+
+.header_content .menu_right {
+  width: 530px;
+  height: 100%;
+  margin-left: 68px;
+  float: left;
+}
+
+.header_content .menu_right .search {
+  width: 110px;
+  height: 70%;
+  margin-right: 0px;
+  float: left;
+  margin-top: 12px;
+  border-right: #bac9cf 1.5px solid;
+}
+
+.header_content .menu_right .search .search_icon {
+  width: 70%;
+  height: 40%;
+}
+
+.header_content .menu_right .search .searchWords {
+  width: 100%;
+  height: 40%;
+  margin-top: 10px;
+}
+
+.header_content .menu_right .search .searchWords a {
+  margin-left: 20px;
+  margin-top: 20px !important;
+  color: white !important;
+}
+
+.header_content .menu_right .needToKnow {
+  width: 150px;
+  height: 70%;
+  margin-right: 0px;
+  float: left;
+  margin-top: 12px;
+  border-right: #bac9cf 1.5px solid;
+}
+
+.header_content .menu_right .needToKnow .needToKnow_icon {
+  width: 70%;
+  height: 40%;
+  margin-left: 67px;
+}
+
+.header_content .menu_right .needToKnow .needToKnowWords {
+  width: 100%;
+  height: 40%;
+  margin-top: 10px;
+}
+
+.header_content .menu_right .needToKnow .needToKnowWords a {
+  margin-left: 20px;
+  margin-top: 20px !important;
+  color: white !important;
+}
+
+.header_content .menu_right .contact {
+  width: 120px;
+  height: 70%;
+  margin-right: 0px;
+  float: left;
+  margin-top: 12px;
+  border-right: #bac9cf 1.5px solid;
+}
+
+.header_content .menu_right .contact .contact_icon {
+  width: 70%;
+  height: 40%;
+  margin-left: 49px;
+}
+
+.header_content .menu_right .contact .contactWords {
+  width: 100%;
+  height: 40%;
+  margin-top: 10px;
+}
+
+.header_content .menu_right .contact .contactWords a {
+  margin-left: 30px;
+  margin-top: 20px !important;
+  color: white !important;
+}
+
+.header_content .menu_right .login {
+  width: 140px;
+  height: 70%;
+  margin-right: 0px;
+  float: left;
+  margin-top: 12px;
+}
+
+.header_content .menu_right .login .login_icon {
+  width: 70%;
+  height: 40%;
+  margin-left: 63px;
+}
+
+.header_content .menu_right .login .loginWords {
+  width: 100%;
+  height: 40%;
+  margin-top: 10px;
+}
+
+.header_content .menu_right .login .loginWords a {
+  margin-left: 29px;
+  margin-top: 20px !important;
+  color: white !important;
+}
+/*# sourceMappingURL=menu.component.css.map */
