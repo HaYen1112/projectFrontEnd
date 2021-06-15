@@ -13,6 +13,8 @@ import { AdvertisementComponent } from './components/body/page-body/body-center/
 import { UnderTheAdComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad.component';
 import { UnderTheAdLeftComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/under-the-ad-left.component';
 import { UnderTheAdRightComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-right/under-the-ad-right.component';
+import { WordsAdLeftComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/words-ad-left/words-ad-left.component';
+import { ImgAdLeftComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/img-ad-left/img-ad-left.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,8 @@ import { UnderTheAdRightComponent } from './components/body/page-body/body-cente
     UnderTheAdComponent,
     UnderTheAdLeftComponent,
     UnderTheAdRightComponent,
+    WordsAdLeftComponent,
+    ImgAdLeftComponent,
 
   ],
   imports: [

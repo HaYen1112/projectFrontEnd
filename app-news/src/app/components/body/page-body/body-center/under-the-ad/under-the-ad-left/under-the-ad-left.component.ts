@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./under-the-ad-left.component.scss']
 })
 export class UnderTheAdLeftComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

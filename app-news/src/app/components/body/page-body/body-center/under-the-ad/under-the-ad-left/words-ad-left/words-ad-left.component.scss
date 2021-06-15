@@ -1,0 +1,32 @@
+.container{
+  width: 100%;
+  height: 25%;
+  padding:0px;
+  h2{
+    width: 100%;
+    margin-top: 17px;
+    margin-left: 24px;
+    a{
+      color: #000000;
+      text-decoration: none;
+
+    }
+    a:hover{
+      color: #009cd7;
+    }
+  }
+  .posting_time{
+    color: #888;
+    width:200px;
+    height:40px;
+    a{
+      margin-left:5px;
+    }
+    .time{
+      width:40px;
+      margin-left:27px;
+      margin-right: 5px;
+    }
+
+  }
+}
