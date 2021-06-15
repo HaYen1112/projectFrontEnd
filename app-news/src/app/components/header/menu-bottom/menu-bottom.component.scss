@@ -2,7 +2,7 @@
     font-size: 18px;
     border: 2px solid rgb(196, 196, 196);
     height: 55px;
-    
+
     .navbar {
         overflow: hidden;
         background-color: rgb(252, 250, 250);
@@ -17,9 +17,9 @@
         &:hover{
             overflow: visible;
         }
-            
-        
-        
+
+
+
     }
     .subnav {
         float: left;
@@ -49,13 +49,13 @@
         display: none;
         position: absolute;
         left: 0;
-        background-color: rgb(0, 162, 255);
+        background-color: #00739f;
         width: 100%;
         z-index: 1;
-        
+
         height: 50px;
         padding-left: 400px;
-       
+
         a {
             float: left;
             color: white;
@@ -66,30 +66,6 @@
             }
         }
     }
-    
-    .headline{
-        height: 60px;
-        padding-top: 12px;
-        padding-left: 200px;
-        display: flex;
-        label{
-            border: 1px solid black;
-            background-color: #eb2929;
-            height: 30px;
-            width: 100px;
-            text-align: center;
-            color: aliceblue;
 
-        }
-        ul{
-            list-style: none;
-            display: flex;
-            li{
-                padding-left:20px;   
-                a{
-                    color: #888;
-                }
-            }
-        }
-    }
+
 }

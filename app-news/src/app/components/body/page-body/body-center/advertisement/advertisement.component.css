@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+  height: 210px;
+  background-color: aqua;
+  padding: 0px;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=advertisement.component.css.map */

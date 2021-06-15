@@ -1,0 +1,71 @@
+.menu_bottom {
+  font-size: 18px;
+  border: 2px solid #c4c4c4;
+  height: 55px;
+}
+
+.menu_bottom .navbar {
+  overflow: hidden;
+  background-color: #fcfafa;
+}
+
+.menu_bottom .navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 8px 9px 8px 8px;
+  text-decoration: none;
+}
+
+.menu_bottom .navbar:hover {
+  overflow: visible;
+}
+
+.menu_bottom .subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.menu_bottom .subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #333;
+  padding: 8px 9px 8px 8px;
+  background-color: transparent;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.menu_bottom .subnav:hover .subnav-content {
+  display: block;
+}
+
+.menu_bottom .navbar a:hover, .menu_bottom .subnav:hover .subnavbtn {
+  color: #00a2ff;
+}
+
+.menu_bottom .subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #00739f;
+  width: 100%;
+  z-index: 1;
+  height: 50px;
+  padding-left: 400px;
+}
+
+.menu_bottom .subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu_bottom .subnav-content a:hover {
+  color: black;
+}
+/*# sourceMappingURL=menu-bottom.component.css.map */
