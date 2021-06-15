@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACR,KAAK,EAAC,KAAK;EACX,MAAM,EAAC,IAAI;EACX,gBAAgB,EAAC,UAAU;EAC3B,KAAK,EAAE,IAAI;EACX,WAAW,EAAC,GAAG;EACf,YAAY,EAAC,IAEf;CAAC",
+    "sources": [
+        "body-left.component.scss"
+    ],
+    "names": [],
+    "file": "body-left.component.css"
+}

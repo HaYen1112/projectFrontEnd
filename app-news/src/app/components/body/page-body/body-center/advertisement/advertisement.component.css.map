@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACR,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,KAAK;EACZ,gBAAgB,EAAC,IAAI;EACrB,OAAO,EAAE,GAAG;CAKb;;AATD,AAKE,UALQ,CAKR,GAAG,CAAA;EACH,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,IAAI;CACV",
+    "sources": [
+        "advertisement.component.scss"
+    ],
+    "names": [],
+    "file": "advertisement.component.css"
+}

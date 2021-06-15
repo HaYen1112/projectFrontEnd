@@ -137,7 +137,7 @@
 .header_content .menu_center .nameApp-News {
   width: 242px;
   height: 43px;
-  margin-left: 86px;
+  margin-left: 62px;
   margin-top: 19px;
 }
 
@@ -155,7 +155,7 @@
 }
 
 .header_content .menu_right {
-  width: 530px;
+  width: 511px;
   height: 100%;
   margin-left: 68px;
   float: left;
@@ -242,7 +242,7 @@
 }
 
 .header_content .menu_right .login {
-  width: 140px;
+  width: 121px;
   height: 70%;
   margin-right: 0px;
   float: left;
