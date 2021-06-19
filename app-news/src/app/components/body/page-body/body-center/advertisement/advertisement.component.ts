@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./advertisement.component.scss']
 })
 export class AdvertisementComponent implements OnInit {
-  imageQuangCao : string = 'assets/images/quangcao.png';
+  imageQuangCao : string = 'assets/images/ve-may-bay.jpg';
   constructor() { }
 
   ngOnInit(): void {
