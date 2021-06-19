@@ -15,6 +15,9 @@ import { UnderTheAdLeftComponent } from './components/body/page-body/body-center
 import { UnderTheAdRightComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-right/under-the-ad-right.component';
 import { WordsAdLeftComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/words-ad-left/words-ad-left.component';
 import { ImgAdLeftComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/img-ad-left/img-ad-left.component';
+import { TabsComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-right/tabs/tabs.component';
+import { FeatureComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/feature/feature.component';
+import { EditorPickComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/editor-pick/editor-pick.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +34,9 @@ import { ImgAdLeftComponent } from './components/body/page-body/body-center/unde
     UnderTheAdRightComponent,
     WordsAdLeftComponent,
     ImgAdLeftComponent,
+    TabsComponent,
+    FeatureComponent,
+    EditorPickComponent,
 
   ],
   imports: [
