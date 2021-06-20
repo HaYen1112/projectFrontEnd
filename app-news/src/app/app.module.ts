@@ -18,6 +18,7 @@ import { ImgAdLeftComponent } from './components/body/page-body/body-center/unde
 import { TabsComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-right/tabs/tabs.component';
 import { FeatureComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/feature/feature.component';
 import { EditorPickComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/editor-pick/editor-pick.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { EditorPickComponent } from './components/body/page-body/body-center/und
     TabsComponent,
     FeatureComponent,
     EditorPickComponent,
+
 
   ],
   imports: [
