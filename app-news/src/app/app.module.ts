@@ -15,8 +15,7 @@ import { UnderTheAdLeftComponent } from './components/body/page-body/body-center
 import { UnderTheAdRightComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-right/under-the-ad-right.component';
 import { WordsAdLeftComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/words-ad-left/words-ad-left.component';
 import { ImgAdLeftComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/img-ad-left/img-ad-left.component';
-import { NewsComponent } from './components/body/page-body/body-center/news/news.component';
-import { TopicComponent } from './components/body/page-body/body-center/news/topic/topic.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,9 +32,7 @@ import { TopicComponent } from './components/body/page-body/body-center/news/top
     UnderTheAdRightComponent,
     WordsAdLeftComponent,
     ImgAdLeftComponent,
-    NewsComponent,
-    TopicComponent,
-
+   
   ],
   imports: [
     BrowserModule
