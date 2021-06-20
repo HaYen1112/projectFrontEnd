@@ -18,6 +18,8 @@ import { ImgAdLeftComponent } from './components/body/page-body/body-center/unde
 import { TabsComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-right/tabs/tabs.component';
 import { FeatureComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/feature/feature.component';
 import { EditorPickComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/editor-pick/editor-pick.component';
+import { NewsComponent } from './components/body/page-body/body-center/news/news.component';
+import { TopicComponent } from './components/body/page-body/body-center/news/topic/topic.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { EditorPickComponent } from './components/body/page-body/body-center/und
     TabsComponent,
     FeatureComponent,
     EditorPickComponent,
+    NewsComponent,
+    TopicComponent,
 
 
   ],
