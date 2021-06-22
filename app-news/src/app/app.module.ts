@@ -20,6 +20,7 @@ import { FeatureComponent } from './components/body/page-body/body-center/under-
 import { EditorPickComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/editor-pick/editor-pick.component';
 import { NewsComponent } from './components/body/page-body/body-center/news/news.component';
 import { TopicComponent } from './components/body/page-body/body-center/news/topic/topic.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { TopicComponent } from './components/body/page-body/body-center/news/top
     EditorPickComponent,
     NewsComponent,
     TopicComponent,
+    FooterComponent,
 
 
   ],
