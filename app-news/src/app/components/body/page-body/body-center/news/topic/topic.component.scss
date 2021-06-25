@@ -1,7 +1,9 @@
 .new {
     width: auto;
-    height: 80%;
-    margin: 20px;
+    height: 100%;
+    margin-top: 20px;
+    background-color:white;
+    box-shadow: 0 1px 7px #d9d9d9;
     .tilte {
         div {
             height: 50px;
@@ -15,10 +17,10 @@
             .icon{
                 float: left;
                 color: #009cd7;
-               
+
             }
             a {
-                font-size: 30px;
+                font-size: 25px;
                 font-weight: 700;
                 line-height: 24px;
                 color: #333;
@@ -33,7 +35,7 @@
         .item {
             width: 80%;
             float: right;
-            padding-left: 100px;
+
             ul {
                 list-style: none;
                 display: flex;
@@ -56,13 +58,16 @@
 
         .big-new {
             float: left;
-            width: 50%;
+            width: 545px;
+            height:400px;
+            background-color:white;
+            box-shadow: 0 1px 7px #d9d9d9;
             img {
                 width: 100%;
-                height: 80%;
+                height: 300px;
             }
             h2 {
-                font-size: 30px;
+                font-size: 25px !important;
                 font-family: inherit;
                 font-weight: 600;
                 line-height: 1.1;
@@ -70,6 +75,8 @@
                 display: block;
                 font-size: 1.7em;
                 padding-top: 5px;
+                margin-bottom: 0px;
+                margin-left: 20px;
                 a {
                     display: block;
                     text-decoration: none;
@@ -83,9 +90,11 @@
                 display: flex;
                 width: 300px;
                 padding-left: 50px;
+                font-size: 15px !important;
+                color: #888 !important;
+                margin-top: 10px;
                 .time {
-                    font-size: 20px;
-                    color: #888;
+
                     display: block;
                     width: 100px;
                 }
@@ -97,26 +106,38 @@
         }
         .list-new {
             display:block;
-            padding-left: 20px;
-            a{
+            margin-left: 20px;
+            padding: 0px;
+            i{
+              margin-right:5px;
+            }
+            .tin-khac{
                 text-decoration: none;
                 font-size: 20px;
+                width:100px;
+                height:100px;
+                color:#009cd7;
+
             }
             article {
-                height: 100px;
+                height: 109.7 px;
                 width: 500px;
                 display: flex;
-                padding:10px;
+                margin-top: 12px;
                 margin-bottom: 20px;
+                box-shadow: 0 1px 7px #d9d9d9;
+
                 .detail {
                     float: right;
                     display:block;
                     height: 100%;
                     h2 {
-                        font-size: 16px;
+                        font-size: 15px;
                         height: 50%;
                         padding-left: 10px;
                         padding-top: 10px;
+                        width: 255px;
+
                         a {
                             text-decoration: none;
                             color: #333;
@@ -127,8 +148,10 @@
                         }
                     }
                 .mega{
-                    padding-left:60px;
+                    padding-left:25px;
                     padding-top: 10px;
+                    color: #888;
+                    font-size:14px;
                     span{
                         padding-left: 20px;
                     }

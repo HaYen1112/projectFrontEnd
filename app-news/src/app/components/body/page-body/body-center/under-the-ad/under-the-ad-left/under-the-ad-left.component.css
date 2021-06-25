@@ -1,8 +1,10 @@
 .container {
-  width: 68%;
+  width: 65%;
   height: 550px;
   margin-left: 0px;
   float: left;
   padding: 0px;
+  -webkit-box-shadow: 0 1px 7px #d9d9d9;
+          box-shadow: 0 1px 7px #d9d9d9;
 }
 /*# sourceMappingURL=under-the-ad-left.component.css.map */

@@ -3,14 +3,17 @@
     border: 1px solid black;
     width: auto;
     padding-left: 50px;
-    top: 2000px;
+    // top: 2000px;
     position: absolute;
     height:auto;
 }
 .news-slider {
     height: 500px;
     width: 1250px;
-    border: 1px solid black;
-    border-radius: 20px;
-    
+    // border: 1px solid black;
+    // border-radius: 20px;
+    margin-top: 20px;
+    // background-color:rgb(199, 42, 42);
+    box-shadow: 0 1px 7px #d9d9d9;
+
 }

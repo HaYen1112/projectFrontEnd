@@ -1,18 +1,20 @@
 .feature_container{
-  width: 465px;
-  height:700px;
-  margin-top: 25px;
+  width: 383px;
+  height:630px;
+  margin-top: 20px;
   margin-right: 0px;
   float: left;
+
   .story--primary{
-    width:100%;height:117px;
+    width:100%;height:110px;
     margin-bottom: 20px;
     background-color:white;
     box-shadow: 0 1px 7px #d9d9d9;
+
   }
-    a{
-      width:168px;
-      height:117px;
+    .imgnews{
+      width:155px;
+      height:110px;
       float: left;
       img{
         width: 100%;
@@ -20,14 +22,13 @@
       }
     }
     h2{
-      width:277px;
+      width:200px;
       height: 52px;
       float: left;
-      font-size:18px;
       margin-left: 20px;
-      margin-top: 17px;
+      margin-top: 10px;
       margin-bottom: 0px;
-
+      font-size:15px;
       .shorten{
         width: 100%;
         color: #333;
@@ -38,11 +39,13 @@
       }
     }
     .meta{
-      width:277px;
+      width:200px;
       height:30px;
       float: left;
       margin-left: 20px;
+      margin-top:10px;
       color: #888;
+      font-size:14px;
       .time{
         width:108px;
         float: left;

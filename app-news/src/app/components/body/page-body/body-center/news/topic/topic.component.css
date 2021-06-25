@@ -1,0 +1,180 @@
+.new {
+  width: auto;
+  height: 80%;
+  margin: 20px;
+}
+
+.new .tilte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.new .tilte div {
+  height: 50px;
+  width: auto;
+}
+
+.new .tilte .big-tilte {
+  float: left;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.new .tilte .big-tilte .icon {
+  float: left;
+  color: #009cd7;
+}
+
+.new .tilte .big-tilte a {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #333;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.new .tilte .big-tilte a:hover {
+  color: #009cd7;
+}
+
+.new .tilte .item {
+  width: 80%;
+  float: right;
+  padding-left: 100px;
+}
+
+.new .tilte .item ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.new .tilte .item ul li {
+  padding-left: 15px;
+}
+
+.new .tilte .item ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.new .tilte .item ul li a:hover {
+  color: #009cd7;
+}
+
+.new .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 400px;
+}
+
+.new .content .big-new {
+  float: left;
+  width: 50%;
+}
+
+.new .content .big-new img {
+  width: 100%;
+  height: 80%;
+}
+
+.new .content .big-new h2 {
+  font-size: 30px;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #333;
+  display: block;
+  font-size: 1.7em;
+  padding-top: 5px;
+}
+
+.new .content .big-new h2 a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.new .content .big-new h2 a:hover {
+  color: #009cd7;
+}
+
+.new .content .big-new .mega {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  padding-left: 50px;
+}
+
+.new .content .big-new .mega .time {
+  font-size: 20px;
+  color: #888;
+  display: block;
+  width: 100px;
+}
+
+.new .content .big-new .mega span {
+  float: right;
+  padding-left: 30px;
+}
+
+.new .content .list-new {
+  display: block;
+  padding-left: 20px;
+}
+
+.new .content .list-new a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.new .content .list-new article {
+  height: 100px;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.new .content .list-new article .detail {
+  float: right;
+  display: block;
+  height: 100%;
+}
+
+.new .content .list-new article .detail h2 {
+  font-size: 16px;
+  height: 50%;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.new .content .list-new article .detail h2 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.new .content .list-new article .detail h2 a:hover {
+  cursor: pointer;
+  color: #009cd7;
+}
+
+.new .content .list-new article .detail .mega {
+  padding-left: 60px;
+  padding-top: 10px;
+}
+
+.new .content .list-new article .detail .mega span {
+  padding-left: 20px;
+}
+/*# sourceMappingURL=topic.component.css.map */

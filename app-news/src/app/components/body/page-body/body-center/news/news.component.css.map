@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC,KAAK,CAAA;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,eAAe;EACvB,KAAK,EAAE,IAAI;EACX,YAAY,EAAE,IAAI;EAClB,GAAG,EAAE,MAAM;EACX,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAC,IAAI;CACd;;AACD,AAAA,YAAY,CAAC;EACT,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,eAAe;EACvB,aAAa,EAAE,IAAI;CAEtB",
+    "sources": [
+        "news.component.scss"
+    ],
+    "names": [],
+    "file": "news.component.css"
+}
