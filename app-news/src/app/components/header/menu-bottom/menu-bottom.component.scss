@@ -1,9 +1,12 @@
 .menu_bottom{
     font-size: 18px;
-    border: 2px solid rgb(196, 196, 196);
     height: 55px;
 
+    background-color:#fff;
+
     .navbar {
+      box-shadow: 0 1px 7px #d9d9d9;
+      height:100%;
         overflow: hidden;
         background-color: rgb(252, 250, 250);
         a {
@@ -52,17 +55,16 @@
         background-color: #00739f;
         width: 100%;
         z-index: 1;
-
         height: 50px;
-        padding-left: 400px;
-
+        padding-left: 100px;
         a {
             float: left;
             color: white;
             text-decoration: none;
             text-align: center;
             &:hover {
-                 color: black;
+                text-decoration: underline;
+                color:white;
             }
         }
     }

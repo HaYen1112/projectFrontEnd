@@ -1,264 +1,73 @@
-$widthIconMenu : 70%;
-$heightIconMenu : 40%;
-.header_content{
+.site-header__content{
   position: relative;
   background-color: #009cd7;
-  height:100px;
-  .icon_menu{
-    font-size:25px;
-    color: white;
-    margin-left: 0px;
-    float: left;
-    margin-left:45px;
-    margin-top:12px;
-    margin-bottom: 5px;
-  }
-  .menu_left{
-    // background-color:antiquewhite;
-    width: 600px;
+  height:75px;
+  font-size:14px;
+  .logo{
+    width:400px;
     height: 100%;
-    margin-left: 0px;
-    float: left;
-    .categories{
-      width: 140px;
-      height:70%;
-      // background-color:#009cd7;
-      margin-right: 0px;
-      float:left;
-      margin-top:12px;
-      border-right: #bac9cf 1.5px solid;
-      .categories_icon{
-        width: $widthIconMenu;
-        height:$heightIconMenu;
-        margin-left:61px;
-      }
-      .categoriesWords{
-        width: 100%;
-        height:40%;
-        // background-color: #d3e6ee;
-        margin-top: 10px;
-        a{
-          margin-left:17px;
-          margin-top: 20px !important;
-          color: white !important;
-          text-decoration: none;
-        }
-      }
-    }
-    .utilities{
-      width: 120px;
-      height:70%;
-      // background-color:#009cd7;
-      margin-right: 0px;
-      float:left;
-      margin-top:12px;
-      border-right: #bac9cf 1.5px solid;
-      .utilities_icon{
-        width: $widthIconMenu;
-        height:$heightIconMenu;
-        margin-left: 48px;
+    float:left;
+    margin-left:0px;
+    text-align:center;
+    margin-bottom: 0px;
+    a{
+      text-decoration:none;
+      color: #fff;
+      width: 100%;
 
-      }
-      .utilitiesWords{
-        width: 100%;
-        height:40%;
-        // background-color: #d3e6ee;
-        margin-top: 10px;
-        a{
-          margin-left:27px;
-          margin-top: 20px !important;
-          color: white !important;
-          text-decoration: none;
-        }
-      }
-    }
-    .forYou{
-      width: 150px;
-      height:70%;
-      // background-color:#009cd7;
-      margin-right: 0px;
-      float:left;
-      margin-top:12px;
-      border-right: #bac9cf 1.5px solid;
-      .forYou_icon{
-        width: $widthIconMenu;
-        height:$heightIconMenu;
-        margin-left: 65px;
-      }
-      .forYouWords{
-        width: 100%;
-        height:40%;
-        // background-color: #d3e6ee;
-        margin-top: 10px;
-        a{
-          margin-left:16px;
-          margin-top: 20px !important;
-          color: white !important;
-          text-decoration: none;
-        }
-      }
-    }
-    .job{
-      width: 140px;
-      height:70%;
-      // background-color:#009cd7;
-      margin-right: 0px;
-      float:left;
-      margin-top:12px;
 
-      .job_icon{
-        width: $widthIconMenu;
-        height:$heightIconMenu;
+    }
+    .logo-chu{
+      font-size:14px;
+      color: rgb(0, 0, 0);
 
-      }
-      .jobWords{
-        width: 100%;
-        height:40%;
-        // background-color: #d3e6ee;
-        margin-top: 10px;
-        a{
-          margin-left:20px;
-          margin-top: 20px !important;
-          color: white !important;
-          text-decoration: none;
-        }
-      }
     }
 
   }
-  .menu_center{
-
-    width: 400px;
-    height: 100%;
-    margin-left: 0px;
-    float: left;
-    .nameApp-News{
-      width: 242px;
-      height: 43px;
-      margin-left: 62px;
-      margin-top:19px;
-      h1{
-        color: white;
-      }
-    }
-    .nameApp-News-bottom{
-      width: 412px;
-      height: 22px;
-      a{
-        color: white;
-      }
-
-    }
+  //tool right
+  .right{
+    margin-left: 10px !important;
+    width:400px !important;
   }
-  .menu_right{
-    // background-color:rgb(172, 130, 130);
-    width: 511px;
-    height: 100%;
-    margin-left: 68px;
+
+
+  .site-header__tool{
+    width:431px;
+    // background-color: antiquewhite;
     float: left;
+    padding: 0px;
+    margin:0px;
+    margin-top: 12px;
 
-    .search{
-      width: 110px;
-      height:70%;
-      // background-color:#009cd7;
-      margin-right: 0px;
-      float:left;
-      margin-top:12px;
-      border-right: #bac9cf 1.5px solid;
-      .search_icon{
-        width: $widthIconMenu;
-        height:$heightIconMenu;
-
-      }
-      .searchWords{
-        width: 100%;
-        height:40%;
-        // background-color: #d3e6ee;
-        margin-top: 10px;
-        a{
-          margin-left:20px;
-          margin-top: 20px !important;
-          color: white !important;
-          text-decoration: none;
-        }
-      }
+    a{
+      color: #fff;
+      text-decoration: none;
     }
-    .needToKnow{
-      width: 150px;
-      height:70%;
-      // background-color:#009cd7;
-      margin-right: 0px;
-      float:left;
-      margin-top:12px;
-      border-right: #bac9cf 1.5px solid;
-      .needToKnow_icon{
-        width: $widthIconMenu;
-        height:$heightIconMenu;
-       margin-left: 67px;
-      }
-      .needToKnowWords{
-        width: 100%;
-        height:40%;
-        // background-color: #d3e6ee;
-        margin-top: 10px;
-        a{
-          margin-left:20px;
-          margin-top: 20px !important;
-          color: white !important;
-          text-decoration: none;
-        }
-      }
+    //bỏ border right việc làm
+    .item--vl{
+      border-right: none !important;
     }
-    .contact{
-      width: 120px;
-      height:70%;
-      // background-color:#009cd7;
-      margin-right: 0px;
-      float:left;
-      margin-top:12px;
-      border-right: #bac9cf 1.5px solid;
-      .contact_icon{
-        width: $widthIconMenu;
-        height:$heightIconMenu;
-        margin-left: 49px;
-      }
-      .contactWords{
-        width: 100%;
-        height:40%;
-        // background-color: #d3e6ee;
-        margin-top: 10px;
-        a{
-          margin-left:35px;
-          margin-top: 20px !important;
-          color: white !important;
-          text-decoration: none;
-
-        }
-      }
+    //bỏ border right item đăng nhập
+    .item--dn{
+      border-right: none !important;
+      padding-left: 28px !important;
     }
-    .login{
-      width: 121px;
-      height:70%;
-      // background-color:#009cd7;
-      margin-right: 0px;
-      float:left;
-      margin-top:12px;
+    .item{
+      text-align: center;
+      height:50px;
+      float: left;
+      padding: 5px 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      list-style-type:none;
+      border-right: 1px solid rgba(255,255,255,.3);
+      .parent{
+        position: relative;
+        width:100%;
 
-      .login_icon{
-        width: $widthIconMenu;
-        height:$heightIconMenu;
-        margin-left: 63px;
-      }
-      .loginWords{
-        width: 100%;
-        height:40%;
-        // background-color: #d3e6ee;
-        margin-top: 10px;
-        a{
-          margin-left:29px;
-          margin-top: 20px !important;
-          color: white !important;
-          text-decoration: none;
+        i{
+          width: 75%;
+          text-align: center;
         }
       }
     }
