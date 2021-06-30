@@ -32,11 +32,13 @@
         margin-right:15px;
       }
       a{
-        color: #00739f;
+        color: black;
         text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
       }
       a:hover{
-        text-decoration: underline;
+        color: #00bfc5;
       }
 
     }
@@ -84,7 +86,7 @@
                       text-decoration: none;
                       font-weight: 700;
                       &:hover{
-                          color: red;
+                          color: #00bfc5;
                       }
                  }
               }
