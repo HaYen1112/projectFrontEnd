@@ -146,11 +146,10 @@
           background: none;
       }
       .nav-tabs .nav-item {
-         // padding-bottom: 10px;
           display: block;
           color: #051441;
           text-transform: capitalize;
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 500;
       }
       .nav-tabs {
@@ -160,6 +159,7 @@
           border: 0;
           display: flex;
           justify-content: end;
+          margin-left: -60px;
           background:none;
   }
 }
