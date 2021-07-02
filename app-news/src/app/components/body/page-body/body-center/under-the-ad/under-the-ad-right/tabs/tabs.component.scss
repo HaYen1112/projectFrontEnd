@@ -1,6 +1,6 @@
 .container{
   width: 331px;
-  height:620px;
+  height:408px;
   background-color:white;
   margin-right: 0px;
   float: left;
@@ -10,7 +10,7 @@
   box-shadow: 0 1px 7px #d9d9d9;
 
   .news-container{
-    width:134px;
+    width:331px;
     height:48px;
     background-color:white;
     margin-right: 0px;
@@ -18,7 +18,7 @@
     h3{
       margin-left:23px;
       padding-top: 6px;
-      border-bottom: 3px solid #00bfc5;
+      padding-bottom: -10px;
     }
   }
 
@@ -29,14 +29,16 @@
 
     .meta{
       width:85%;
-      height: 110px;
+      height: 90px;
       margin-left: 27px;
       padding-top: 12px;
       border-bottom: 0.5px solid #eee;
       .time{
         height: 100%;
         float: left;
-        margin-right:15px;
+        margin-right:10px;
+        font-size: 12px;
+        margin-top: 5px;
       }
       a{
         color: black;
@@ -52,6 +54,47 @@
   }
 }
 
+//follow
+.single-follow{
+  background: #fff;
+  padding: 30px 20px 30px 20px;
+  width: 331px;
+  height:190px;
+  float: right;
+  .single-box{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+  }
+  .follow-us{
+      background: rgba(248, 238, 238, 0.555);
+      border: 1px solid#f4f4f4;
+      padding-top: 10px;
+      padding-bottom: 15px;
+      padding-left: 13px;
+      padding-right: 13px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      width: 49%;
+
+      .follow-count{
+          padding-left: 15px;
+          span{
+              color:#232323;
+              font-size: 14px;
+              font-weight: 500;
+          }
+          p{
+              margin-bottom: 0;
+              line-height: 1;
+              font-size: 11px;
+          }
+      }
+  }
+}
+
+//tin gần đây
 .most-recent-area{
   width: 331px;
   height:570px;
@@ -59,6 +102,7 @@
   float: left;
   margin-top: 20px;
   margin-left: 20px;
+  margin-bottom: 20px;
   display: block;
   .most-recent{
       .most-recent-img{
