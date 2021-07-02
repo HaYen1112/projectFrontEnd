@@ -22,6 +22,7 @@ import { NewsComponent } from './components/body/page-body/body-center/news/news
 import { TopicComponent } from './components/body/page-body/body-center/news/topic/topic.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TechNewsComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/tech-news/tech-news.component';
+import { LastNewReadingsComponent } from './components/last-new-readings/last-new-readings.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { TechNewsComponent } from './components/body/page-body/body-center/under
     TopicComponent,
     FooterComponent,
     TechNewsComponent,
+    LastNewReadingsComponent,
 
 
   ],
