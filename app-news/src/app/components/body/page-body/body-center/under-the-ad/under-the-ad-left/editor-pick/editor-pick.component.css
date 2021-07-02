@@ -1,6 +1,6 @@
 .editor-pick {
   width: 248px;
-  height: 667px;
+  height: 630px;
   background-color: white;
   float: left;
   margin-left: 20px;
@@ -10,7 +10,7 @@
 }
 
 .editor-pick .slimScrollDiv {
-  width: 260px;
+  width: 218px;
   height: 637px;
   margin-top: 15px;
   margin-left: 15px;
@@ -18,18 +18,18 @@
 
 .editor-pick .slimScrollDiv .slimScrollDiv_1 {
   width: 100%;
-  height: 280px;
+  height: 260px;
   border-bottom: 0.5px solid #eee;
 }
 
 .editor-pick .slimScrollDiv .slimScrollDiv_1 img {
   width: 100%;
-  height: 190px;
+  height: 170px;
   margin-bottom: 10px;
 }
 
 .editor-pick .slimScrollDiv .slimScrollDiv_1 h2 {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .editor-pick .slimScrollDiv .slimScrollDiv_1 h2 a {
@@ -43,13 +43,13 @@
 
 .editor-pick .slimScrollDiv .slimScrollDiv_2 {
   width: 100%;
-  height: 90px;
+  height: 80px;
   border-bottom: 0.5px solid #eee;
 }
 
 .editor-pick .slimScrollDiv .slimScrollDiv_2 h2 {
   margin-top: 3px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .editor-pick .slimScrollDiv .slimScrollDiv_2 h2 a {

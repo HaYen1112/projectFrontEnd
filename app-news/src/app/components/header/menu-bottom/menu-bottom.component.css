@@ -1,7 +1,17 @@
+@charset "UTF-8";
 .menu_bottom {
-  font-size: 18px;
-  height: 55px;
+  font-size: 12px;
+  height: 40px;
+  position: fixed;
+  /*Cho menu cố định 1 vị trí với top và left*/
+  top: 75px;
+  /*Nằm trên cùng*/
+  left: 0px;
+  /*Nằm sát bên trái*/
+  z-index: 100000;
+  /*Hiển thị lớp trên cùng*/
   background-color: #fff;
+  width: 1270px;
 }
 
 .menu_bottom .navbar {
@@ -14,11 +24,15 @@
 
 .menu_bottom .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 12px;
   color: black;
   text-align: center;
   padding: 8px 9px 8px 8px;
   text-decoration: none;
+}
+
+.menu_bottom .navbar a:hover {
+  text-decoration: underline;
 }
 
 .menu_bottom .navbar:hover {
@@ -31,7 +45,7 @@
 }
 
 .menu_bottom .subnav .subnavbtn {
-  font-size: 16px;
+  font-size: 12px;
   border: none;
   outline: none;
   color: #333;
@@ -39,7 +53,7 @@
   background-color: transparent;
   font-style: bold;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 12px;
 }
 
 .menu_bottom .subnav:hover .subnav-content {
@@ -47,17 +61,17 @@
 }
 
 .menu_bottom .navbar a:hover, .menu_bottom .subnav:hover .subnavbtn {
-  color: #00a2ff;
+  color: #00bfc5;
 }
 
 .menu_bottom .subnav-content {
   display: none;
   position: absolute;
   left: 0;
-  background-color: #00739f;
+  background-color: #018f94;
   width: 100%;
   z-index: 1;
-  height: 50px;
+  height: 35px;
   padding-left: 100px;
 }
 

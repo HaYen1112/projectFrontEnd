@@ -8,17 +8,24 @@
   margin-left: 20px;
   font-size: 15px;
   box-shadow: 0 1px 7px #d9d9d9;
+
   .news-container{
-    width:158px;
+    width:134px;
     height:48px;
+    background-color:white;
+    margin-right: 0px;
+
     h3{
       margin-left:23px;
       padding-top: 6px;
+      border-bottom: 3px solid #00bfc5;
     }
   }
+
   .story--text{
     width:100%;
     height: 100%;
+
 
     .meta{
       width:85%;
