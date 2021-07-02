@@ -1,6 +1,6 @@
 .container{
   width: 100%;
-  height: 137px;
+  height: 90px;
   padding:0px;
   background-color: #fff;
   box-shadow: 0 1px 7px #d9d9d9;
@@ -8,7 +8,7 @@
     width: 100%;
     padding-top: 10px;
     margin-left: 24px;
-    font-size: 25px;
+    font-size: 22px;
     a{
       color: #000000;
       text-decoration: none;
@@ -24,11 +24,13 @@
     height:40px;
     a{
       margin-left:5px;
+      font-size: 14px;
     }
     .time{
       width:40px;
       margin-left:27px;
       margin-right: 5px;
+
     }
 
   }

@@ -1,15 +1,17 @@
 .container {
   width: 100%;
-  height: 25%;
+  height: 90px;
   padding: 0px;
   background-color: #fff;
+  -webkit-box-shadow: 0 1px 7px #d9d9d9;
+          box-shadow: 0 1px 7px #d9d9d9;
 }
 
 .container h2 {
   width: 100%;
   padding-top: 10px;
   margin-left: 24px;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .container h2 a {
@@ -18,7 +20,7 @@
 }
 
 .container h2 a:hover {
-  color: #009cd7;
+  color: #00bfc5;
 }
 
 .container .posting_time {
@@ -29,6 +31,7 @@
 
 .container .posting_time a {
   margin-left: 5px;
+  font-size: 14px;
 }
 
 .container .posting_time .time {
