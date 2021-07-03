@@ -8,12 +8,8 @@ import {Router} from '@angular/router';
 })
 export class LastnewBodyReadingComponent implements OnInit {
 
-  product: any[];
-  constructor(private router: Router) {
-    const navigation = this.router.getCurrentNavigation();
-    this.product = navigation?.extras.state as  any[];
+  constructor() {
 
-    console.log(this.product);
   }
 
   ngOnInit(): void {
