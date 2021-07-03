@@ -1,0 +1,12 @@
+.container-tech-news {
+  margin-top: 20px;
+  width: 100%;
+  height: 150px;
+  background-color: antiquewhite;
+}
+
+.container-tech-news img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=tech-news.component.css.map */

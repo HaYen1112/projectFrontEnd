@@ -12,21 +12,16 @@
 }
 
 .container .news-container {
-  width: 158px;
+  width: 134px;
   height: 48px;
-  background-color: #edebeb;
+  background-color: white;
+  margin-right: 0px;
 }
 
 .container .news-container h3 {
   margin-left: 23px;
   padding-top: 6px;
-}
-
-.container .news-container2 {
-  width: 173px;
-  height: 48px;
-  float: left;
-  background-color: #edebeb;
+  border-bottom: 3px solid #00bfc5;
 }
 
 .container .story--text {
