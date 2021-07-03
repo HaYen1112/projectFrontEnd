@@ -23,6 +23,10 @@ import { TopicComponent } from './components/body/page-body/body-center/news/top
 import { FooterComponent } from './components/footer/footer.component';
 import { TechNewsComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/tech-news/tech-news.component';
 import { LastNewReadingsComponent } from './components/last-new-readings/last-new-readings.component';
+import { LastnewMenuComponent } from './components/last-new-readings/lastnew-menu/lastnew-menu.component';
+import { LastnewBodyReadingComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -48,13 +52,16 @@ import { LastNewReadingsComponent } from './components/last-new-readings/last-ne
     FooterComponent,
     TechNewsComponent,
     LastNewReadingsComponent,
+    LastnewMenuComponent,
+    LastnewBodyReadingComponent,
 
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpClientModule, RouterModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [HttpClientModule]
 })
 export class AppModule { }
