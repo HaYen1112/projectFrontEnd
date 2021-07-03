@@ -111,6 +111,34 @@
 
 li.dropdown {
   display: inline-block;
+.dropdown-menu-tk{
+    // width: 412px !important;
+    height: 73px !important;
+    margin-top: 17px !important;
+    background-color: white;
+    padding: 0;
+    margin-left: 0px !important;
+    box-shadow: none !important;
+  .content{
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    width: 99.5%;
+    height: 75%;
+    border-bottom: none !important;
+    background-color:white !important;
+
+    .input-tk{
+      width: 97.5%;
+      height: 100%;
+      margin-top: 9px;
+      margin-left: 25px;
+      border: #00bfc5 solid 2px;
+      font-size:18px;
+    }
+  }
+
+}
   .dropdown-menu{
     width: 1272px;
     height: 600px;

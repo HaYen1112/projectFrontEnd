@@ -162,7 +162,7 @@
   display: block;
   color: #051441;
   text-transform: capitalize;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -177,6 +177,7 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  margin-left: -60px;
   background: none;
 }
 /*# sourceMappingURL=feature.component.css.map */
