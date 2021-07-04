@@ -27,6 +27,7 @@ export class FooterComponent implements OnInit {
       component.getData(this.url)
       .subscribe(value => {
         for (const [k, v] of Object.entries(value)) {
+          console.log(value[3]);
           this.index++;
           if (this.index == 3){
             this.data.push(v);
@@ -40,9 +41,6 @@ export class FooterComponent implements OnInit {
             }
            }
       });
-      console.log(this.dataDate);
-      console.log(this.dataTitle);
-      // console.log(this.data.length);
      }
   ngOnInit(): void {
   }
