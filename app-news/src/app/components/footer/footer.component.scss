@@ -37,14 +37,15 @@
           text-decoration: none;
           .whats-right-img{
               img{
-                  border-radius: 6px;
+                  width: 80px;
+                  height: 80px;
               }
           }
           .whats-right-cap{
               padding-left: 18px;
-              margin-top: 20px;
+              margin-top: 25px;
               h4{
-                  font-size: 16px;
+                  font-size: 12px;
                   font-weight: 700;
 
                   a{
@@ -53,7 +54,7 @@
                       line-height:1.4;
                       color: #fff;
                       &:hover{
-                          color: #018f94;
+                          color: black;
                       }
                   }
               }

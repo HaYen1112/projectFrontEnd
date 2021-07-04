@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,35 +8,46 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app-news';
-  url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ftuoitre.vn%2Frss%2Ftin-moi-nhat.rss';
-  data: any[];
+  dataTitle: any[];
+  dataDate: any[];
+  dataImg: any[];
   index = 0;
-  s = '';
-  constructor(private http:HttpClient){
-    this.data = [];
-      this.http.get(this.url).toPromise().then(data=>{
-        //console.log(data);
-        console.log(Object.entries(data));
-        for (const [k, v] of Object.entries(data)) {
-          this.index++;
-           if (this.index == 3)
-              for(let i of v)
-                 {
-                  for (let h in i)
-                     if (h = 'title')
-                         this.data.push(i[h]);
-                        console.log(data.toString);
-                 }
-        }
-                console.log(this.data.toString());
-        // for(let items in data)
-        //   if (data.hasOwnProperty(items))
-        //      for(let i of items){
-        //      this.array?.push(i);
-        //       console.log(items);
-        //     }
+  url: string;
 
+  constructor(private http: HttpClient){
+    this.dataTitle = [];
+    this.dataDate = [];
+    this.dataImg = [];
+    this.url = '';
+  }
+  setMain(url: string){
+    this.url=url;
+    this.http.get(this.url).toPromise().then(data=>{
+      console.log(Object.entries(data));
+      for (const [k, v] of Object.entries(data)) {
+              this.index++;
+              if (this.index == 3)
+              for(let i of v)
+                   for (const [s, x] of Object.entries(i)){
+                    if(s =='title')
+                        this.dataTitle.push(x);
+                     if(s =='pubDate')
+                        this.dataDate.push(x);
+                    if(s =='thumbnail')
+                        this.dataImg.push(x);
+                   }
+           }
       });
+      for(let a of this.dataImg)
+        console.log(a);
+  }
+  getDataTitle(){
+    return this.dataTitle;
+  }
+  getDataDate(){
+    return this.dataDate;
+  }
+  getDataImg(){
+    return this.dataImg;
   }
 }
