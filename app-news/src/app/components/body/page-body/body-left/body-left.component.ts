@@ -31,16 +31,11 @@ export class BodyLeftComponent implements OnInit {
             for (const [s, x] of Object.entries(this.data[0]))
                   this.datas.push(x);
               for (const [s, x] of Object.entries(this.datas)){
-                    this.dataTitle.push(x['title']);
-                    this.dataDate.push(x['pubDate']);
                     this.dataImg.push(x['thumbnail']);
               }
             }
            }
       });
-      console.log(this.dataDate);
-      console.log(this.dataTitle);
-      // console.log(this.data.length);
      }
   ngOnInit(): void {
   }
