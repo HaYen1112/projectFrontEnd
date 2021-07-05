@@ -9,7 +9,7 @@ import { UnderTheAdLeftComponent } from '../under-the-ad-left.component';
 
 })
 export class FeatureComponent implements OnInit {
-  
+
   @Input() dataItem: any[];
   private urlLife = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fdoi-song.rss'.trim();
   private urlTravel = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fdu-lich.rss'.trim();
