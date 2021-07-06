@@ -14,7 +14,10 @@
                 .weekly2-img{
                     margin-bottom: 20px;
                     img{
-                        width: 100%;
+                        width: 210px;
+                        height: 130px;
+                        object-fit: cover;
+
                     }
                 }
                 .weekly2-caption{
@@ -34,6 +37,13 @@
                         color: #838793;
                         font-size: 12px;
                         margin: 0;
+                        margin-top: 10px;
+                    }
+                    .p1{
+                      margin-top: 51px;
+                    }
+                    .p2{
+                      margin-top: 30px;
                     }
                 }
             }
@@ -103,7 +113,7 @@
               }
           }
       }
-     
+
       // icon
       span{
           color: #7a8496;
