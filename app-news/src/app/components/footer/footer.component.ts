@@ -1,6 +1,7 @@
 
 import { Component, Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
+import { WordsAdLeftComponent } from '../body/page-body/body-center/under-the-ad/under-the-ad-left/words-ad-left/words-ad-left.component';
 
 @Component({
   selector: 'app-footer',
@@ -16,7 +17,6 @@ export class FooterComponent implements OnInit {
   private data: any[];
   private datas: any[];
   private url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Ftai-chinh-kinh-doanh.rss';
-
     constructor(private component: AppComponent) {
       this.data=[];
       this.dataDate = [];
