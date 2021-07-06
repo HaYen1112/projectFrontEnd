@@ -11,17 +11,15 @@ import { UnderTheAdLeftComponent } from '../under-the-ad-left.component';
 export class WordsAdLeftComponent implements OnInit {
 
   @Input() dataItem: any[];
-  private urlLife = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fthe-gioi.rss'.trim();
-  private urlTravel = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fvan-hoa.rss'.trim();
-  private urlTechnology = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fhome.rss'.trim();
+  private urlLife = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fhome.rss'.trim();
     constructor(private underLeft: UnderTheAdLeftComponent) {
       this.dataItem = [];
       this.underLeft.setDatas(this.urlLife, 0 , [], [], this.dataItem);
-      this.underLeft.setDatas(this.urlTravel, 0 , [], [], this.dataItem);
-      this.underLeft.setDatas(this.urlTechnology, 0 , [], [], this.dataItem);
-      console.log(this.dataItem);
+      // console.log(this.dataItem);
      }
-
+getDataItem(): any[]{
+  return this.dataItem;
+}
   ngOnInit(): void {
   }
 
