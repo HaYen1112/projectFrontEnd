@@ -20,7 +20,6 @@ export class BodyCenterComponent implements OnInit {
                 datas.push(x);
                 console.log(data);
             for (const [s, x] of Object.entries(datas)){
-               // if ((s == 'title') || (s == 'thumbnail') || (s == 'pubDate'))
                      dataItem.push(x['thumbnail']);
                      dataItem.push(x['title']);
                      dataItem.push(x['pubDate']);

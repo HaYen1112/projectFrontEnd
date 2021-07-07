@@ -44,6 +44,7 @@ export class NewsComponent implements OnInit {
   getDataSVK(): any[]{
     return this.dataSVK;
   }
+
   ngOnInit(): void {
   }
 
