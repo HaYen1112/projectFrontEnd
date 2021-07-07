@@ -15,7 +15,7 @@ export class WordsAdLeftComponent implements OnInit {
     constructor(private underLeft: UnderTheAdLeftComponent) {
       this.dataItem = [];
       this.underLeft.setDatas(this.urlLife, 0 , [], [], this.dataItem);
-      // console.log(this.dataItem);
+      
      }
 getDataItem(): any[]{
   return this.dataItem;
