@@ -11,21 +11,23 @@
   .whats-news-single{
       margin-left: 15px;
       margin-right: 15px;
+      height: 250px;
       .whates-img{
           margin-bottom: 12px;
           overflow: hidden;
 
           img{
              width: 250px;
-             height: 200px;
+             height: 140px;
               transform: scale(1);
               object-fit: cover;
+              margin-left: 5px;
           }
       }
       .whates-caption{
           h4{
               a{
-                  font-size: 18px;
+                  font-size: 14px;
                   line-height: 1.2;
                   margin-bottom: 12px;
                   display: block;
@@ -47,7 +49,7 @@
           p{
               margin-bottom: 0;
               color: #000000;
-              font-size: 16px;
+              font-size: 12px;
           }
 
       }
