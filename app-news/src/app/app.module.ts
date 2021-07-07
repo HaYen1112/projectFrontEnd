@@ -27,6 +27,14 @@ import { LastnewMenuComponent } from './components/last-new-readings/lastnew-men
 import { LastnewBodyReadingComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { LastnewBodyReadingLeftComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/lastnew-body-reading-left.component';
+import { LastnewBodyReadingRightComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-right/lastnew-body-reading-right.component';
+import { PostsComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/posts/posts.component';
+import { NewsReadMoreComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/news-read-more/news-read-more.component';
+import { CommentComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/comment/comment.component';
+import { ReadingsMoreComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/readings-more/readings-more.component';
+import { MaybeYouAreInterestedComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/maybe-you-are-interested/maybe-you-are-interested.component';
+import { NewsForYouComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/news-for-you/news-for-you.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +62,14 @@ import { RouterModule } from '@angular/router';
     LastNewReadingsComponent,
     LastnewMenuComponent,
     LastnewBodyReadingComponent,
+    LastnewBodyReadingLeftComponent,
+    LastnewBodyReadingRightComponent,
+    PostsComponent,
+    NewsReadMoreComponent,
+    CommentComponent,
+    ReadingsMoreComponent,
+    MaybeYouAreInterestedComponent,
+    NewsForYouComponent,
 
 
   ],
