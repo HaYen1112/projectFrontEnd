@@ -39,18 +39,6 @@ export class NewsComponent implements OnInit {
     this.newBodyCenter.setDatas(this.urlVideo,0,[],[],this.dataVideo);
     this.newBodyCenter.setLink(this.urlVideo,0,[],[],this.dataLink);
   }
-  getDataKDMN(): any[]{
-    return this.dataKDMN;
-  }
-  getDataLD(): any[]{
-    return this.dataLD;
-  }
-  getDataKP(): any[]{
-    return this.dataKP;
-  }
-  getDataSVK(): any[]{
-    return this.dataSVK;
-  }
   ngOnInit(): void {
   }
 
