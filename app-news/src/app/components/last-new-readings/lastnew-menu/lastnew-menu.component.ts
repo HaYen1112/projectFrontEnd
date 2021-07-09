@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lastnew-menu',
@@ -6,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lastnew-menu.component.scss']
 })
 export class LastnewMenuComponent implements OnInit {
-
-  constructor() { }
-
+ 
   ngOnInit(): void {
   }
 

@@ -7,10 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PageBodyComponent implements OnInit {
 
-
-constructor(){}
-
+  constructor() {
+  }
   ngOnInit(): void {
   }
 
 }
+
