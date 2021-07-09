@@ -1,7 +1,8 @@
+
 <div class="site-header__content">
   <ul class="site-header__tool left btn-group">
-    <li class = "item item--dm dropdown">
-      <a href="#chuyenmuc" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
+    <li class = "item item--dm dropdown" [ngStyle]="{backgroundColor: colorBackgroundDanhMuc}">
+      <a (click)="setColor(1)" [ngStyle]="{color:colorTextDanhMuc}" href="#chuyenmuc" class=" chuyenmuc parent dropbtn" id="navbardrop" data-toggle="dropdown">
         <i class="fas fa-bars"></i>
         <span>CHUYÊN MỤC</span>
       </a>
@@ -246,8 +247,8 @@
 
       </div>
     </li>
-    <li class = "item item--ti dropdown">
-      <a href="#tienich" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
+    <li class = "item item--ti dropdown" [ngStyle]="{backgroundColor: colorBackgroundTienIch}">
+      <a (click)="setColor(2)" [ngStyle]="{color: colorTextTienIch}" href="#tienich" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
         <i class="fas fa-puzzle-piece"></i>
         <span> TIỆN ÍCH</span>
       </a>
@@ -332,17 +333,17 @@
     </a>
   </h1>
   <ul class="site-header__tool right btn-group">
-    <li class = "item item--tk  dropdown">
-      <a href="#timkiem" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
-        <i class="fas fa-search"></i>
-        <span>TÌM KIẾM</span>
-      </a>
-      <div class="dropdown-menu dropdown-menu-tk">
-        <div class="content">
-            <input type="text" class="input-tk" placeholder="Tìm Kiếm..." >
+      <li class = "item item--dm dropdown" [ngStyle]="{backgroundColor: colorBackgroundTimKiem}">
+        <a (click)="setColor(3)" [ngStyle]="{color:colorTextTimKiem}" href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
+          <i class="fas fa-search"></i>
+          <span>TÌM KIẾM</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-tk">
+          <div class="content">
+              <input type="text" class="input-tk" placeholder="Tìm Kiếm..." >
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
     <li class = "item item--bcb">
       <a href="" class="parent">
         <i class="far fa-lightbulb"></i>
@@ -356,7 +357,7 @@
       </a>
     </li>
     <li class = "item item--dn">
-      <a href="" class="parent">
+      <a [routerLink]="['/last-new-readings']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="parent">
         <i class="far fa-user"></i>
         <span>ĐĂNG NHẬP</span>
       </a>

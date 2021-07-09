@@ -26,7 +26,7 @@ import { LastNewReadingsComponent } from './components/last-new-readings/last-ne
 import { LastnewMenuComponent } from './components/last-new-readings/lastnew-menu/lastnew-menu.component';
 import { LastnewBodyReadingComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterModule, Routes} from '@angular/router';
 import { LastnewBodyReadingLeftComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/lastnew-body-reading-left.component';
 import { LastnewBodyReadingRightComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-right/lastnew-body-reading-right.component';
 import { PostsComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/posts/posts.component';
@@ -35,6 +35,14 @@ import { CommentComponent } from './components/last-new-readings/lastnew-body-re
 import { ReadingsMoreComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/readings-more/readings-more.component';
 import { MaybeYouAreInterestedComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/maybe-you-are-interested/maybe-you-are-interested.component';
 import { NewsForYouComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/news-for-you/news-for-you.component';
+import { AppRoutingModule } from './components/app-routing/app-routing.module';
+
+
+const route: Routes = [
+  { path: 'last-new-readings', component: LastNewReadingsComponent },
+  { path: 'footer', component: FooterComponent},
+  { path: 'timkiem1', component: PageBodyComponent}
+]
 
 @NgModule({
   declarations: [
@@ -74,9 +82,12 @@ import { NewsForYouComponent } from './components/last-new-readings/lastnew-body
 
   ],
   imports: [
-    BrowserModule, HttpClientModule, RouterModule,
+    BrowserModule, HttpClientModule, RouterModule, AppRoutingModule, RouterModule.forChild(route),
+    
   ],
-  providers: [],
+  providers: [
+    RouterModule,
+  ],
   bootstrap: [AppComponent],
   exports: [HttpClientModule]
 })
