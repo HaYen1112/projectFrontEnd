@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
+import { BodyCenterComponent } from '../../../body-center.component';
 import { UnderTheAdLeftComponent } from '../under-the-ad-left.component';
 
 @Component({
@@ -21,7 +22,7 @@ export class FeatureComponent implements OnInit {
   private urlFashion = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fttt.rss'.trim();
   private urlSport = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthethao.thanhnien.vn%2Frss%2Fhome.rss'.trim();
   private urlTechnology = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fcong-nghe.rss'.trim();
-    constructor(private underLeft: UnderTheAdLeftComponent) {
+    constructor(private underLeft: BodyCenterComponent) {
       this.dataLife = [];
       this.dataFashion = [];
       this.dataSport = [];

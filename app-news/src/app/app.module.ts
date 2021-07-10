@@ -36,7 +36,7 @@ import { ReadingsMoreComponent } from './components/last-new-readings/lastnew-bo
 import { MaybeYouAreInterestedComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/maybe-you-are-interested/maybe-you-are-interested.component';
 import { NewsForYouComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/news-for-you/news-for-you.component';
 import { AppRoutingModule } from './components/app-routing/app-routing.module';
-
+import { formatDate } from '@angular/common';
 
 const route: Routes = [
   { path: 'last-new-readings', component: LastNewReadingsComponent },
@@ -82,8 +82,8 @@ const route: Routes = [
 
   ],
   imports: [
-    BrowserModule, HttpClientModule, RouterModule, AppRoutingModule, RouterModule.forChild(route),
-    
+    BrowserModule, HttpClientModule, RouterModule, AppRoutingModule, RouterModule.forChild(route), 
+
   ],
   providers: [
     RouterModule,
