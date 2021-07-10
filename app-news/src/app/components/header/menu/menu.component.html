@@ -2,7 +2,7 @@
 <div class="site-header__content">
   <ul class="site-header__tool left btn-group">
     <li class = "item item--dm dropdown" [ngStyle]="{backgroundColor: colorBackgroundDanhMuc}">
-      <a (click)="setColor(1)" [ngStyle]="{color:colorTextDanhMuc}" href="#chuyenmuc" class=" chuyenmuc parent dropbtn" id="navbardrop" data-toggle="dropdown">
+      <a (click)="setColor('chuyenmuc')" [ngStyle]="{color:colorTextDanhMuc}" href="#chuyenmuc" class=" chuyenmuc parent dropbtn" id="navbardrop" data-toggle="dropdown">
         <i class="fas fa-bars"></i>
         <span>CHUYÊN MỤC</span>
       </a>
@@ -248,7 +248,7 @@
       </div>
     </li>
     <li class = "item item--ti dropdown" [ngStyle]="{backgroundColor: colorBackgroundTienIch}">
-      <a (click)="setColor(2)" [ngStyle]="{color: colorTextTienIch}" href="#tienich" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
+      <a (click)="setColor('tienich')" [ngStyle]="{color: colorTextTienIch}" href="#tienich" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
         <i class="fas fa-puzzle-piece"></i>
         <span> TIỆN ÍCH</span>
       </a>
@@ -312,14 +312,14 @@
         </div>
       </div>
     </li>
-    <li class = "item item--dcb">
-      <a href="" class="parent">
+    <li class = "item item--dcb" [ngStyle]="{backgroundColor: colorBackgroundDCB}">
+      <a routerLink="#" class="parent" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
         <i class="fab fa-buffer"></i>
         <span> DÀNH CHO BẠN</span>
       </a>
     </li>
-    <li class = "item item--vl">
-      <a href="" class="parent">
+    <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL}">
+      <a routerLink="#" class="parent" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
         <i class="fas fa-briefcase"></i>
         <span>VIỆC LÀM</span>
       </a>
@@ -334,7 +334,7 @@
   </h1>
   <ul class="site-header__tool right btn-group">
       <li class = "item item--dm dropdown" [ngStyle]="{backgroundColor: colorBackgroundTimKiem}">
-        <a (click)="setColor(3)" [ngStyle]="{color:colorTextTimKiem}" href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
+        <a (click)="setColor('timkiem')" [ngStyle]="{color:colorTextTimKiem}" href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
           <i class="fas fa-search"></i>
           <span>TÌM KIẾM</span>
         </a>
@@ -344,20 +344,20 @@
           </div>
         </div>
       </li>
-    <li class = "item item--bcb">
-      <a href="" class="parent">
+    <li class = "item item--bcb" [ngStyle]="{backgroundColor: colorBackgroundBCB}">
+      <a href="#" class="parent" (click)="setColor('bancanbiet')" [ngStyle]="{color: colorTextBCB}">
         <i class="far fa-lightbulb"></i>
         <span>BẠN CẦN BIẾT</span>
       </a>
     </li>
-    <li class = "item item--lh">
-      <a href="" class="parent">
+    <li class = "item item--lh" [ngStyle]="{backgroundColor: colorBackgroundLH}">
+      <a href="#" class="parent" (click)="setColor('lienhe')" [ngStyle]="{color: colorTextLH}">
         <i class="far fa-envelope"></i>
         <span>LIÊN HỆ</span>
       </a>
     </li>
-    <li class = "item item--dn">
-      <a [routerLink]="['/last-new-readings']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="parent">
+    <li class = "item item--dn" [ngStyle]="{backgroundColor: colorBackgroundDN}">
+      <a routerLink="#" (click)="setColor('dangnhap')" [ngStyle]="{color: colorTextDN}" class="parent">
         <i class="far fa-user"></i>
         <span>ĐĂNG NHẬP</span>
       </a>
