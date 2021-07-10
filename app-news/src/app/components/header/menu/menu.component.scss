@@ -222,6 +222,48 @@ li.dropdown {
   }
 
 }
+.dropdown-menu-lh{
+  width: 1262px !important;
+  height:73px !important;
+  margin-top:17px !important;
+  left: -13px !important;
+
+  .content-lh{
+    height:100%;
+    font-size: 14px;
+    background-color:white !important;
+    border-bottom: none !important;
+    margin-top: 5px;
+    margin-left: -5px;
+    padding-left: 465px;
+    .item--datbao{
+      border-left:none !important;
+    }
+    .item-lh{
+
+      margin-top:7px;
+      height:80%;
+      float: left;
+      padding: 5px 0;
+      padding-left: 18px;
+      border-left: #00bfc5 1px solid;
+      :hover{
+        color: black !important;
+      }
+      a{
+        margin-left: -2px;
+        color: #046d70 !important;
+        .fas{
+          width:85% !important;
+        }
+        
+
+      }
+
+    }
+  }
+}
+}
   .dropdown-menu{
     width: 1272px;
     height: 600px;
@@ -282,5 +324,4 @@ li.dropdown {
     }
   }
   }
-}
 
