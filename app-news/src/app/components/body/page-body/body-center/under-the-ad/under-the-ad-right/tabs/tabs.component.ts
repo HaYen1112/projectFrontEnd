@@ -1,5 +1,6 @@
 import { Component,Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
+import { BodyCenterComponent } from '../../../body-center.component';
 import { UnderTheAdRightComponent } from '../under-the-ad-right.component';
 @Component({
   selector: 'app-tabs',
@@ -17,7 +18,7 @@ export class TabsComponent implements OnInit {
   private urlOP ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fthoi-su%2Fquoc-phong.rss';
  //Công nghệ
   private urlCN =' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fcong-nghe%2Fchuyen-doi-so.rss';
-  constructor(private underRight: UnderTheAdRightComponent) {
+  constructor(private underRight: BodyCenterComponent) {
     this.dataMostRecent =[];
     this.dataQP = [];
     this.dataCN = [];
