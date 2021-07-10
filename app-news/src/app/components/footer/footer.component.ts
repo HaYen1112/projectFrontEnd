@@ -10,11 +10,12 @@ import { BodyCenterComponent } from '../body/page-body/body-center/body-center.c
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  
+
   @Input() data: any[];
   private url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Ftai-chinh-kinh-doanh.rss'.trim();
     constructor(private bodyCenter: BodyCenterComponent) {
       this.data=[];
+      this.bodyCenter.setDatas(this.url, 0, [], [], this.data);
      }
   ngOnInit(): void {
   }
