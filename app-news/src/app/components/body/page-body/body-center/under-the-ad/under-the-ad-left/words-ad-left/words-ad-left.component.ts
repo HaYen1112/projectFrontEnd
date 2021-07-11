@@ -2,8 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 import { BodyCenterComponent } from '../../../body-center.component';
-import { UnderTheAdLeftComponent } from '../under-the-ad-left.component';
-// import { NewsComponent } from '../body/page-body/body-center/news/news.component';
 @Component({
   selector: 'app-words-ad-left',
   templateUrl: './words-ad-left.component.html',
@@ -18,9 +16,6 @@ export class WordsAdLeftComponent implements OnInit {
       this.underLeft.setDatas(this.urlLife, 0 , [], [], this.dataItem);
 
      }
-getDataItem(): any[]{
-  return this.dataItem;
-}
   ngOnInit(): void {
   }
 

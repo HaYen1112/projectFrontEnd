@@ -313,13 +313,13 @@
       </div>
     </li>
     <li class = "item item--dcb" [ngStyle]="{backgroundColor: colorBackgroundDCB}">
-      <a routerLink="#" class="parent" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
+      <a [routerLink]="['/#']" class="parent" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
         <i class="fab fa-buffer"></i>
         <span> DÀNH CHO BẠN</span>
       </a>
     </li>
     <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL}">
-      <a routerLink="#" class="parent" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
+      <a [routerLink]="['/#']" class="parent" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
         <i class="fas fa-briefcase"></i>
         <span>VIỆC LÀM</span>
       </a>
@@ -376,12 +376,12 @@
             </a>
           </li>
 
-         
+
         </div>
       </div>
     </li>
     <li class = "item item--dn" [ngStyle]="{backgroundColor: colorBackgroundDN}">
-      <a routerLink="#" (click)="setColor('dangnhap')" [ngStyle]="{color: colorTextDN}" class="parent">
+      <a [routerLink]="['/#']" (click)="setColor('dangnhap')" [ngStyle]="{color: colorTextDN}" class="parent">
         <i class="far fa-user"></i>
         <span>ĐĂNG NHẬP</span>
       </a>
