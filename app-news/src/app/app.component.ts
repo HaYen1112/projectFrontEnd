@@ -1,7 +1,6 @@
 import { Component, Injectable, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { newArray } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,7 @@ import { newArray } from '@angular/compiler/src/util';
 @Injectable()
 export class AppComponent {
   constructor(private http: HttpClient){
-  }
+         }
   getData(url: string): Observable<any>{
     return this.http.get(url);
   }

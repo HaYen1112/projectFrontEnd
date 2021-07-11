@@ -1,6 +1,4 @@
-import { ActivatedRoute, Navigation, NavigationExtras, provideRoutes } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
-import { ProviderAstType } from '@angular/compiler';
 
 @Component({
   selector: 'app-menu',

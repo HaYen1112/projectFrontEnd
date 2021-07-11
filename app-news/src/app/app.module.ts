@@ -25,7 +25,7 @@ import { TechNewsComponent } from './components/body/page-body/body-center/under
 import { LastNewReadingsComponent } from './components/last-new-readings/last-new-readings.component';
 import { LastnewMenuComponent } from './components/last-new-readings/lastnew-menu/lastnew-menu.component';
 import { LastnewBodyReadingComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientJsonpModule, HttpClientModule, HttpErrorResponse } from '@angular/common/http';
 import { Router, RouterLink, RouterLinkActive, RouterModule, Routes} from '@angular/router';
 import { LastnewBodyReadingLeftComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/lastnew-body-reading-left.component';
 import { LastnewBodyReadingRightComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-right/lastnew-body-reading-right.component';
@@ -82,7 +82,9 @@ const route: Routes = [
 
   ],
   imports: [
-    BrowserModule, HttpClientModule, RouterModule, AppRoutingModule, RouterModule.forChild(route), 
+    BrowserModule, HttpClientModule, RouterModule, AppRoutingModule,
+     RouterModule.forChild(route), HttpClientJsonpModule, 
+
 
   ],
   providers: [
