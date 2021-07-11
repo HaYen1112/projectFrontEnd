@@ -315,7 +315,7 @@
     <li class = "item item--dcb" [ngStyle]="{backgroundColor: colorBackgroundDCB}">
       <a [routerLink]="['/#']" class="parent" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
         <i class="fab fa-buffer"></i>
-        <span> DÀNH CHO BẠN</span>
+        <span> BẠN CẦN BIẾT</span>
       </a>
     </li>
     <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL}">
@@ -345,10 +345,56 @@
         </div>
       </li>
     <li class = "item item--bcb" [ngStyle]="{backgroundColor: colorBackgroundBCB}">
-      <a href="#" class="parent" (click)="setColor('bancanbiet')" [ngStyle]="{color: colorTextBCB}">
+      <a href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('bancanbiet')" [ngStyle]="{color: colorTextBCB}">
         <i class="far fa-lightbulb"></i>
-        <span>BẠN CẦN BIẾT</span>
+        <span>TIN MỚI</span>
       </a>
+      <div class="dropdown-menu dropdown-menu-tm">
+        <div class="content content-tm">
+          <div class="item">
+            <div class="meta">
+              <time>20:30</time>
+            </div>
+            <a href="">Cháy kinh hoàng trong khu phong tỏa ở quận 3 lúc rạng sáng, thiêu rụi 3 căn nhà</a>
+          </div>
+          <div class="item">
+            <div class="meta">
+              <time>20:30</time>
+            </div>
+            <a href="">Cháy kinh hoàng trong khu phong tỏa ở quận 3 lúc rạng sáng, thiêu rụi 3 căn nhà</a>
+          </div>
+          <div class="item">
+            <div class="meta">
+              <time>20:30</time>
+            </div>
+            <a href="">Cháy kinh hoàng trong khu phong tỏa ở quận 3 lúc rạng sáng, thiêu rụi 3 căn nhà</a>
+          </div>
+          <div class="item">
+            <div class="meta">
+              <time>20:30</time>
+            </div>
+            <a href="">Cháy kinh hoàng trong khu phong tỏa ở quận 3 lúc rạng sáng, thiêu rụi 3 căn nhà</a>
+          </div>
+          <div class="item">
+            <div class="meta">
+              <time>20:30</time>
+            </div>
+            <a href="">Cháy kinh hoàng trong khu phong tỏa ở quận 3 lúc rạng sáng, thiêu rụi 3 căn nhà</a>
+          </div>
+          <div class="item">
+            <div class="meta">
+              <time>20:30</time>
+            </div>
+            <a href="">Cháy kinh hoàng trong khu phong tỏa ở quận 3 lúc rạng sáng, thiêu rụi 3 căn nhà</a>
+          </div>
+          <div class="item">
+            <div class="meta">
+              <time>20:30</time>
+            </div>
+            <a href="">Cháy kinh hoàng trong khu phong tỏa ở quận 3 lúc rạng sáng, thiêu rụi 3 căn nhà</a>
+          </div>
+        </div>
+      </div>
     </li>
     <li class = "item item--lh dropdown" [ngStyle]="{backgroundColor: colorBackgroundLH}">
       <a href="#lienhe" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('lienhe')" [ngStyle]="{color: colorTextLH}">
@@ -365,7 +411,7 @@
           </li>
           <li class = "item-lh item--quangcao">
             <a href="#quangcao" class="parent">
-              <i class="fas fa-ad"></i>
+              <i class="fab fa-adversal"></i>
               <span> QUẢNG CÁO </span>
             </a>
           </li>
