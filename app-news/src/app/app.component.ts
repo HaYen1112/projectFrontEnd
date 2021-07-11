@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class AppComponent {
   constructor(private http: HttpClient){
          }
