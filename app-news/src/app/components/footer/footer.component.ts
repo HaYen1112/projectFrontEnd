@@ -1,9 +1,9 @@
 
 import { formatDate } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 import { BodyCenterComponent } from '../body/page-body/body-center/body-center.component';
-
+@Injectable({providedIn: 'root'})
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
