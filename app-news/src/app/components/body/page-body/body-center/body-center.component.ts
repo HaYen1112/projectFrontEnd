@@ -24,13 +24,15 @@ export class BodyCenterComponent implements OnInit {
     const months = Number(this.jstoday.substr(5, 2));
     this.com.getData(url)
       .subscribe((value: any) => {
-              dataItem.push(value['items'][0]['thumbnail']);
-              dataItem.push(value['items'][0]['title']);
-             // this.descipt.push((JSON.parse(JSON.stringify(value['items'][0]['description']))));
-              const day = days - Number(value['items'][0]['pubDate'].substr(8, 2));
-              const minute = minutes - Number(value['items'][0]['pubDate'].substr(14, 2));
-              const hour = hours - Number(value['items'][0]['pubDate'].substr(11, 2));
-              const month = months - Number(value['items'][0]['pubDate'].substr(5, 2));
+              // console.log(value['items']);
+             // this.descipt.push((JSON.parse(JSON.stringify(item['description']))));
+             for (let item of value['items']){
+                 dataItem.push(item['thumbnail']);
+                 dataItem.push(item['title']);
+              const day = days - Number(item['pubDate'].substr(8, 2));
+              const minute = minutes - Number(item['pubDate'].substr(14, 2));
+              const hour = hours - Number(item['pubDate'].substr(11, 2));
+              const month = months - Number(item['pubDate'].substr(5, 2));
               if (month > 0) {
                 dataItem.push(month + ' tháng trước');
                   } else
@@ -44,6 +46,8 @@ export class BodyCenterComponent implements OnInit {
                     else { dataItem.push(hour + 5 + ' giờ trước'); }
                   }
                 }
+             }
+
       });
       console.log(dataItem);
   }
@@ -51,7 +55,8 @@ export class BodyCenterComponent implements OnInit {
   setLink(url: string, dataItem: any[]) {
     this.com.getData(url)
       .subscribe((value: any) => {
-         dataItem.push(value['items'][0]['link']);
+        for (let item of value['items'])
+           dataItem.push(item['link']);
       });
   }
   ngOnInit(): void {
