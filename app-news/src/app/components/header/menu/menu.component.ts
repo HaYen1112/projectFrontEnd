@@ -1,12 +1,19 @@
 
 import { Component, Injectable, Input, OnInit } from '@angular/core';
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 import { formatDate } from '@angular/common';
 import { AppComponent } from 'src/app/app.component';
 import { BodyCenterComponent } from '../../body/page-body/body-center/body-center.component';
+import { Router } from '@angular/router';
 
+<<<<<<< HEAD
 
 import { Router } from '@angular/router';
+=======
+>>>>>>> main
 
 @Component({
   selector: 'app-menu',
@@ -28,7 +35,12 @@ export class MenuComponent implements OnInit {
     this.dataTime = [];
     this.setTitle(this.urlNew,0,[],[],this.dataTitle);
     this.setTime(this.urlNew,0,[],[],this.dataTime);
+<<<<<<< HEAD
     if (this.router.url == '/bancanbiet'){
+=======
+
+     if (this.router.url == '/bancanbiet'){
+>>>>>>> main
       this.titleBCB = 'TIN TỨC NHANH';
       this.titleHome = 'BẠN CẦN BIẾT';
       this.paddingHome = 10;
@@ -54,6 +66,10 @@ export class MenuComponent implements OnInit {
 console.log(this.routerBCB);
 console.log(this.routerHome);
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> main
  displayBCB = '';
  displayHome = '';
  paddingHome = 0;
@@ -64,8 +80,11 @@ console.log(this.routerHome);
  routerHome: string = '/';
  routerBCB: string = 'bancanbiet';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> main
    colorTextDanhMuc = '';
    colorBackgroundDanhMuc = '';
    colorTextTienIch = '';
@@ -204,9 +223,9 @@ setTitle(urls: string, index: any, data: any[], datas: any[], dataItem: any[]){
               console.log(data);
           for (const [s, x] of Object.entries(datas)){
              // if ((s == 'title') || (s == 'thumbnail') || (s == 'pubDate'))
-                   
+
                    dataItem.push(x['title']);
-                   
+
           }
         }
        }
@@ -214,10 +233,10 @@ setTitle(urls: string, index: any, data: any[], datas: any[], dataItem: any[]){
 }
 
 setTime(urls: string, index: any, data: any[], datas: any[], dataItem: any[]) {
-  
+
   const hours = Number(this.jstoday.substr(11, 2));
   const minutes = Number(this.jstoday.substr(14, 2));
-  
+
   //console.log(month);
   this.menu.getData(urls)
     .subscribe((value: any) => {
@@ -228,10 +247,10 @@ setTime(urls: string, index: any, data: any[], datas: any[], dataItem: any[]) {
           for (const [s, x] of Object.entries(data[0]))
             datas.push(x);
           for (const [s, x] of Object.entries(datas)) {
-          
+
             this.descipt.push((JSON.parse(JSON.stringify(x['description']))));
           // console.log(JSON.parse(data[0]));
-           
+
             const minute =  Number(x['pubDate'].substr(14, 2));
             const hour =  Number(x['pubDate'].substr(11, 2));
                if(minute <10 && minute >0)
@@ -240,7 +259,7 @@ setTime(urls: string, index: any, data: any[], datas: any[], dataItem: any[]) {
                   dataItem.push(hour +':'+ minute);
                 }
                 }
-              
+
         }
       }
     });
