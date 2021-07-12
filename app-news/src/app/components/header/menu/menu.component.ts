@@ -1,19 +1,10 @@
 
 import { Component, Injectable, Input, OnInit } from '@angular/core';
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 import { formatDate } from '@angular/common';
 import { AppComponent } from 'src/app/app.component';
 import { BodyCenterComponent } from '../../body/page-body/body-center/body-center.component';
 import { Router } from '@angular/router';
 
-<<<<<<< HEAD
-
-import { Router } from '@angular/router';
-=======
->>>>>>> main
 
 @Component({
   selector: 'app-menu',
@@ -35,12 +26,8 @@ export class MenuComponent implements OnInit {
     this.dataTime = [];
     this.setTitle(this.urlNew,0,[],[],this.dataTitle);
     this.setTime(this.urlNew,0,[],[],this.dataTime);
-<<<<<<< HEAD
-    if (this.router.url == '/bancanbiet'){
-=======
 
      if (this.router.url == '/bancanbiet'){
->>>>>>> main
       this.titleBCB = 'TIN TỨC NHANH';
       this.titleHome = 'BẠN CẦN BIẾT';
       this.paddingHome = 10;
@@ -66,10 +53,7 @@ export class MenuComponent implements OnInit {
 console.log(this.routerBCB);
 console.log(this.routerHome);
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> main
+
  displayBCB = '';
  displayHome = '';
  paddingHome = 0;
@@ -80,11 +64,6 @@ console.log(this.routerHome);
  routerHome: string = '/';
  routerBCB: string = 'bancanbiet';
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> main
    colorTextDanhMuc = '';
    colorBackgroundDanhMuc = '';
    colorTextTienIch = '';
