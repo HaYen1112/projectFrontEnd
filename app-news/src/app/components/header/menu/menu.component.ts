@@ -1,6 +1,6 @@
 
 import { Component, Injectable, Input, OnInit } from '@angular/core';
-import { Component, Input, OnInit } from '@angular/core';
+import { formatDate } from '@angular/common';
 import { AppComponent } from 'src/app/app.component';
 import { BodyCenterComponent } from '../../body/page-body/body-center/body-center.component';
 
@@ -12,12 +12,19 @@ import { BodyCenterComponent } from '../../body/page-body/body-center/body-cente
 
 })
 export class MenuComponent implements OnInit {
- @Input() dataNew: any[];
- private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fthoi-su%2Fvuot-qua-covid-19.rss';
-  constructor() {
-    this.dataNew = [];
-   
-  }
+ @Input() dataTitle: any[];
+ @Input() dataTime: any[];
+ @Input() descipt: any[] = [];
+ today = new Date();
+ jstoday = formatDate(this.today, 'yyyy-MM-dd hh:mm:ss aa', 'en-US', '+0700');
+ stringJson: any;
+ private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fhome.rss';
+  constructor(private menu : AppComponent) {
+    this.dataTitle = [];
+    this.dataTime = [];
+    this.setTitle(this.urlNew,0,[],[],this.dataTitle);
+    this.setTime(this.urlNew,0,[],[],this.dataTime);
+    }
    colorTextDanhMuc = '';
    colorBackgroundDanhMuc = '';
    colorTextTienIch = '';
@@ -160,7 +167,66 @@ if (index == 'bancanbiet') {
   this.indVL = 0;  this.indTK = 0; this.indLH = 0;  this.indDN = 0;
 }
 }
+setTitle(url: string, index: any, data: any[], datas: any[], dataItem: any[]){
+  this.menu.getData(url)
+  .subscribe(value => {
+    for (const [k, v] of Object.entries(value)) {
+      index++;
+      if (index == 3){
+        data.push(v);
+        for (const [s, x] of Object.entries(data[0]))
+              datas.push(x);
+              console.log(data);
+          for (const [s, x] of Object.entries(datas)){
+             // if ((s == 'title') || (s == 'thumbnail') || (s == 'pubDate'))
+                   
+                   dataItem.push(x['title']);
+                   
+          }
+        }
+       }
+  });
+}
 
+setTime(url: string, index: any, data: any[], datas: any[], dataItem: any[]) {
+  
+  const hours = Number(this.jstoday.substr(11, 2));
+  const minutes = Number(this.jstoday.substr(14, 2));
+  
+  //console.log(month);
+  this.menu.getData(url)
+    .subscribe((value: any) => {
+      for (const [k, v] of Object.entries(value)) {
+        index++;
+        if (index == 3) {
+          data.push(v);
+          for (const [s, x] of Object.entries(data[0]))
+            datas.push(x);
+          for (const [s, x] of Object.entries(datas)) {
+          
+            this.descipt.push((JSON.parse(JSON.stringify(x['description']))));
+          // console.log(JSON.parse(data[0]));
+           
+            const minute =  Number(x['pubDate'].substr(14, 2));
+            const hour =  Number(x['pubDate'].substr(11, 2));
+               if(minute <10 && minute >0)
+                  dataItem.push(hour +':0'+ minute);
+                else{
+                  dataItem.push(hour +':'+ minute);
+                }
+                }
+              
+        }
+      }
+    });
+}
+
+getDataTitle(): any[]{
+  return this.dataTitle;
+}
+getDataTime(): any[]{
+  return this.dataTime;
+}
   ngOnInit(): void {
 
   }
@@ -176,3 +242,4 @@ class Style {
 class NewStyle {
   'display': string = 'none';
 }
+

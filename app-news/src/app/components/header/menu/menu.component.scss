@@ -296,7 +296,7 @@ li.dropdown {
     height:400px;
     display: block;
     padding-right: 5px;
-    width: 98%;
+    width: 100%;
     .item{
       height: 80px;
       width: 100%;
@@ -306,11 +306,13 @@ li.dropdown {
         font-size: 15px;
         color: #888;
         float: left;
-        width: 40%;
+        width: 20%;
         padding-top: 10px;
         color: #2e3735;
+        text-align: center;
       }
       a{
+          width: 80%;
           font-size: 13px;
           color: #00739f;
           text-decoration: none;
