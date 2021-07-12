@@ -29,11 +29,11 @@ export class FeatureComponent implements OnInit {
       this.dataTechnology = [];
       this.dataTravel = [];
 
-      this.underLeft.setDatas(this.urlLife, 0 , [], [], this.dataLife);
-      this.underLeft.setDatas(this.urlTravel, 0 , [], [], this.dataTravel);
-      this.underLeft.setDatas(this.urlFashion, 0 , [], [], this.dataFashion);
-      this.underLeft.setDatas(this.urlSport, 0, [], [], this.dataSport);
-      this.underLeft.setDatas(this.urlTechnology, 0 , [], [], this.dataTechnology);
+      this.underLeft.setDatas(this.urlLife, this.dataLife);
+      this.underLeft.setDatas(this.urlTravel, this.dataTravel);
+      this.underLeft.setDatas(this.urlFashion, this.dataFashion);
+      this.underLeft.setDatas(this.urlSport, this.dataSport);
+      this.underLeft.setDatas(this.urlTechnology, this.dataTechnology);
     //  console.log(this.dataItem);
      }
      getDataLife(): any[]{

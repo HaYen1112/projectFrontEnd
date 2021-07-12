@@ -32,12 +32,12 @@ export class NewsComponent implements OnInit {
     this.dataVideo =[];
     //link
     this.dataLink = [];
-    this.newBodyCenter.setDatas(this.urlKDMN, 0 , [], [], this.dataKDMN);
-    this.newBodyCenter.setDatas(this.urlLD, 0 , [], [], this.dataLD);
-    this.newBodyCenter.setDatas(this.urlKP, 0 , [], [], this.dataKP);
-    this.newBodyCenter.setDatas(this.urlSVK, 0, [], [], this.dataSVK);
-    this.newBodyCenter.setDatas(this.urlVideo,0,[],[],this.dataVideo);
-    this.newBodyCenter.setLink(this.urlVideo,0,[],[],this.dataLink);
+    this.newBodyCenter.setDatas(this.urlKDMN, this.dataKDMN);
+    this.newBodyCenter.setDatas(this.urlLD, this.dataLD);
+    this.newBodyCenter.setDatas(this.urlKP, this.dataKP);
+    this.newBodyCenter.setDatas(this.urlSVK, this.dataSVK);
+    this.newBodyCenter.setDatas(this.urlVideo, this.dataVideo);
+    this.newBodyCenter.setLink(this.urlVideo, this.dataLink);
   }
   ngOnInit(): void {
   }

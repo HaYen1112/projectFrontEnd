@@ -3,6 +3,7 @@ import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { formatDate } from '@angular/common';
 import { AppComponent } from 'src/app/app.component';
 import { BodyCenterComponent } from '../../body/page-body/body-center/body-center.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { BodyCenterComponent } from '../../body/page-body/body-center/body-cente
 
 })
 export class MenuComponent implements OnInit {
+
  @Input() dataTitle: any[];
  @Input() dataTime: any[];
  @Input() descipt: any[] = [];
@@ -19,12 +21,49 @@ export class MenuComponent implements OnInit {
  jstoday = formatDate(this.today, 'yyyy-MM-dd hh:mm:ss aa', 'en-US', '+0700');
  stringJson: any;
  private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fhome.rss';
-  constructor(private menu : AppComponent) {
+  constructor(private menu : AppComponent, private router: Router) {
     this.dataTitle = [];
     this.dataTime = [];
     this.setTitle(this.urlNew,0,[],[],this.dataTitle);
     this.setTime(this.urlNew,0,[],[],this.dataTime);
+    
+     if (this.router.url == '/bancanbiet'){
+      this.titleBCB = 'TIN TỨC NHANH';
+      this.titleHome = 'BẠN CẦN BIẾT';
+      this.paddingHome = 10;
+      this.paddingBCB = 15;
+      this.displayHome = 'none';
+      this.displayBCB = 'none'
+      this.fontw = 'bold';
+      this.routerBCB = '/';
+      this.routerHome = 'bancanbiet';
+
+}
+    if (this.router.url == '/'){
+      this.titleHome = 'TIN TỨC NHANH';
+      this.titleBCB = 'BẠN CẦN BIẾT';
+      this.paddingHome = 0;
+      this.paddingBCB = 10;
+      this.displayHome = '';
+      this.displayBCB = ''
+      this.fontw = '';
+      this.routerBCB = 'bancanbiet';
+      this.routerHome = '/';
+}
+console.log(this.routerBCB);
+console.log(this.routerHome);
     }
+ @Input() dataNew: any[];
+ displayBCB = '';
+ displayHome = '';
+ paddingHome = 0;
+ paddingBCB = 0;
+ titleHome = '';
+ titleBCB = '';
+ fontw ='';
+ routerHome: string = '/';
+ routerBCB: string = 'bancanbiet';
+
    colorTextDanhMuc = '';
    colorBackgroundDanhMuc = '';
    colorTextTienIch = '';
@@ -35,8 +74,6 @@ export class MenuComponent implements OnInit {
    colorBackgroundDCB = '';
    colorTextVL = '';
    colorBackgroundVL = '';
-   colorTextBCB = '';
-   colorBackgroundBCB = '';
    colorTextDN = '';
    colorBackgroundDN = '';
    colorTextLH = '';
@@ -46,10 +83,9 @@ export class MenuComponent implements OnInit {
    indTK = 0;
    indDCB = 0;
    indVL = 0;
-   indBCB = 0;
    indLH = 0;
    indDN = 0;
-  @Input() style = new NewStyle();
+@Input() style = new NewStyle();
 setColor(index :any){
    this.colorTextDanhMuc = '';
    this.colorBackgroundDanhMuc = '';
@@ -61,8 +97,6 @@ setColor(index :any){
    this.colorBackgroundDCB = '';
    this.colorTextVL = '';
    this.colorBackgroundVL = '';
-   this.colorTextBCB = '';
-   this.colorBackgroundBCB = '';
    this.colorTextDN = '';
    this.colorBackgroundDN = '';
    this.colorTextLH = '';
@@ -80,14 +114,14 @@ setColor(index :any){
            this.indDM = 0;
         }
         this.indTK = 0;  this.indTI = 0;  this.indDCB = 0;
-        this.indVL = 0;  this.indBCB = 0; this.indLH = 0;  this.indDN = 0;
+        this.indVL = 0;  this.indLH = 0;  this.indDN = 0;
     }
     if (index == 'tienich') {
       this.colorTextTienIch = 'black';
       this.colorBackgroundTienIch = 'white';
       this.indTI++;
       this.indTK = 0;  this.indDM = 0;  this.indDCB = 0;
-      this.indVL = 0;  this.indBCB = 0; this.indLH = 0;  this.indDN = 0;
+      this.indVL = 0;  this.indLH = 0;  this.indDN = 0;
       if (this.indTI > 1) {
         this.colorTextTienIch = '';
         this.colorBackgroundTienIch = '';
@@ -104,7 +138,7 @@ setColor(index :any){
       this.indTK = 0;
     }
     this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-    this.indVL = 0;  this.indBCB = 0; this.indLH = 0;  this.indDN = 0;
+    this.indVL = 0;  this.indLH = 0;  this.indDN = 0;
 }
 if (index == 'danhchoban') {
   this.colorTextDCB = 'black';
@@ -116,7 +150,7 @@ if (index == 'danhchoban') {
     this.indDCB = 0;
   }
   this.indDM = 0;  this.indTI = 0;  this.indTK = 0;
-  this.indVL = 0;  this.indBCB = 0; this.indLH = 0;  this.indDN = 0;
+  this.indVL = 0;  this.indLH = 0;  this.indDN = 0;
 }
 if (index == 'vieclam') {
   this.colorTextVL = 'black';
@@ -128,7 +162,7 @@ if (index == 'vieclam') {
     this.indVL = 0;
   }
   this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-  this.indTK = 0;  this.indBCB = 0; this.indLH = 0;  this.indDN = 0;
+  this.indTK = 0;  this.indLH = 0;  this.indDN = 0;
 }
 if (index == 'lienhe') {
   this.colorTextLH = 'black';
@@ -140,7 +174,7 @@ if (index == 'lienhe') {
     this.indLH = 0;
   }
   this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-  this.indVL = 0;  this.indBCB = 0; this.indTK = 0;  this.indDN = 0;
+  this.indVL = 0;  this.indTK = 0;  this.indDN = 0;
 }
 if (index == 'dangnhap') {
   this.colorTextDN = 'black';
@@ -152,20 +186,9 @@ if (index == 'dangnhap') {
     this.indDN = 0;
   }
   this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-  this.indVL = 0;  this.indBCB = 0; this.indLH = 0;  this.indTK = 0;
+  this.indVL = 0;  this.indLH = 0;  this.indTK = 0;
 }
-if (index == 'bancanbiet') {
-  this.colorTextBCB = 'black';
-  this.colorBackgroundBCB = 'white';
-  this.indBCB++;
-  if (this.indBCB > 1) {
-    this.colorTextBCB = '';
-    this.colorBackgroundBCB = '';
-    this.indBCB = 0;
-  }
-  this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-  this.indVL = 0;  this.indTK = 0; this.indLH = 0;  this.indDN = 0;
-}
+
 }
 setTitle(urls: string, index: any, data: any[], datas: any[], dataItem: any[]){
   this.menu.getData(urls)
