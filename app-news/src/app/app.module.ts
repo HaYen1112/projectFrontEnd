@@ -44,7 +44,7 @@ import { UnderRightComponent } from './components/you-need-know/under-right/unde
 const route: Routes = [
   { path: 'last-new-readings', component: LastNewReadingsComponent },
   { path: 'footer', component: FooterComponent},
-  { path: 'timkiem1', component: PageBodyComponent}
+  { path: 'bancanbiet', component: YouNeedKnowComponent}
 ]
 
 @NgModule({
@@ -89,7 +89,7 @@ const route: Routes = [
   ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule, AppRoutingModule,
-     RouterModule.forChild(route), HttpClientJsonpModule, 
+     RouterModule.forChild(route), HttpClientJsonpModule,
 
 
   ],

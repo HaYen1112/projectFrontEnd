@@ -313,7 +313,7 @@
       </div>
     </li>
     <li class = "item item--dcb" [ngStyle]="{backgroundColor: colorBackgroundDCB}">
-      <a [routerLink]="['/#']" class="parent" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
+      <a [routerLink]="['/bancanbiet']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="parent" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
         <i class="far fa-lightbulb"></i>
         <span> BẠN CẦN BIẾT</span>
       </a>
