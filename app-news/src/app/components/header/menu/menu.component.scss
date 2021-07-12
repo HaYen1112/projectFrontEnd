@@ -269,14 +269,34 @@ li.dropdown {
 }
 //tin moi
 .dropdown-menu-tm{
+  overflow-y: scroll;
+  &::-webkit-scrollbar{
+    width: 4px;
+    background: rgb(146, 170, 216);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #00bfc5; }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+      background-color: #F5F5F5;
+      border-radius: 10px; }
+}
+.dropdown-menu-tm{
   width: 350px !important;
-  height:auto !important;
+  height:400px !important;
   margin-top:17px !important;
   left: -13px !important;
   text-align: left;
+  position: relative;
+  
+  
   .content-tm{
-    height:100%;
+    height:400px;
     display: block;
+    padding-right: 5px;
+    width: 98%;
     .item{
       height: 80px;
       width: 100%;
