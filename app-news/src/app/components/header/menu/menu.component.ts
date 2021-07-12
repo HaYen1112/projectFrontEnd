@@ -1,6 +1,9 @@
+
+import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { Component, Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 import { BodyCenterComponent } from '../../body/page-body/body-center/body-center.component';
+
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +11,6 @@ import { BodyCenterComponent } from '../../body/page-body/body-center/body-cente
   styleUrls: ['./menu.component.scss']
 
 })
-
 export class MenuComponent implements OnInit {
  @Input() dataNew: any[];
  private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fthoi-su%2Fvuot-qua-covid-19.rss';
@@ -40,7 +42,7 @@ export class MenuComponent implements OnInit {
    indBCB = 0;
    indLH = 0;
    indDN = 0;
-
+  @Input() style = new NewStyle();
 setColor(index :any){
    this.colorTextDanhMuc = '';
    this.colorBackgroundDanhMuc = '';
@@ -58,13 +60,16 @@ setColor(index :any){
    this.colorBackgroundDN = '';
    this.colorTextLH = '';
    this.colorBackgroundLH = '';
+   this.style = new NewStyle();
     if (index == 'chuyenmuc') {
         this.colorBackgroundDanhMuc = 'white';
         this.colorTextDanhMuc = 'black';
+        this.style = new Style();
         this.indDM++;
         if (this.indDM > 1) {
           this.colorBackgroundDanhMuc = '';
           this.colorTextDanhMuc = '';
+          this.style = new NewStyle();
            this.indDM = 0;
         }
         this.indTK = 0;  this.indTI = 0;  this.indDCB = 0;
@@ -159,5 +164,15 @@ if (index == 'bancanbiet') {
   ngOnInit(): void {
 
   }
-
+}
+Injectable();
+class Style {
+    'position': string = 'absolute';
+    'top.px': number = -5;
+    'left.px': number = 0;
+    'color': string = 'blue';
+    'display': string = 'block';
+}
+class NewStyle {
+  'display': string = 'none';
 }

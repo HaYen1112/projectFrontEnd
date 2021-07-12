@@ -37,6 +37,9 @@ import { MaybeYouAreInterestedComponent } from './components/last-new-readings/l
 import { NewsForYouComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/news-for-you/news-for-you.component';
 import { AppRoutingModule } from './components/app-routing/app-routing.module';
 import { formatDate } from '@angular/common';
+import { YouNeedKnowComponent } from './components/you-need-know/you-need-know.component';
+import { UnderLeftComponent } from './components/you-need-know/under-left/under-left.component';
+import { UnderRightComponent } from './components/you-need-know/under-right/under-right.component';
 
 const route: Routes = [
   { path: 'last-new-readings', component: LastNewReadingsComponent },
@@ -78,6 +81,9 @@ const route: Routes = [
     ReadingsMoreComponent,
     MaybeYouAreInterestedComponent,
     NewsForYouComponent,
+    YouNeedKnowComponent,
+    UnderLeftComponent,
+    UnderRightComponent,
 
 
   ],

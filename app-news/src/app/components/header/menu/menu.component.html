@@ -1,12 +1,12 @@
 
 <div class="site-header__content">
   <ul class="site-header__tool left btn-group">
-    <li class = "item item--dm dropdown" [ngStyle]="{backgroundColor: colorBackgroundDanhMuc}">
+    <li class = "item item--dm " [ngStyle]="{backgroundColor: colorBackgroundDanhMuc}">
       <a (click)="setColor('chuyenmuc')" [ngStyle]="{color:colorTextDanhMuc}" href="#chuyenmuc" class=" chuyenmuc parent dropbtn" id="navbardrop" data-toggle="dropdown">
         <i class="fas fa-bars"></i>
         <span>CHUYÊN MỤC</span>
       </a>
-      <div class="dropdown-menu">
+      <div class="dropdown-menu-cm" [ngStyle]= "style">
         <div class="content">
           <table>
             <tr>
@@ -254,7 +254,7 @@
       </a>
       <div class="dropdown-menu dropdown-menu-ti">
         <div class="content content-ti">
-          <li class = "item-ti item--tt">
+          <li class = "item-ti item--tt" style="padding-left: 140px;">
             <a href="#thanhtoan" class="parent">
               <i class="fas fa-wallet"></i>
               <span> THANH TOÁN </span>
