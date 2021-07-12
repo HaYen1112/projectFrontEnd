@@ -44,8 +44,8 @@
     .dropdown {
       display: inline-block;
       .dropdown-menu{
-        width: 1290px;
-        height: 600px;
+        width: 1350px;
+        height: 500px;
         background-color: white;
         padding: 0;
         margin-right: -15px;
@@ -147,11 +147,10 @@
 li.dropdown {
   display: inline-block;
  .dropdown-menu-ti{
-  width: 1262px !important;
+  width: 1270px !important;
   height:73px !important;
-  margin-top:17px !important;
-  left: -13px !important;
-
+  margin-top:20px !important;
+  left: -10px !important;
   .content-ti{
     height:100%;
     font-size: 14px;
@@ -159,6 +158,7 @@ li.dropdown {
     border-bottom: none !important;
     margin-top: 5px;
     margin-left: -5px;
+    text-align: center;
     .item--tt{
       border-left:none !important;
     }
@@ -259,7 +259,7 @@ li.dropdown {
         .fab{
           width: 90%;
         }
-        
+
 
       }
 
@@ -301,21 +301,36 @@ li.dropdown {
       }
     }
 
-    
+
   }
 
 
-  .dropdown-menu{
-    width: 1272px;
-    height: 600px;
+  .dropdown-menu-cm{
+    width: 1275px;
+    height: 450px;
     display: none;
-  position: fixed;
-  display: block;
-  background-color: white;
-  padding: 0;
-  margin-left: -15px;
-  margin-top: 69px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    position: fixed;
+    display: block;
+    background-color: white;
+    padding: 0;
+    margin-left: -15px;
+    margin-top: 69px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    overflow-y: scroll;
+        &::-webkit-scrollbar{
+          width: 4px;
+          background: grey;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+          background-color: #00bfc5;
+        }
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            background-color: #F5F5F5;
+            border-radius: 10px;
+        }
   .content{
     border-bottom: 1px solid rgba(66, 65, 65, 0.281);
     text-decoration: none;

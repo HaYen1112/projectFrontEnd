@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Injectable, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 
 })
-
 export class MenuComponent implements OnInit {
 
   constructor() {
@@ -35,7 +34,7 @@ export class MenuComponent implements OnInit {
    indBCB = 0;
    indLH = 0;
    indDN = 0;
-
+  @Input() style = new NewStyle();
 setColor(index :any){
    this.colorTextDanhMuc = '';
    this.colorBackgroundDanhMuc = '';
@@ -53,13 +52,16 @@ setColor(index :any){
    this.colorBackgroundDN = '';
    this.colorTextLH = '';
    this.colorBackgroundLH = '';
+   this.style = new NewStyle();
     if (index == 'chuyenmuc') {
         this.colorBackgroundDanhMuc = 'white';
         this.colorTextDanhMuc = 'black';
+        this.style = new Style();
         this.indDM++;
         if (this.indDM > 1) {
           this.colorBackgroundDanhMuc = '';
           this.colorTextDanhMuc = '';
+          this.style = new NewStyle();
            this.indDM = 0;
         }
         this.indTK = 0;  this.indTI = 0;  this.indDCB = 0;
@@ -153,5 +155,15 @@ if (index == 'bancanbiet') {
   ngOnInit(): void {
 
   }
-
+}
+Injectable();
+class Style {
+    'position': string = 'absolute';
+    'top.px': number = -5;
+    'left.px': number = 0;
+    'color': string = 'blue';
+    'display': string = 'block';
+}
+class NewStyle {
+  'display': string = 'none';
 }
