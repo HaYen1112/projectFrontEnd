@@ -167,8 +167,8 @@ if (index == 'bancanbiet') {
   this.indVL = 0;  this.indTK = 0; this.indLH = 0;  this.indDN = 0;
 }
 }
-setTitle(url: string, index: any, data: any[], datas: any[], dataItem: any[]){
-  this.menu.getData(url)
+setTitle(urls: string, index: any, data: any[], datas: any[], dataItem: any[]){
+  this.menu.getData(urls)
   .subscribe(value => {
     for (const [k, v] of Object.entries(value)) {
       index++;
@@ -188,13 +188,13 @@ setTitle(url: string, index: any, data: any[], datas: any[], dataItem: any[]){
   });
 }
 
-setTime(url: string, index: any, data: any[], datas: any[], dataItem: any[]) {
+setTime(urls: string, index: any, data: any[], datas: any[], dataItem: any[]) {
   
   const hours = Number(this.jstoday.substr(11, 2));
   const minutes = Number(this.jstoday.substr(14, 2));
   
   //console.log(month);
-  this.menu.getData(url)
+  this.menu.getData(urls)
     .subscribe((value: any) => {
       for (const [k, v] of Object.entries(value)) {
         index++;
