@@ -13,7 +13,7 @@ export class WordsAdLeftComponent implements OnInit {
   private urlLife = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fhome.rss'.trim();
     constructor(private underLeft: BodyCenterComponent) {
       this.dataItem = [];
-      this.underLeft.setDatas(this.urlLife, 0 , [], [], this.dataItem);
+      this.underLeft.setDatas(this.urlLife, this.dataItem);
 
      }
   ngOnInit(): void {
