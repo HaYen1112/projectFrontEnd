@@ -254,7 +254,7 @@
       </a>
       <div class="dropdown-menu dropdown-menu-ti">
         <div class="content content-ti">
-          <li class = "item-ti item--tt" style="padding-left: 140px;">
+          <li class = "item-ti item--tt" style="padding-left: 70px;">
             <a href="#thanhtoan" class="parent">
               <i class="fas fa-wallet"></i>
               <span> THANH TOÁN </span>
@@ -312,10 +312,10 @@
         </div>
       </div>
     </li>
-    <li class = "item item--dcb" [ngStyle]="{backgroundColor: colorBackgroundDCB}">
-      <a [routerLink]="['/#']" class="parent" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
-        <i class="far fa-lightbulb"></i>
-        <span> BẠN CẦN BIẾT</span>
+    <li class = "item item--dcb"[ngStyle]="{paddingTop: paddingBCB + 'px' }">
+      <a [routerLink]="['/', routerBCB]" class="parent">
+        <i [ngStyle]="{display: displayBCB}" class="far fa-lightbulb"></i>
+        <span [ngStyle]="{fontWeight: fontw}"> {{titleBCB}} </span>
       </a>
     </li>
     <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL}">
@@ -325,11 +325,10 @@
       </a>
     </li>
   </ul>
-  <h1 class = "logo">
-    <a href="" class = "logo-index">
-     <b><span style="font-family: inherit;">TIN TỨC NHANH</span></b>
-      <h6 style="font-size: 14px;">DIỄN ĐÀN TIN TỨC CỦA MỌI NHÀ</h6>
-      <!-- <span class = "logo-chu">DIỄN ĐÀN CỦA HỘI LIÊN HIỆP THANH NÊN VIỆT NAM</span> -->
+  <h1 class = "logo" [ngStyle]="{paddingTop: paddingHome + 'px'}">
+    <a [routerLink]="['/', routerHome]" class = "logo-index">
+     <b><span style="font-family: inherit;">{{titleHome}} </span></b>
+      <h6 [ngStyle]="{display: displayHome}" style="font-size: 14px;">DIỄN ĐÀN TIN TỨC CỦA MỌI NHÀ</h6>
     </a>
   </h1>
   <ul class="site-header__tool right btn-group">
@@ -339,15 +338,15 @@
           <span>TÌM KIẾM</span>
         </a>
         <div class="dropdown-menu dropdown-menu-tk">
-          <div class="content">
+          <div class="content" style="padding-left: 60px;">
               <input type="text" class="input-tk" placeholder="Tìm Kiếm..." >
           </div>
         </div>
       </li>
-    <li class = "item item--bcb" [ngStyle]="{backgroundColor: colorBackgroundBCB}">
-      <a href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('bancanbiet')" [ngStyle]="{color: colorTextBCB}">
+    <li class = "item item--bcb" [ngStyle]="{backgroundColor: colorBackgroundDCB}">
+      <a href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
         <i class="far fa-bell"></i>
-        <span>TIN MỚI<img _ngcontent-nyt-c18="" src="https://static.thanhnien.vn/thethao2021/w/app_themes/img/hot.png" data-was-processed="true" class="loading" style="margin-top: -5px;"></span>
+        <span>TIN MỚI<img _ngcontent-nyt-c18="" width="25px" height="25px" src="assets/images/icon.gif" data-was-processed="true" class="loading" style="margin-top: -5px;"></span>
       </a>
       <div class="dropdown-menu dropdown-menu-tm">
         <div class="content content-tm">
