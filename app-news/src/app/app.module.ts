@@ -43,7 +43,7 @@ import { UnderRightComponent } from './components/you-need-know/under-right/unde
 
 const route: Routes = [
   { path: 'last-new-readings', component: LastNewReadingsComponent },
-  { path: 'footer', component: FooterComponent},
+  { path: '', component: PageBodyComponent},
   { path: 'bancanbiet', component: YouNeedKnowComponent}
 ]
 

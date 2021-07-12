@@ -17,63 +17,41 @@ export class BodyCenterComponent implements OnInit {
   }
 
 
-  setDatas(url: string, index: any, data: any[], datas: any[], dataItem: any[]) {
+  setDatas(url: string, dataItem: any[]) {
     const days = Number(this.jstoday.substr(8, 2));
     const hours = Number(this.jstoday.substr(11, 2));
     const minutes = Number(this.jstoday.substr(14, 2));
     const months = Number(this.jstoday.substr(5, 2));
-    //console.log(month);
     this.com.getData(url)
       .subscribe((value: any) => {
-        for (const [k, v] of Object.entries(value)) {
-          index++;
-          if (index == 3) {
-            data.push(v);
-            for (const [s, x] of Object.entries(data[0]))
-              datas.push(x);
-            for (const [s, x] of Object.entries(datas)) {
-              dataItem.push(x['thumbnail']);
-              dataItem.push(x['title']);
-              this.descipt.push((JSON.parse(JSON.stringify(x['description']))));
-            // console.log(JSON.parse(data[0]));
-              const day = days - Number(x['pubDate'].substr(8, 2));
-              const minute = minutes - Number(x['pubDate'].substr(14, 2));
-              const hour = hours - Number(x['pubDate'].substr(11, 2));
-              const month = months - Number(x['pubDate'].substr(5, 2));
+              dataItem.push(value['items'][0]['thumbnail']);
+              dataItem.push(value['items'][0]['title']);
+             // this.descipt.push((JSON.parse(JSON.stringify(value['items'][0]['description']))));
+              const day = days - Number(value['items'][0]['pubDate'].substr(8, 2));
+              const minute = minutes - Number(value['items'][0]['pubDate'].substr(14, 2));
+              const hour = hours - Number(value['items'][0]['pubDate'].substr(11, 2));
+              const month = months - Number(value['items'][0]['pubDate'].substr(5, 2));
               if (month > 0) {
                 dataItem.push(month + ' tháng trước');
-              } else
-                if (day > 0) {
+                  } else
+              if (day > 0) {
                   dataItem.push(day + ' ngày trước');
-                } else {
-                  if (hour > 0) {
+                  } else {
+              if (hour > 0) {
                     dataItem.push(hour + ' giờ trước');
                   } else {
-                    if (minute > 0) { dataItem.push(minute + ' phút trước') }
+              if (minute > 0) { dataItem.push(minute + ' phút trước') }
                     else { dataItem.push(hour + 5 + ' giờ trước'); }
                   }
                 }
-
-            }
-          }
-        }
       });
+      console.log(dataItem);
   }
-  @Input() htmls: any[] = [];
-  setLink(url: string, index: any, data: any[], datas: any[], dataItem: any[]) {
+
+  setLink(url: string, dataItem: any[]) {
     this.com.getData(url)
       .subscribe((value: any) => {
-        for (const [k, v] of Object.entries(value)) {
-          index++;
-          if (index == 3) {
-            data.push(v);
-            for (const [s, x] of Object.entries(data[0]))
-              datas.push(x);
-            for (const [s, x] of Object.entries(datas)) {
-              dataItem.push(x['link']);
-            }
-          }
-        }
+         dataItem.push(value['items'][0]['link']);
       });
   }
   ngOnInit(): void {

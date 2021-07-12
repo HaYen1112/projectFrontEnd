@@ -19,20 +19,9 @@ export class TabsComponent implements OnInit {
     this.dataMostRecent =[];
     this.dataQP = [];
     this.dataCN = [];
-    this.underRight.setDatas(this.urlMostRecent, 0, [], [], this.dataMostRecent);
-    this.underRight.setDatas(this.urlOP, 0,[],[], this.dataQP);
-    this.underRight.setDatas(this.urlCN, 0,[],[], this.dataCN);
-
-
-   }
-   getDataMostRecent(): any[]{
-    return this.dataMostRecent;
-  }
-  getDataQP(): any[]{
-    return this.dataQP;
-  }
-  getDataCN(): any[]{
-    return this.dataCN;
+    this.underRight.setDatas(this.urlMostRecent, this.dataMostRecent);
+    this.underRight.setDatas(this.urlOP, this.dataQP);
+    this.underRight.setDatas(this.urlCN, this.dataCN);
   }
 
   ngOnInit(): void {
