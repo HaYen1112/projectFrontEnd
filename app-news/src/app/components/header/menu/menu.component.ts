@@ -1,4 +1,9 @@
+
 import { Component, Injectable, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
+import { BodyCenterComponent } from '../../body/page-body/body-center/body-center.component';
+
 
 @Component({
   selector: 'app-menu',
@@ -7,8 +12,11 @@ import { Component, Injectable, Input, OnInit } from '@angular/core';
 
 })
 export class MenuComponent implements OnInit {
-
+ @Input() dataNew: any[];
+ private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fthoi-su%2Fvuot-qua-covid-19.rss';
   constructor() {
+    this.dataNew = [];
+   
   }
    colorTextDanhMuc = '';
    colorBackgroundDanhMuc = '';
@@ -152,6 +160,7 @@ if (index == 'bancanbiet') {
   this.indVL = 0;  this.indTK = 0; this.indLH = 0;  this.indDN = 0;
 }
 }
+
   ngOnInit(): void {
 
   }
