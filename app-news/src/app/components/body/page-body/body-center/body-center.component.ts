@@ -13,7 +13,6 @@ export class BodyCenterComponent implements OnInit {
   jstoday = formatDate(this.today, 'yyyy-MM-dd hh:mm:ss aa', 'en-US', '+0700');
   stringJson: any;
   constructor(private com: AppComponent) {
-
   }
 
 
@@ -49,7 +48,7 @@ export class BodyCenterComponent implements OnInit {
              }
 
       });
-      console.log(dataItem);
+      // console.log(dataItem);
   }
 
   setLink(url: string, dataItem: any[]) {
