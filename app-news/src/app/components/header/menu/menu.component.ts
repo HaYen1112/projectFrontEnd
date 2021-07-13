@@ -38,6 +38,8 @@ export class MenuComponent implements OnInit {
     this.dataTM = [];
     this.setDataTM(this.urlNew);
     console.log(this.dataCM);
+    this.colorTextDN = '';
+    this.colorBackgroundDN = '';
      if (this.router.url == '/bancanbiet'){
       this.titleBCB = 'TIN TỨC NHANH';
       this.titleHome = 'BẠN CẦN BIẾT';
@@ -60,6 +62,13 @@ export class MenuComponent implements OnInit {
       this.fontw = '';
       this.routerBCB = 'bancanbiet';
       this.routerHome = '/';
+}
+if (this.router.url == '/dangnhap') {
+  this.titleHome = 'TIN TỨC NHANH';
+  this.titleBCB = 'BẠN CẦN BIẾT';
+  this.paddingBCB = 10;
+  this.colorTextDN = 'black';
+  this.colorBackgroundDN = 'white';
 }
 }
 getDisplay(title: string){
@@ -118,8 +127,6 @@ setColor(index :any){
    this.colorBackgroundDCB = '';
    this.colorTextVL = '';
    this.colorBackgroundVL = '';
-   this.colorTextDN = '';
-   this.colorBackgroundDN = '';
    this.colorTextLH = '';
    this.colorBackgroundLH = '';
    this.style = new NewStyle();
@@ -135,14 +142,14 @@ setColor(index :any){
            this.indDM = 0;
         }
         this.indTK = 0;  this.indTI = 0;  this.indDCB = 0;
-        this.indVL = 0;  this.indLH = 0;  this.indDN = 0;
+        this.indVL = 0;  this.indLH = 0;
     }
     if (index == 'tienich') {
       this.colorTextTienIch = 'black';
       this.colorBackgroundTienIch = 'white';
       this.indTI++;
       this.indTK = 0;  this.indDM = 0;  this.indDCB = 0;
-      this.indVL = 0;  this.indLH = 0;  this.indDN = 0;
+      this.indVL = 0;  this.indLH = 0;
       if (this.indTI > 1) {
         this.colorTextTienIch = '';
         this.colorBackgroundTienIch = '';
@@ -159,7 +166,7 @@ setColor(index :any){
       this.indTK = 0;
     }
     this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-    this.indVL = 0;  this.indLH = 0;  this.indDN = 0;
+    this.indVL = 0;  this.indLH = 0;
 }
 if (index == 'danhchoban') {
   this.colorTextDCB = 'black';
@@ -171,7 +178,7 @@ if (index == 'danhchoban') {
     this.indDCB = 0;
   }
   this.indDM = 0;  this.indTI = 0;  this.indTK = 0;
-  this.indVL = 0;  this.indLH = 0;  this.indDN = 0;
+  this.indVL = 0;  this.indLH = 0;
 }
 if (index == 'vieclam') {
   this.colorTextVL = 'black';
@@ -183,7 +190,7 @@ if (index == 'vieclam') {
     this.indVL = 0;
   }
   this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-  this.indTK = 0;  this.indLH = 0;  this.indDN = 0;
+  this.indTK = 0;  this.indLH = 0;
 }
 if (index == 'lienhe') {
   this.colorTextLH = 'black';
@@ -195,21 +202,8 @@ if (index == 'lienhe') {
     this.indLH = 0;
   }
   this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-  this.indVL = 0;  this.indTK = 0;  this.indDN = 0;
+  this.indVL = 0;  this.indTK = 0;
 }
-if (index == 'dangnhap') {
-  this.colorTextDN = 'black';
-  this.colorBackgroundDN = 'white';
-  this.indDN++;
-  if (this.indDN > 1) {
-    this.colorTextDN = '';
-    this.colorBackgroundDN = '';
-    this.indDN = 0;
-  }
-  this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-  this.indVL = 0;  this.indLH = 0;  this.indTK = 0;
-}
-
 }
   ngOnInit(): void {
 

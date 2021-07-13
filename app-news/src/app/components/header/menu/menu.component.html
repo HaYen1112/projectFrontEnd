@@ -84,16 +84,16 @@
         </div>
       </div>
     </li>
-    <li class = "item item--dcb"[ngStyle]="{paddingTop: paddingBCB + 'px' }">
-      <a [routerLink]="['/', routerBCB]" class="parent">
-        <i [ngStyle]="{display: displayBCB}" class="far fa-lightbulb"></i>
-        <span [ngStyle]="{fontWeight: fontw}"> {{titleBCB}} </span>
-      </a>
-    </li>
     <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL}">
       <a [routerLink]="['/#']" class="parent" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
         <i class="fas fa-briefcase"></i>
         <span>VIỆC LÀM</span>
+      </a>
+    </li>
+    <li class = "item item--dcb"[ngStyle]="{paddingTop: paddingBCB + 'px' }">
+      <a [routerLink]="['/', routerBCB]" class="parent">
+        <i [ngStyle]="{display: displayBCB}" class="far fa-lightbulb"></i>
+        <span [ngStyle]="{fontWeight: fontw}"> {{titleBCB}} </span>
       </a>
     </li>
   </ul>
@@ -162,7 +162,7 @@
       </div>
     </li>
     <li class = "item item--dn" [ngStyle]="{backgroundColor: colorBackgroundDN}">
-      <a [routerLink]="['/#']" (click)="setColor('dangnhap')" [ngStyle]="{color: colorTextDN}" class="parent">
+      <a [routerLink]="['/dangnhap']" [ngStyle]="{color: colorTextDN}" class="parent">
         <i class="far fa-user"></i>
         <span>ĐĂNG NHẬP</span>
       </a>

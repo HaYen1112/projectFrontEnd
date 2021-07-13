@@ -109,9 +109,7 @@
       text-decoration: none;
     }
     //bỏ border right việc làm
-    .item--vl{
-      border-right: none !important;
-    }
+    
     .item--lh{
       margin-right: -30px;
     }
@@ -119,6 +117,9 @@
     .item--dn{
       border-right: none !important;
       margin-left: 30px;
+    }
+    .item--dcb{
+      border-right: none !important;
     }
     .item{
       padding-top: 12px;
