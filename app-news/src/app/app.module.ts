@@ -25,7 +25,7 @@ import { TechNewsComponent } from './components/body/page-body/body-center/under
 import { LastNewReadingsComponent } from './components/last-new-readings/last-new-readings.component';
 import { LastnewMenuComponent } from './components/last-new-readings/lastnew-menu/lastnew-menu.component';
 import { LastnewBodyReadingComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading.component';
-import { HttpClientJsonpModule, HttpClientModule, HttpErrorResponse } from '@angular/common/http';
+import { HttpClientJsonpModule, HttpClientModule, HttpContextToken, HttpErrorResponse } from '@angular/common/http';
 import { Router, RouterLink, RouterLinkActive, RouterModule, Routes} from '@angular/router';
 import { LastnewBodyReadingLeftComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/lastnew-body-reading-left.component';
 import { LastnewBodyReadingRightComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-right/lastnew-body-reading-right.component';
@@ -40,13 +40,17 @@ import { formatDate } from '@angular/common';
 import { YouNeedKnowComponent } from './components/you-need-know/you-need-know.component';
 import { UnderLeftComponent } from './components/you-need-know/under-left/under-left.component';
 import { UnderRightComponent } from './components/you-need-know/under-right/under-right.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormLoginComponent } from './components/login/form-login/form-login.component';
 
 const route: Routes = [
   { path: 'last-new-readings', component: LastNewReadingsComponent },
   { path: '', component: PageBodyComponent},
-  { path: 'bancanbiet', component: YouNeedKnowComponent}
+  { path: 'bancanbiet', component: YouNeedKnowComponent},
+  { path: 'dangnhap', component: LoginComponent}
 ]
-
+export const ERROR_COUNT = new HttpContextToken(() => 0);
+export const RETRY_COUNT = new HttpContextToken(() => 3);
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,6 +88,8 @@ const route: Routes = [
     YouNeedKnowComponent,
     UnderLeftComponent,
     UnderRightComponent,
+    LoginComponent,
+    FormLoginComponent,
 
 
   ],

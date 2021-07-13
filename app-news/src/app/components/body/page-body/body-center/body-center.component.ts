@@ -6,7 +6,7 @@ import { AppComponent } from 'src/app/app.component';
   templateUrl: './body-center.component.html',
   styleUrls: ['./body-center.component.scss']
 })
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class BodyCenterComponent implements OnInit {
   @Input() descipt: any[] = [];
   today = new Date();
