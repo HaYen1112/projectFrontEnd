@@ -350,67 +350,12 @@
       </a>
       <div class="dropdown-menu dropdown-menu-tm">
         <div class="content content-tm">
-          <div class="item">
+          <div class="item" *ngFor="let data of dataTM">
             <div class="meta">
-              <time>{{dataTime[0]}}</time>
+              <time>{{data.time}}</time>
             </div>
-            <a href="">{{dataTitle[0]}}</a>
+            <a href="">{{data.title}}</a>
           </div>
-          <div class="item">
-            <div class="meta">
-              <time>{{dataTime[1]}}</time>
-            </div>
-            <a href="">{{dataTitle[1]}}</a>
-          </div>
-          <div class="item">
-            <div class="meta">
-              <time>{{dataTime[2]}}</time>
-            </div>
-            <a href="">{{dataTitle[2]}}</a>
-          </div>
-          <div class="item">
-            <div class="meta">
-              <time>{{dataTime[3]}}</time>
-            </div>
-            <a href="">{{dataTitle[3]}}</a>
-          </div>
-          <div class="item">
-            <div class="meta">
-              <time>{{dataTime[4]}}</time>
-            </div>
-            <a href="">{{dataTitle[4]}}</a>
-          </div>
-          <div class="item">
-            <div class="meta">
-              <time>{{dataTime[5]}}</time>
-            </div>
-            <a href="">{{dataTitle[5]}}</a>
-          </div>
-          <div class="item">
-            <div class="meta">
-              <time>{{dataTime[6]}}</time>
-            </div>
-            <a href="">{{dataTitle[6]}}</a>
-          </div>
-          <div class="item">
-            <div class="meta">
-              <time>{{dataTime[7]}}</time>
-            </div>
-            <a href="">{{dataTitle[7]}}</a>
-          </div>
-          <div class="item">
-            <div class="meta">
-              <time>{{dataTime[8]}}</time>
-            </div>
-            <a href="">{{dataTitle[8]}}</a>
-          </div>
-          <div class="item">
-            <div class="meta">
-              <time>{{dataTime[9]}}</time>
-            </div>
-            <a href="">{{dataTitle[9]}}</a>
-          </div>
-          
         </div>
       </div>
     </li>
