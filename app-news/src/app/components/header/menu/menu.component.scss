@@ -112,10 +112,13 @@
     .item--vl{
       border-right: none !important;
     }
+    .item--lh{
+      margin-right: -30px;
+    }
     //bỏ border right item đăng nhập
     .item--dn{
       border-right: none !important;
-      padding-left: 28px !important;
+      margin-left: 30px;
     }
     .item{
       padding-top: 12px;
@@ -380,15 +383,18 @@ li.dropdown {
         text-align: left;
         font-weight: bolder;
         &:hover{
-          color: #00bfc5;
+          color: black;
         }
       }
     }
     .titleItem{
-      background-color: #eee;
+      padding-top: 10px;
+      background-color: white;
+      height: 40px;
+      float: left;
       a{
         color: #2e3735;
-        text-align: center;
+        text-align: left;
         margin-left: 20px;
         font-size: 12px;
         text-transform: uppercase;
@@ -398,7 +404,7 @@ li.dropdown {
       }
     }
     &:hover{
-      background-color: #f4f6f7;
+      background-color: #ced0d1;
       .title{
         background-color: #046d70;
       }
