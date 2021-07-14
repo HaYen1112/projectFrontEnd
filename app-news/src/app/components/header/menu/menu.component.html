@@ -3,10 +3,14 @@
   <ul class="site-header__tool left btn-group">
     <li class = "item item--dm " [ngStyle]="{backgroundColor: colorBackgroundDanhMuc}">
       <a (click)="setColor('chuyenmuc')" [ngStyle]="{color:colorTextDanhMuc}" href="#chuyenmuc" class=" chuyenmuc parent dropbtn" id="navbardrop" data-toggle="dropdown">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars" [ngStyle]="{display: displayCM1}" style="margin-bottom: 5px;"></i>
+        <div class="close-container" [ngStyle]="{display: displayCM2}">
+          <div class="leftright"></div>
+          <div class="rightleft"></div>
+        </div>
         <span>CHUYÊN MỤC</span>
       </a>
-      <div class="dropdown-menu-cm" [ngStyle]= "style">
+      <div class="dropdown-menu-cm" [ngStyle]="{display: displayCM2}">
         <div class="content" *ngFor="let item of dataCM">
           <table>
             <tr>
@@ -21,10 +25,14 @@
     </li>
     <li class = "item item--ti dropdown" [ngStyle]="{backgroundColor: colorBackgroundTienIch}">
       <a (click)="setColor('tienich')" [ngStyle]="{color: colorTextTienIch}" href="#tienich" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
-        <i class="fas fa-puzzle-piece"></i>
+        <i class="fas fa-puzzle-piece" [ngStyle]="{display: displayTI1}" style="margin-bottom: 5px;"></i>
+        <div class="close-container" [ngStyle]="{display: displayTI2}">
+          <div class="leftright"></div>
+          <div class="rightleft"></div>
+        </div>
         <span> TIỆN ÍCH</span>
       </a>
-      <div class="dropdown-menu dropdown-menu-ti">
+      <div class="dropdown-menu-ti" [ngStyle]="{display: displayTI2}">
         <div class="content content-ti">
           <li class = "item-ti item--tt" style="padding-left: 70px;">
             <a href="#thanhtoan" class="parent">
@@ -85,6 +93,12 @@
       </div>
     </li>
     <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL}">
+      <a [routerLink]="['/#']" class="parent" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
+        <i class="fas fa-briefcase" [ngStyle]="{display: displayVL1}" style="margin-bottom: 5px;"></i>
+        <div class="close-container" [ngStyle]="{display: displayVL2}">
+          <div class="leftright"></div>
+          <div class="rightleft"></div>
+        </div>
       <a [routerLink]="['/#']" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
         <i class="fas fa-briefcase"></i>
         <span>VIỆC LÀM</span>
@@ -114,7 +128,7 @@
         </div>
         </div> -->
     </li>
-    <li class = "item item--dcb"[ngStyle]="{paddingTop: paddingBCB + 'px' }">
+    <li class = "item item--dcb"[ngStyle]="{paddingTop: paddingBCB + size + 'px' }">
       <a [routerLink]="['/', routerBCB]" class="parent">
         <i [ngStyle]="{display: displayBCB}" class="far fa-lightbulb"></i>
         <span [ngStyle]="{fontWeight: fontw}"> {{titleBCB}} </span>
@@ -130,23 +144,31 @@
   <ul class="site-header__tool right btn-group">
       <li class = "item item--dm dropdown" [ngStyle]="{backgroundColor: colorBackgroundTimKiem}">
         <a (click)="setColor('timkiem')" [ngStyle]="{color:colorTextTimKiem}" href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
-          <i class="fas fa-search"></i>
+          <i class="fas fa-search" [ngStyle]="{display: displayTK1}" style="margin-bottom: 5px;"></i>
+          <div class="close-container" [ngStyle]="{display: displayTK2}">
+            <div class="leftright"></div>
+            <div class="rightleft"></div>
+          </div>
           <span>TÌM KIẾM</span>
         </a>
-        <div class="dropdown-menu dropdown-menu-tk">
-          <div class="content" style="padding-left: 60px;">
+        <div class="dropdown-menu-tk" [ngStyle]="{display: displayTK2}">
+          <div class="content">
               <input type="text" class="input-tk" placeholder="Tìm Kiếm..." >
           </div>
         </div>
       </li>
     <li class = "item item--bcb" [ngStyle]="{backgroundColor: colorBackgroundDCB}">
       <a href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
-        <i class="far fa-bell"></i>
+        <i class="far fa-bell" [ngStyle]="{display: displayTM1}" style="margin-bottom: 5px;"></i>
+        <div class="close-container" [ngStyle]="{display: displayTM2}">
+          <div class="leftright"></div>
+          <div class="rightleft"></div>
+        </div>
         <span>TIN MỚI<img _ngcontent-nyt-c18="" width="25px" height="25px" src="assets/images/icon.gif" data-was-processed="true" class="loading" style="margin-top: -5px;"></span>
       </a>
-      <div class="dropdown-menu dropdown-menu-tm">
+      <div class="dropdown-menu-tm" [ngStyle]="{display: displayTM2}">
         <div class="content content-tm">
-          <div class="item" *ngFor="let data of dataTM">
+          <div class="item" *ngFor="let data of dataTM; let i=index">
             <div class="meta">
               <time>{{data.time}}</time>
             </div>
@@ -157,10 +179,14 @@
     </li>
     <li class = "item item--lh dropdown" [ngStyle]="{backgroundColor: colorBackgroundLH}">
       <a href="#lienhe" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('lienhe')" [ngStyle]="{color: colorTextLH}">
-        <i class="far fa-envelope"></i>
+        <i class="far fa-envelope" [ngStyle]="{display: displayLH1}" style="margin-bottom: 5px;"></i>
+        <div class="close-container" [ngStyle]="{display: displayLH2}">
+          <div class="leftright"></div>
+          <div class="rightleft"></div>
+        </div>
         <span>LIÊN HỆ</span>
       </a>
-      <div class="dropdown-menu dropdown-menu-lh">
+      <div class="dropdown-menu-lh" [ngStyle]="{display: displayLH2}">
         <div class="content content-lh">
           <li class = "item-lh item--datbao">
             <a href="#datbao" class="parent">
@@ -185,12 +211,13 @@
         </div>
       </div>
     </li>
-    <li class = "item item--dn" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-      <a [routerLink]="['/dangnhap']"  [ngStyle]="{color: colorTextDN}" class="parent">
+    <li class = "item item--dn" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngStyle]="{backgroundColor: colorBackgroundDN}">
+      <a [routerLink]="['/dangnhap']" [ngStyle]="{color: colorTextDN}" class="parent">
         <i class="far fa-user"></i>
         <span>ĐĂNG NHẬP</span>
       </a>
     </li>
   </ul>
 </div>
+
 
