@@ -1,6 +1,6 @@
 import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
-import { MenuComponent } from '../menu/menu.component';
+
 @Component({
   selector: 'app-menu-bottom',
   templateUrl: './menu-bottom.component.html',
