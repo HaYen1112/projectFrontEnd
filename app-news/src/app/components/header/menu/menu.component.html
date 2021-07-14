@@ -85,10 +85,34 @@
       </div>
     </li>
     <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL}">
-      <a [routerLink]="['/#']" class="parent" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
+      <a [routerLink]="['/#']" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
         <i class="fas fa-briefcase"></i>
         <span>VIỆC LÀM</span>
       </a>
+      <!-- <div class="dropdown-menu dropdown-menu-vl">
+        <div class="content content-vl">
+          <li class = "item-vl item--td">
+            <a href="#tuyendung" class="parent">
+              <i class="fas fa-address-card"></i>
+              <span>  TUYỂN DỤNG </span>
+            </a>
+          </li>
+          <li class = "item-vl item--camnang">
+            <a href="#camnang" class="parent">
+              <i class="fas fa-atlas"></i>
+              <span> CẨM NANG </span>
+            </a>
+          </li>
+          <li class = "item-vl item--call">
+            <a href="#call" class="parent">
+              <i class="fas fa-phone-volume"></i>
+              <span> 08008052220 </span>
+            </a>
+          </li>
+
+
+        </div>
+        </div> -->
     </li>
     <li class = "item item--dcb"[ngStyle]="{paddingTop: paddingBCB + 'px' }">
       <a [routerLink]="['/', routerBCB]" class="parent">
