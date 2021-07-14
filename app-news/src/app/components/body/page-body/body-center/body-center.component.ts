@@ -16,8 +16,6 @@ export class BodyCenterComponent implements OnInit {
   constructor(private com: AppComponent) {
 
   }
-
-
   setDatas(url: string, dataItem: any[]) {
     const days = Number(this.jstoday.substr(8, 2));
     const hours = Number(this.jstoday.substr(11, 2));
@@ -48,7 +46,6 @@ export class BodyCenterComponent implements OnInit {
                   }
                 }
              }
-      console.log(dataItem);
       });
   }
   setLink(url: string, dataItem: any[]) {
@@ -58,7 +55,9 @@ export class BodyCenterComponent implements OnInit {
            dataItem.push(item['link']);
       });
   }
+
   getTime(date: string){
+    //
     const days = Number(this.jstoday.substr(8, 2));
     const hours = Number(this.jstoday.substr(11, 2));
     const minutes = Number(this.jstoday.substr(14, 2));
@@ -91,7 +90,6 @@ export class BodyCenterComponent implements OnInit {
               datas.push({image: item['thumbnail'], title: item['title'], time: this.getTime(item['pubDate'])});
             }
     });
-    console.log(datas);
   }
 
   ngOnInit(): void {

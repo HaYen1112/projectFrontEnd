@@ -21,11 +21,11 @@
                             </div>
                       </div>
                   </div>
-                  <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7" style="margin-top: -25px;">
+                  <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7" style="margin-top: 60px;">
                     <div class="single-footer-caption mb-50">
                       <div class="whats-right-single mb-20" *ngFor="let data of datas; let i = index">
-                        <div class="whats-right-img" style="margin-bottom: 30px;">
-                            <img src="{{data.image}}" alt="" *ngIf="(2<i) && (i<6)">
+                        <div class="whats-right-img">
+                            <img src="{{data.image}}" alt="" *ngIf="(2<i) && (i<6)" style="margin-bottom: 30px;">
                         </div>
                         <div class="whats-right-cap" *ngIf="(2<i) && (i<6)" style="margin-top: -10px;">
                             <h4><a href="latest_news.html"> {{data.title}} </a></h4>

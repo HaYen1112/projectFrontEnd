@@ -33,7 +33,8 @@ export class MenuComponent implements OnInit {
    {header: 'XE', data: ['THỊ TRƯỜNG XE', 'TƯ VẤN XE', 'DIỄN ĐÀN XE', 'ĐÁNH GIÁ XE', 'KHÁM PHÁ XE', 'VIDEO']}
  ];
 
-
+ routerHome: string = '/';
+ routerBCB: string = 'bancanbiet';
  constructor(private menu : AppComponent, private router: Router) {
     this.dataTM = [];
     this.setDataTM(this.urlNew);
@@ -49,6 +50,7 @@ export class MenuComponent implements OnInit {
       this.fontw = 'bold';
       this.routerBCB = '/';
       this.routerHome = 'bancanbiet';
+      this.size = 15;
 
 }
     if (this.router.url == '/'){
@@ -59,6 +61,7 @@ export class MenuComponent implements OnInit {
       this.displayHome = '';
       this.displayBCB = ''
       this.fontw = '';
+      this.size = 0;
       this.routerBCB = 'bancanbiet';
       this.routerHome = '/';
 }
@@ -77,131 +80,117 @@ getDisplay(title: string){
 setDataTM(urls: string){
   this.menu.getData(urls)
   .subscribe((value: any) => {
+    console.log(value['items']);
     for (let item of value['items']) {
             this.dataTM.push({title: item['title'], time: item['pubDate'].substr(11,5)});
           }
+          console.log(this.dataTM);
   });
 }
 
- displayBCB = '';
- displayHome = '';
+ displayBCB = ''; displayHome = ''; displayCM1 = 'block'; displayCM2 = 'none';
+ displayTI1 = 'block'; displayTI2 = 'none'; displayVL1 = 'block'; displayVL2 = 'none';
+ displayTK1 = 'block'; displayTK2 = 'none'; displayTM1 = 'block'; displayTM2 = 'none';
+ displayLH1 = 'block';displayLH2 = 'none';
  paddingHome = 0;
  paddingBCB = 0;
  titleHome = '';
  titleBCB = '';
  fontw ='';
- routerHome: string = '/';
- routerBCB: string = 'bancanbiet';
-
-   colorTextDanhMuc = '';
-   colorBackgroundDanhMuc = '';
-   colorTextTienIch = '';
-   colorBackgroundTienIch = '';
-   colorTextTimKiem = '';
-   colorBackgroundTimKiem = '';
-   colorTextDCB = '';
-   colorBackgroundDCB = '';
-   colorTextVL = '';
-   colorBackgroundVL = '';
-   colorTextDN = '';
-   colorBackgroundDN = '';
-   colorTextLH = '';
-   colorBackgroundLH = '';
-   indDM = 0;
-   indTI = 0;
-   indTK = 0;
-   indDCB = 0;
-   indVL = 0;
-   indLH = 0;
-   indDN = 0;
+ size = 0;
+   colorTextDanhMuc = ''; colorBackgroundDanhMuc = '';
+   colorTextTienIch = ''; colorBackgroundTienIch = '';
+   colorTextTimKiem = ''; colorBackgroundTimKiem = '';
+   colorTextDCB = ''; colorBackgroundDCB = '';
+   colorTextVL = ''; colorBackgroundVL = '';
+   colorTextDN = ''; colorBackgroundDN = '';
+   colorTextLH = ''; colorBackgroundLH = '';
+   displayclose = ''; indDM = 0; indTI = 0; indTK = 0;
+   indDCB = 0; indVL = 0; indLH = 0; indDN = 0;
 @Input() style = new NewStyle();
+@Input() styleTI = new NewStyle();
+@Input() styleTK = new NewStyle();
+@Input() styleTM = new NewStyle();
+@Input() styleVL = new NewStyle();
+@Input() styleLH = new NewStyle();
 setColor(index :any){
-   this.colorTextDanhMuc = '';
-   this.colorBackgroundDanhMuc = '';
-   this.colorTextTienIch = '';
-   this.colorBackgroundTienIch = '';
-   this.colorTextTimKiem = '';
-   this.colorBackgroundTimKiem = '';
-   this.colorTextDCB = '';
-   this.colorBackgroundDCB = '';
-   this.colorTextVL = '';
-   this.colorBackgroundVL = '';
-   this.colorTextLH = '';
-   this.colorBackgroundLH = '';
+   this.colorTextDN = ''; this.colorBackgroundDN = '#00bfc5';
+   this.colorTextDanhMuc = ''; this.colorBackgroundDanhMuc = '';
+   this.colorTextTienIch = ''; this.colorBackgroundTienIch = '';
+   this.colorTextTimKiem = ''; this.colorBackgroundTimKiem = '';
+   this.colorTextDCB = ''; this.colorBackgroundDCB = '';
+   this.colorTextVL = ''; this.colorBackgroundVL = '';
+   this.colorTextLH = ''; this.colorBackgroundLH = '';
    this.style = new NewStyle();
+   this.styleTI = new NewStyle();
+   this.styleTK = new NewStyle();
+   this.styleTM = new NewStyle();
+   this.styleVL = new NewStyle();
+   this.styleLH = new NewStyle();
+   this.displayCM1 = 'block'; this.displayCM2 = 'none';
+   this.displayTI1 = 'block'; this.displayTI2 = 'none';
+   this.displayVL1 = 'block'; this.displayVL2 = 'none';
+   this.displayTK1 = 'block'; this.displayTK2 = 'none';
+   this.displayLH1 = 'block'; this.displayLH2 = 'none';
+   this.displayTM1 = 'block'; this.displayTM2 = 'none';
     if (index == 'chuyenmuc') {
-        this.colorBackgroundDanhMuc = 'white';
-        this.colorTextDanhMuc = 'black';
+        this.colorBackgroundDanhMuc = 'white'; this.colorTextDanhMuc = 'black';
+        this.displayCM2 = 'block'; this.displayCM1 = 'none';
         this.style = new Style();
         this.indDM++;
         if (this.indDM > 1) {
-          this.colorBackgroundDanhMuc = '';
-          this.colorTextDanhMuc = '';
+          this.colorBackgroundDanhMuc = ''; this.colorTextDanhMuc = '';
+          this.displayCM1 = 'block'; this.displayCM2 = 'none';
           this.style = new NewStyle();
            this.indDM = 0;
         }
-        this.indTK = 0;  this.indTI = 0;  this.indDCB = 0;
-        this.indVL = 0;  this.indLH = 0;
+        this.indTK = 0;  this.indTI = 0;  this.indDCB = 0; this.indVL = 0;  this.indLH = 0;
     }
     if (index == 'tienich') {
-      this.colorTextTienIch = 'black';
-      this.colorBackgroundTienIch = 'white';
-      this.indTI++;
-      this.indTK = 0;  this.indDM = 0;  this.indDCB = 0;
-      this.indVL = 0;  this.indLH = 0;
+      this.colorTextTienIch = 'black'; this.colorBackgroundTienIch = 'white';
+      this.indTI++; this.styleTI = new Style(); this.displayTI2 = 'block'; this.displayTI1 = 'none';
+      this.indTK = 0;  this.indDM = 0;  this.indDCB = 0; this.indVL = 0;  this.indLH = 0;
       if (this.indTI > 1) {
-        this.colorTextTienIch = '';
-        this.colorBackgroundTienIch = '';
-        this.indTI = 0;
+        this.displayTI1 = 'block'; this.displayTI2 = 'none';
+        this.colorTextTienIch = ''; this.colorBackgroundTienIch = '';
+        this.indTI = 0; this.styleTI = new NewStyle();
       }
   }
   if (index == 'timkiem') {
-    this.colorTextTimKiem = 'black';
-    this.colorBackgroundTimKiem = 'white';
-    this.indTK++;
+    this.colorTextTimKiem = 'black'; this.colorBackgroundTimKiem = 'white';
+    this.indTK++; this.styleTK = new Style(); this.displayTK2 = 'block'; this.displayTK1 = 'none';
     if (this.indTK > 1) {
-      this.colorTextTimKiem = '';
-      this.colorBackgroundTimKiem = '';
-      this.indTK = 0;
+      this.colorTextTimKiem = ''; this.colorBackgroundTimKiem = '';
+      this.indTK = 0; this.styleTK = new NewStyle(); this.displayTK1 = 'block'; this.displayTK2 = 'none';
     }
-    this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-    this.indVL = 0;  this.indLH = 0;
+    this.indDM = 0;  this.indTI = 0;  this.indDCB = 0; this.indVL = 0;  this.indLH = 0;
 }
 if (index == 'danhchoban') {
-  this.colorTextDCB = 'black';
-  this.colorBackgroundDCB = 'white';
-  this.indDCB++;
+  this.colorTextDCB = 'black'; this.colorBackgroundDCB = 'white';
+  this.indDCB++; this.styleTM = new Style(); this.displayTM2 = 'block'; this.displayTM1 = 'none';
   if (this.indDCB > 1) {
-    this.colorTextDCB = '';
-    this.colorBackgroundDCB = '';
-    this.indDCB = 0;
+    this.colorTextDCB = ''; this.colorBackgroundDCB = '';
+    this.indDCB = 0; this.styleTM = new NewStyle(); this.displayTM1 = 'block'; this.displayTM2 = 'none';
   }
-  this.indDM = 0;  this.indTI = 0;  this.indTK = 0;
-  this.indVL = 0;  this.indLH = 0;
+  this.indDM = 0;  this.indTI = 0;  this.indTK = 0; this.indVL = 0;  this.indLH = 0;
 }
 if (index == 'vieclam') {
-  this.colorTextVL = 'black';
-  this.colorBackgroundVL = 'white';
-  this.indVL++;
+  this.colorTextVL = 'black'; this.colorBackgroundVL = 'white';
+  this.indVL++; this.styleVL = new Style(); this.displayVL2 = 'block'; this.displayVL1 = 'none';
   if (this.indVL > 1) {
-    this.colorTextVL = '';
-    this.colorBackgroundVL = '';
-    this.indVL = 0;
+    this.displayVL1 = 'block'; this.displayVL2 = 'none';
+    this.colorTextVL = ''; this.colorBackgroundVL = ''; this.indVL = 0; this.styleVL = new Style();
   }
-  this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-  this.indTK = 0;  this.indLH = 0;
+  this.indDM = 0;  this.indTI = 0;  this.indDCB = 0; this.indTK = 0;  this.indLH = 0;
 }
 if (index == 'lienhe') {
-  this.colorTextLH = 'black';
-  this.colorBackgroundLH = 'white';
-  this.indLH++;
+  this.colorTextLH = 'black'; this.colorBackgroundLH = 'white';
+  this.indLH++; this.styleLH = new Style(); this.displayLH2 = 'block'; this.displayLH1 = 'none';
   if (this.indLH > 1) {
-    this.colorTextLH = '';
-    this.colorBackgroundLH = '';
-    this.indLH = 0;
+    this.colorTextLH = ''; this.colorBackgroundLH = ''; this.indLH = 0; this.styleLH = new NewStyle();
+    this.displayLH1 = 'block'; this.displayLH2 = 'none';
   }
-  this.indDM = 0;  this.indTI = 0;  this.indDCB = 0;
-  this.indVL = 0;  this.indTK = 0;
+  this.indDM = 0;  this.indTI = 0;  this.indDCB = 0; this.indVL = 0;  this.indTK = 0;
 }
 }
   ngOnInit(): void {
@@ -210,10 +199,6 @@ if (index == 'lienhe') {
 }
 Injectable();
 class Style {
-    'position': string = 'absolute';
-    'top.px': number = -5;
-    'left.px': number = 0;
-    'color': string = 'blue';
     'display': string = 'block';
 }
 class NewStyle {

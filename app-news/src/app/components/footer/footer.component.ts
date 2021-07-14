@@ -14,7 +14,6 @@ export class FooterComponent implements OnInit {
   private url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Ftai-chinh-kinh-doanh.rss'.trim();
     constructor(private bodyCenter: BodyCenterComponent) {
       this.datas =[];
-      //this.bodyCenter.setDatas(this.url, this.data);
       this.bodyCenter.getDatas(this.url, this.datas);
      }
   ngOnInit(): void {
