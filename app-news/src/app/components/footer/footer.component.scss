@@ -67,12 +67,14 @@
 .footer-bottom-area{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    float: right;
+    margin-top: -140px;
     a{
       text-decoration: none;
       margin-left: 10px;
       font-weight: bold;
       color: white;
-      float: left;
+
     }
     :hover{
       color: #018f94;

@@ -25,8 +25,8 @@ import { TechNewsComponent } from './components/body/page-body/body-center/under
 import { LastNewReadingsComponent } from './components/last-new-readings/last-new-readings.component';
 import { LastnewMenuComponent } from './components/last-new-readings/lastnew-menu/lastnew-menu.component';
 import { LastnewBodyReadingComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading.component';
-import { HttpClientJsonpModule, HttpClientModule, HttpContextToken, HttpErrorResponse } from '@angular/common/http';
-import { Router, RouterLink, RouterLinkActive, RouterModule, Routes} from '@angular/router';
+import { HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
+import { RouterModule, Routes} from '@angular/router';
 import { LastnewBodyReadingLeftComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/lastnew-body-reading-left.component';
 import { LastnewBodyReadingRightComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-right/lastnew-body-reading-right.component';
 import { PostsComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/posts/posts.component';
@@ -36,7 +36,6 @@ import { ReadingsMoreComponent } from './components/last-new-readings/lastnew-bo
 import { MaybeYouAreInterestedComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/maybe-you-are-interested/maybe-you-are-interested.component';
 import { NewsForYouComponent } from './components/last-new-readings/lastnew-body-reading/lastnew-body-reading-left/news-for-you/news-for-you.component';
 import { AppRoutingModule } from './components/app-routing/app-routing.module';
-import { formatDate } from '@angular/common';
 import { YouNeedKnowComponent } from './components/you-need-know/you-need-know.component';
 import { UnderLeftComponent } from './components/you-need-know/under-left/under-left.component';
 import { UnderRightComponent } from './components/you-need-know/under-right/under-right.component';
@@ -49,8 +48,6 @@ const route: Routes = [
   { path: 'bancanbiet', component: YouNeedKnowComponent},
   { path: 'dangnhap', component: LoginComponent}
 ]
-export const ERROR_COUNT = new HttpContextToken(() => 0);
-export const RETRY_COUNT = new HttpContextToken(() => 3);
 @NgModule({
   declarations: [
     AppComponent,

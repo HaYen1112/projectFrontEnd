@@ -10,63 +10,28 @@
                               <b><h4 style="margin-top: 15px;">BÀI ĐĂNG PHỔ BIẾN</h4></b>
                           </div>
                           <!-- Popular post -->
-                          <div class="whats-right-single mb-20">
-                              <div class="whats-right-img">
-                                  <img src="{{data[0]}}" alt="">
+                          <div class="whats-right-single mb-20" *ngFor="let data of datas; let i = index">
+                              <div class="whats-right-img" *ngIf="6<i">
+                                  <img src="{{data.image}}" alt="">
                               </div>
-                              <div class="whats-right-cap">
-                                  <h4><a href="latest_news.html"> {{data[1]}} </a></h4>
-                                  <p> {{data[2]}} </p>
+                              <div class="whats-right-cap" *ngIf="6<i">
+                                  <h4><a href="latest_news.html"> {{data.title}} </a></h4>
+                                  <p> {{data.time}} </p>
                               </div>
-                          </div>
-                          <div class="whats-right-single mb-20">
-                            <div class="whats-right-img">
-                                <img src="{{data[3]}}" alt="">
                             </div>
-                            <div class="whats-right-cap">
-                                <h4><a href="latest_news.html"> {{data[4]}} </a></h4>
-                                <p> {{data[5]}} </p>
-                            </div>
-                        </div> <div class="whats-right-single mb-20">
-                          <div class="whats-right-img">
-                              <img src="{{data[6]}}" alt="">
-                          </div>
-                          <div class="whats-right-cap">
-                              <h4><a href="latest_news.html"> {{data[7]}} </a></h4>
-                              <p> {{data[8]}} </p>
-                          </div>
-                      </div>
                       </div>
                   </div>
-                  <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
+                  <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7" style="margin-top: -25px;">
                     <div class="single-footer-caption mb-50">
-                      <div class="whats-right-single mb-20" style="margin-top: 45px;">
-                        <div class="whats-right-img">
-                            <img src="{{data[9]}}" alt="">
+                      <div class="whats-right-single mb-20" *ngFor="let data of datas; let i = index">
+                        <div class="whats-right-img" style="margin-bottom: 30px;">
+                            <img src="{{data.image}}" alt="" *ngIf="(2<i) && (i<6)">
                         </div>
-                        <div class="whats-right-cap">
-                            <h4><a href="latest_news.html"> {{data[10]}} </a></h4>
-                            <p> {{data[11]}} </p>
+                        <div class="whats-right-cap" *ngIf="(2<i) && (i<6)" style="margin-top: -10px;">
+                            <h4><a href="latest_news.html"> {{data.title}} </a></h4>
+                            <p> {{data.time}} </p>
                         </div>
                     </div>
-                    <div class="whats-right-single mb-20">
-                      <div class="whats-right-img">
-                          <img src="{{data[12]}}" alt="">
-                      </div>
-                      <div class="whats-right-cap">
-                          <h4><a href="latest_news.html"> {{data[13]}} </a></h4>
-                          <p> {{data[14]}} </p>
-                      </div>
-                  </div>
-                  <div class="whats-right-single mb-20">
-                    <div class="whats-right-img">
-                        <img src="{{data[15]}}" alt="">
-                    </div>
-                    <div class="whats-right-cap">
-                        <h4><a href="latest_news.html"> {{data[16]}} </a></h4>
-                        <p> {{data[17]}} </p>
-                    </div>
-                </div>
                     </div>
                 </div>
                   <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">

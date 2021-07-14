@@ -161,8 +161,8 @@
         </div>
       </div>
     </li>
-    <li class = "item item--dn" [ngStyle]="{backgroundColor: colorBackgroundDN}">
-      <a [routerLink]="['/dangnhap']" [ngStyle]="{color: colorTextDN}" class="parent">
+    <li class = "item item--dn" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a [routerLink]="['/dangnhap']"  [ngStyle]="{color: colorTextDN}" class="parent">
         <i class="far fa-user"></i>
         <span>ĐĂNG NHẬP</span>
       </a>
