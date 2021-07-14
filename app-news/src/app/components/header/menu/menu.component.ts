@@ -37,10 +37,9 @@ export class MenuComponent implements OnInit {
  constructor(private menu : AppComponent, private router: Router) {
     this.dataTM = [];
     this.setDataTM(this.urlNew);
-    console.log(this.dataCM);
     this.colorTextDN = '';
     this.colorBackgroundDN = '';
-     if (this.router.url == '/bancanbiet'){
+    if (this.router.url == '/bancanbiet'){
       this.titleBCB = 'TIN TỨC NHANH';
       this.titleHome = 'BẠN CẦN BIẾT';
       this.paddingHome = 10;
@@ -63,12 +62,12 @@ export class MenuComponent implements OnInit {
       this.routerBCB = 'bancanbiet';
       this.routerHome = '/';
 }
-if (this.router.url == '/dangnhap') {
-  this.titleHome = 'TIN TỨC NHANH';
-  this.titleBCB = 'BẠN CẦN BIẾT';
-  this.paddingBCB = 10;
-  this.colorTextDN = 'black';
-  this.colorBackgroundDN = 'white';
+    if (this.router.url == '/dangnhap') {
+      this.titleHome = 'TIN TỨC NHANH';
+      this.titleBCB = 'BẠN CẦN BIẾT';
+      this.paddingBCB = 10;
+      this.colorTextDN = 'black';
+      this.colorBackgroundDN = 'white';
 }
 }
 getDisplay(title: string){

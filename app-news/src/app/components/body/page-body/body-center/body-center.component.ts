@@ -12,7 +12,9 @@ export class BodyCenterComponent implements OnInit {
   today = new Date();
   jstoday = formatDate(this.today, 'yyyy-MM-dd hh:mm:ss aa', 'en-US', '+0700');
   stringJson: any;
+
   constructor(private com: AppComponent) {
+
   }
 
 
@@ -46,11 +48,9 @@ export class BodyCenterComponent implements OnInit {
                   }
                 }
              }
-
+      console.log(dataItem);
       });
-      // console.log(dataItem);
   }
-
   setLink(url: string, dataItem: any[]) {
     this.com.getData(url)
       .subscribe((value: any) => {
@@ -58,6 +58,42 @@ export class BodyCenterComponent implements OnInit {
            dataItem.push(item['link']);
       });
   }
+  getTime(date: string){
+    const days = Number(this.jstoday.substr(8, 2));
+    const hours = Number(this.jstoday.substr(11, 2));
+    const minutes = Number(this.jstoday.substr(14, 2));
+    const months = Number(this.jstoday.substr(5, 2));
+    //
+    const day = days - Number(date.substr(8, 2));
+    const minute = minutes - Number(date.substr(14, 2));
+    const hour = hours - Number(date.substr(11, 2));
+    const month = months - Number(date.substr(5, 2));
+
+    if (month > 0) {
+     return (month + ' tháng trước');
+        } else
+    if (day > 0) {
+      return (day + ' ngày trước');
+        } else {
+    if (hour > 0) {
+      return (hour + ' giờ trước');
+        } else {
+    if (minute > 0) { return (minute + ' phút trước') }
+          else {return(hour + 5 + ' giờ trước'); }
+        }
+      }
+
+  }
+  getDatas(urls: string, datas: any[]){
+    this.com.getData(urls)
+    .subscribe((value: any) => {
+      for (let item of value['items']) {
+              datas.push({image: item['thumbnail'], title: item['title'], time: this.getTime(item['pubDate'])});
+            }
+    });
+    console.log(datas);
+  }
+
   ngOnInit(): void {
   }
 
