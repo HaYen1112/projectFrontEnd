@@ -41,6 +41,7 @@ import { UnderLeftComponent } from './components/you-need-know/under-left/under-
 import { UnderRightComponent } from './components/you-need-know/under-right/under-right.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormLoginComponent } from './components/login/form-login/form-login.component';
+import { CateListComponent } from './components/you-need-know/under-left/cate-list/cate-list.component';
 
 const route: Routes = [
   { path: 'last-new-readings', component: LastNewReadingsComponent },
@@ -87,6 +88,7 @@ const route: Routes = [
     UnderRightComponent,
     LoginComponent,
     FormLoginComponent,
+    CateListComponent,
 
 
   ],
