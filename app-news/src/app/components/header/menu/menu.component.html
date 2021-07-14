@@ -93,7 +93,7 @@
       </div>
     </li>
     <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL}">
-      <a [routerLink]="['/#']" class="parent" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
+      <a [routerLink]="['/#']"  class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
         <i class="fas fa-briefcase" [ngStyle]="{display: displayVL1}" style="margin-bottom: 5px;"></i>
         <div class="close-container" [ngStyle]="{display: displayVL2}">
           <div class="leftright"></div>
@@ -101,8 +101,7 @@
         </div>
         <span>VIỆC LÀM</span>
       </a>
-    </li> 
-      <!-- <div class="dropdown-menu dropdown-menu-vl">
+      <div class="dropdown-menu dropdown-menu-vl" [ngStyle]="{display: displayVL2}">
         <div class="content content-vl">
           <li class = "item-vl item--td">
             <a href="#tuyendung" class="parent">
@@ -125,7 +124,9 @@
 
 
         </div>
-        </div> -->
+        </div>
+    </li> 
+      
     
     <li class = "item item--dcb"[ngStyle]="{paddingTop: paddingBCB + size + 'px' }">
       <a [routerLink]="['/', routerBCB]" class="parent">
