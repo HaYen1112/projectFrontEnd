@@ -8,33 +8,35 @@
   </ul>
   <!-- The slideshow -->
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="news-slider">
-        <div class="slide">
-          <img src="{{dataItem[18]}}">
+    <div class="carousel-item active" >
+      <div class="news-slider"*ngFor="let data of dataItem; let i = index">
+        <div class="slide" *ngIf="i==9">
+          <img src="{{data.image}}">
+          <div class="most-recent-cap"  *ngIf="i==9">
+            <h4><a href="latest_news.html">{{data.title}}</a></h4>
+            <p>{{data.time}}</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item" >
+      <div class="news-slider" *ngFor="let data of dataItem; let i = index">
+        <div class="slide" *ngIf="i==8">
+          <img src="{{data.image}}">
           <div class="most-recent-cap">
-            <h4><a href="latest_news.html">{{dataItem[19]}}</a></h4>
-            <p>{{dataItem[20]}}</p>
+            <h4><a href="latest_news.html">{{data.title}}</a></h4>
+            <p>{{data.time}}</p>
         </div>
         </div>
       </div>
     </div>
     <div class="carousel-item">
-      <div class="news-slider">
-        <div class="slide"><img src="{{dataItem[24]}}">
-          <div class="most-recent-cap">
-            <h4><a href="latest_news.html">{{dataItem[25]}}</a></h4>
-            <p>{{dataItem[26]}}</p>
-        </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="news-slider">
-        <div class="slide"><img src="{{dataItem[21]}}">
-          <div class="most-recent-cap">
-            <h4><a href="latest_news.html">{{dataItem[22]}}</a></h4>
-            <p>{{dataItem[23]}}</p>
+      <div class="news-slider" *ngFor="let data of dataItem; let i = index">
+        <div class="slide"  *ngIf="i==7">
+          <img src="{{data.image}}">
+          <div class="most-recent-cap" *ngIf="i==7">
+            <h4><a href="latest_news.html">{{data.title}}</a></h4>
+            <p>{{data.time}}</p>
         </div>
         </div>
       </div>
