@@ -80,14 +80,11 @@ getDisplay(title: string){
 setDataTM(urls: string){
   this.menu.getData(urls)
   .subscribe((value: any) => {
-    console.log(value['items']);
     for (let item of value['items']) {
             this.dataTM.push({title: item['title'], time: item['pubDate'].substr(11,5)});
           }
-          console.log(this.dataTM);
   });
 }
-
  displayBCB = ''; displayHome = ''; displayCM1 = 'block'; displayCM2 = 'none';
  displayTI1 = 'block'; displayTI2 = 'none'; displayVL1 = 'block'; displayVL2 = 'none';
  displayTK1 = 'block'; displayTK2 = 'none'; displayTM1 = 'block'; displayTM2 = 'none';
