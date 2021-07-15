@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.scss']
 
 })
+@Injectable({providedIn: 'root'})
 export class MenuComponent implements OnInit {
 
  @Input() dataTM: any[];
@@ -85,6 +86,7 @@ setDataTM(urls: string){
           }
   });
 }
+
  displayBCB = ''; displayHome = ''; displayCM1 = 'block'; displayCM2 = 'none';
  displayTI1 = 'block'; displayTI2 = 'none'; displayVL1 = 'block'; displayVL2 = 'none';
  displayTK1 = 'block'; displayTK2 = 'none'; displayTM1 = 'block'; displayTM2 = 'none';

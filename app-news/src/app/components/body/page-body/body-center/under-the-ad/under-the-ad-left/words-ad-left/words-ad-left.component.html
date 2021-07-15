@@ -13,7 +13,7 @@
         <div class="slide" *ngIf="i==9">
           <img src="{{data.image}}">
           <div class="most-recent-cap"  *ngIf="i==9">
-            <h4><a href="latest_news.html">{{data.title}}</a></h4>
+            <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
             <p>{{data.time}}</p>
         </div>
         </div>
@@ -24,7 +24,7 @@
         <div class="slide" *ngIf="i==8">
           <img src="{{data.image}}">
           <div class="most-recent-cap">
-            <h4><a href="latest_news.html">{{data.title}}</a></h4>
+            <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
             <p>{{data.time}}</p>
         </div>
         </div>
@@ -35,7 +35,7 @@
         <div class="slide"  *ngIf="i==7">
           <img src="{{data.image}}">
           <div class="most-recent-cap" *ngIf="i==7">
-            <h4><a href="latest_news.html">{{data.title}}</a></h4>
+            <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
             <p>{{data.time}}</p>
         </div>
         </div>

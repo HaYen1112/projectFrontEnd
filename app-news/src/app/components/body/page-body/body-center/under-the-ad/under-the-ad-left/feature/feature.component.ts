@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
 import { BodyCenterComponent } from '../../../body-center.component';
-import { UnderTheAdLeftComponent } from '../under-the-ad-left.component';
 
 @Component({
   selector: 'app-feature',
@@ -29,19 +27,14 @@ export class FeatureComponent implements OnInit {
       this.dataTechnology = [];
       this.dataTravel = [];
 
-      this.underLeft.setDatas(this.urlLife, this.dataLife);
-      this.underLeft.setDatas(this.urlTravel, this.dataTravel);
-      this.underLeft.setDatas(this.urlFashion, this.dataFashion);
-      this.underLeft.setDatas(this.urlSport, this.dataSport);
-      this.underLeft.setDatas(this.urlTechnology, this.dataTechnology);
-    //  console.log(this.dataItem);
+      this.underLeft.getDatas(this.urlLife, this.dataLife);
+      this.underLeft.getDatas(this.urlTravel, this.dataTravel);
+      this.underLeft.getDatas(this.urlFashion, this.dataFashion);
+      this.underLeft.getDatas(this.urlSport, this.dataSport);
+      this.underLeft.getDatas(this.urlTechnology, this.dataTechnology);
+
      }
-     getDataLife(): any[]{
-       return this.dataLife;
-     }
-     getDataTechnology(): any[]{
-       return this.dataTechnology;
-     }
+
   ngOnInit(): void {
   }
 
