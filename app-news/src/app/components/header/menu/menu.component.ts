@@ -98,21 +98,15 @@ setDataTM(urls: string){
  titleBCB = '';
  fontw ='';
  size = 0;
-   colorTextDanhMuc = ''; colorBackgroundDanhMuc = '';
-   colorTextTienIch = ''; colorBackgroundTienIch = '';
-   colorTextTimKiem = ''; colorBackgroundTimKiem = '';
-   colorTextDCB = ''; colorBackgroundDCB = '';
-   colorTextVL = ''; colorBackgroundVL = '';
-   colorTextDN = ''; colorBackgroundDN = '';
-   colorTextLH = ''; colorBackgroundLH = '';
-   displayclose = ''; indDM = 0; indTI = 0; indTK = 0;
-   indDCB = 0; indVL = 0; indLH = 0; indDN = 0;
-@Input() style = new NewStyle();
-@Input() styleTI = new NewStyle();
-@Input() styleTK = new NewStyle();
-@Input() styleTM = new NewStyle();
-@Input() styleVL = new NewStyle();
-@Input() styleLH = new NewStyle();
+ colorTextDanhMuc = ''; colorBackgroundDanhMuc = '';
+ colorTextTienIch = ''; colorBackgroundTienIch = '';
+ colorTextTimKiem = ''; colorBackgroundTimKiem = '';
+ colorTextDCB = ''; colorBackgroundDCB = '';
+ colorTextVL = ''; colorBackgroundVL = '';
+ colorTextDN = ''; colorBackgroundDN = '';
+ colorTextLH = ''; colorBackgroundLH = '';
+ displayclose = ''; indDM = 0; indTI = 0; indTK = 0;
+ indDCB = 0; indVL = 0; indLH = 0; indDN = 0;
 setColor(index :any){
    this.colorTextDN = ''; this.colorBackgroundDN = '#00bfc5';
    this.colorTextDanhMuc = ''; this.colorBackgroundDanhMuc = '';
@@ -121,12 +115,6 @@ setColor(index :any){
    this.colorTextDCB = ''; this.colorBackgroundDCB = '';
    this.colorTextVL = ''; this.colorBackgroundVL = '';
    this.colorTextLH = ''; this.colorBackgroundLH = '';
-   this.style = new NewStyle();
-   this.styleTI = new NewStyle();
-   this.styleTK = new NewStyle();
-   this.styleTM = new NewStyle();
-   this.styleVL = new NewStyle();
-   this.styleLH = new NewStyle();
    this.displayCM1 = 'block'; this.displayCM2 = 'none';
    this.displayTI1 = 'block'; this.displayTI2 = 'none';
    this.displayVL1 = 'block'; this.displayVL2 = 'none';
@@ -136,58 +124,56 @@ setColor(index :any){
     if (index == 'chuyenmuc') {
         this.colorBackgroundDanhMuc = 'white'; this.colorTextDanhMuc = 'black';
         this.displayCM2 = 'block'; this.displayCM1 = 'none';
-        this.style = new Style();
         this.indDM++;
         if (this.indDM > 1) {
           this.colorBackgroundDanhMuc = ''; this.colorTextDanhMuc = '';
           this.displayCM1 = 'block'; this.displayCM2 = 'none';
-          this.style = new NewStyle();
-           this.indDM = 0;
+          this.indDM = 0;
         }
         this.indTK = 0;  this.indTI = 0;  this.indDCB = 0; this.indVL = 0;  this.indLH = 0;
     }
     if (index == 'tienich') {
       this.colorTextTienIch = 'black'; this.colorBackgroundTienIch = 'white';
-      this.indTI++; this.styleTI = new Style(); this.displayTI2 = 'block'; this.displayTI1 = 'none';
+      this.indTI++; this.displayTI2 = 'block'; this.displayTI1 = 'none';
       this.indTK = 0;  this.indDM = 0;  this.indDCB = 0; this.indVL = 0;  this.indLH = 0;
       if (this.indTI > 1) {
         this.displayTI1 = 'block'; this.displayTI2 = 'none';
         this.colorTextTienIch = ''; this.colorBackgroundTienIch = '';
-        this.indTI = 0; this.styleTI = new NewStyle();
+        this.indTI = 0;
       }
   }
   if (index == 'timkiem') {
     this.colorTextTimKiem = 'black'; this.colorBackgroundTimKiem = 'white';
-    this.indTK++; this.styleTK = new Style(); this.displayTK2 = 'block'; this.displayTK1 = 'none';
+    this.indTK++;  this.displayTK2 = 'block'; this.displayTK1 = 'none';
     if (this.indTK > 1) {
       this.colorTextTimKiem = ''; this.colorBackgroundTimKiem = '';
-      this.indTK = 0; this.styleTK = new NewStyle(); this.displayTK1 = 'block'; this.displayTK2 = 'none';
+      this.indTK = 0; this.displayTK1 = 'block'; this.displayTK2 = 'none';
     }
     this.indDM = 0;  this.indTI = 0;  this.indDCB = 0; this.indVL = 0;  this.indLH = 0;
 }
 if (index == 'danhchoban') {
   this.colorTextDCB = 'black'; this.colorBackgroundDCB = 'white';
-  this.indDCB++; this.styleTM = new Style(); this.displayTM2 = 'block'; this.displayTM1 = 'none';
+  this.indDCB++; this.displayTM2 = 'block'; this.displayTM1 = 'none';
   if (this.indDCB > 1) {
     this.colorTextDCB = ''; this.colorBackgroundDCB = '';
-    this.indDCB = 0; this.styleTM = new NewStyle(); this.displayTM1 = 'block'; this.displayTM2 = 'none';
+    this.indDCB = 0; this.displayTM1 = 'block'; this.displayTM2 = 'none';
   }
   this.indDM = 0;  this.indTI = 0;  this.indTK = 0; this.indVL = 0;  this.indLH = 0;
 }
 if (index == 'vieclam') {
   this.colorTextVL = 'black'; this.colorBackgroundVL = 'white';
-  this.indVL++; this.styleVL = new Style(); this.displayVL2 = 'block'; this.displayVL1 = 'none';
+  this.indVL++; this.displayVL2 = 'block'; this.displayVL1 = 'none';
   if (this.indVL > 1) {
     this.displayVL1 = 'block'; this.displayVL2 = 'none';
-    this.colorTextVL = ''; this.colorBackgroundVL = ''; this.indVL = 0; this.styleVL = new Style();
+    this.colorTextVL = ''; this.colorBackgroundVL = ''; this.indVL = 0;
   }
   this.indDM = 0;  this.indTI = 0;  this.indDCB = 0; this.indTK = 0;  this.indLH = 0;
 }
 if (index == 'lienhe') {
   this.colorTextLH = 'black'; this.colorBackgroundLH = 'white';
-  this.indLH++; this.styleLH = new Style(); this.displayLH2 = 'block'; this.displayLH1 = 'none';
+  this.indLH++; this.displayLH2 = 'block'; this.displayLH1 = 'none';
   if (this.indLH > 1) {
-    this.colorTextLH = ''; this.colorBackgroundLH = ''; this.indLH = 0; this.styleLH = new NewStyle();
+    this.colorTextLH = ''; this.colorBackgroundLH = ''; this.indLH = 0;
     this.displayLH1 = 'block'; this.displayLH2 = 'none';
   }
   this.indDM = 0;  this.indTI = 0;  this.indDCB = 0; this.indVL = 0;  this.indTK = 0;
