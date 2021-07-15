@@ -15,7 +15,7 @@
                                   <img src="{{data.image}}" alt="">
                               </div>
                               <div class="whats-right-cap" *ngIf="6<i">
-                                  <h4><a href="latest_news.html"> {{data.title}} </a></h4>
+                                  <h4><a href="{{data.link}}" target="blank"> {{data.title}} </a></h4>
                                   <p> {{data.time}} </p>
                               </div>
                             </div>
@@ -28,7 +28,7 @@
                             <img src="{{data.image}}" alt="" *ngIf="(2<i) && (i<6)" style="margin-bottom: 30px;">
                         </div>
                         <div class="whats-right-cap" *ngIf="(2<i) && (i<6)" style="margin-top: -10px;">
-                            <h4><a href="latest_news.html"> {{data.title}} </a></h4>
+                            <h4><a href="{{data.link}}" target="blank"> {{data.title}} </a></h4>
                             <p> {{data.time}} </p>
                         </div>
                     </div>
