@@ -227,9 +227,9 @@ position: fixed;
 .dropdown-menu-vl{
   width: 1265px;
   height:73px;
-  // margin-top:20px;
+  margin-top:20px;
   left: 0px;
-  // top: 50px;
+  top: 50px;
   display: block;
   position: fixed;
   .content-vl{
@@ -244,7 +244,7 @@ position: fixed;
       border-left:none;
     }
     .item-vl{
-  
+
       margin-top:7px;
       height:80%;
       float: left;
@@ -264,7 +264,7 @@ position: fixed;
           width: 90%;
         }
       }
-  
+
     }
   }
   }
