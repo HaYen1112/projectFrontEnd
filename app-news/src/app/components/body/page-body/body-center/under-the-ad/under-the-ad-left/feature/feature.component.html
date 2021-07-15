@@ -37,93 +37,33 @@
                               <div class="row">
                                   <!-- Left Details Caption -->
                                   <div class="col-xl-6 col-lg-12">
-                                      <div class="whats-news-single mb-40 mb-40">
-                                          <div class="whates-img">
-                                              <img src={{dataLife[0]}}   alt="">
+                                      <div class="whats-news-single mb-40 mb-40" *ngFor="let data of dataLife; let i=index">
+                                          <div class="whates-img" *ngIf="i<2">
+                                              <img src={{data.image}} alt="">
                                           </div>
-                                          <div class="whates-caption">
-
-                                              <h4><a href="latest_news.html">{{dataLife[1]}} </a></h4>
-                                              <span>{{dataLife[2]}}</span>
-
-
+                                          <div class="whates-caption" *ngIf="i<2">
+                                              <h4><a href="{{data.link}}" target="blank">{{data.title}} </a></h4>
+                                              <span>{{data.time}}</span>
                                             </div>
                                       </div>
-                                      <div class="whats-news-single mb-40 mb-40">
-                                        <div class="whates-img">
-                                            <img src={{dataLife[24]}}   alt="">
-                                        </div>
-                                        <div class="whates-caption">
-                                            <h4><a href="latest_news.html">{{dataLife[25]}} </a></h4>
-                                            <span>{{dataLife[26]}}</span>
-                                          </div>
-                                    </div>
-                                  </div>
 
+                                  </div>
                                   <!-- Right single caption -->
                                   <div class="col-xl-6 col-lg-12">
                                       <div class="row">
                                           <!-- single -->
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
+                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" *ngFor="let data of dataLife; let i=index">
+                                              <div class="whats-right-single mb-20" *ngIf="(i<6) && (i>1)">
                                                   <div class="whats-right-img">
-
-
-
-                                                      <img src={{dataLife[18]}} alt="">
+                                                      <img src={{data.image}} alt="">
                                                   </div>
                                                   <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataLife[19]}}</a></h4>
-                                                      <p>{{dataLife[20]}}</p>
-
-
-
+                                                      <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                                      <p>{{data.time}}</p>
                                                   </div>
                                               </div>
                                           </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
 
-
-                                                      <img src={{dataLife[21]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataLife[22]}}</a></h4>
-                                                      <p>{{dataLife[23]}}</p>
-
-
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-
-
-                                                      <img src={{dataLife[27]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataLife[28]}}</a></h4>
-                                                      <p>{{dataLife[29]}}</p>
-
-
-
-
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataLife[12]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataLife[13]}}</a></h4>
-                                                      <p>{{dataLife[14]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
                                       </div>
                                   </div>
                               </div>
@@ -133,74 +73,32 @@
                               <div class="row">
                                   <!-- Left Details Caption -->
                                   <div class="col-xl-6">
-                                      <div class="whats-news-single mb-40">
-                                          <div class="whates-img">
-                                              <img src={{dataTravel[27]}} alt="">
+                                      <div class="whats-news-single mb-40" *ngFor="let data of dataTravel; let i=index">
+                                          <div class="whates-img" *ngIf="i<2">
+                                              <img src={{data.image}} alt="">
                                           </div>
-                                          <div class="whates-caption">
-
-                                              <h4><a href="#">{{dataTravel[1]}}</a></h4>
-                                              <span>{{dataTravel[2]}}</span>
+                                          <div class="whates-caption" *ngIf="i<2">
+                                              <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                              <span>{{data.time}}</span>
                                           </div>
                                       </div>
-                                      <div class="whats-news-single mb-40">
-                                        <div class="whates-img">
-                                            <img src={{dataTravel[15]}} alt="">
-                                        </div>
-                                        <div class="whates-caption">
-                                            <h4><a href="#">{{dataTravel[16]}}</a></h4>
-                                            <span>{{dataTravel[17]}}</span>
-                                        </div>
-                                    </div>
                                   </div>
                                   <!-- Right single caption -->
                                   <div class="col-xl-6 col-lg-12">
                                       <div class="row">
                                           <!-- single -->
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
+                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" *ngFor="let data of dataTravel; let i=index">
+                                              <div class="whats-right-single mb-20" *ngIf="(i<6) && (i>1)">
                                                   <div class="whats-right-img">
-                                                      <img src={{dataTravel[24]}} alt="">
+                                                      <img src={{data.image}} alt="">
                                                   </div>
                                                   <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataTravel[25]}}</a></h4>
-                                                      <p>{{dataTravel[26]}}</p>
+                                                      <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                                      <p>{{data.time}}</p>
                                                   </div>
                                               </div>
                                           </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataTravel[6]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataTravel[7]}}</a></h4>
-                                                      <p>{{dataTravel[8]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataTravel[9]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataTravel[10]}}</a></h4>
-                                                      <p>{{dataTravel[11]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataTravel[12]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataTravel[13]}}</a></h4>
-                                                      <p>{{dataTravel[14]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
+
                                       </div>
                                   </div>
                               </div>
@@ -210,73 +108,32 @@
                               <div class="row">
                                   <!-- Left Details Caption -->
                                   <div class="col-xl-6">
-                                      <div class="whats-news-single mb-40">
-                                          <div class="whates-img">
-                                              <img src={{dataFashion[0]}} alt="">
+                                      <div class="whats-news-single mb-40" *ngFor="let data of dataFashion; let i=index">
+                                          <div class="whates-img" *ngIf="i<2">
+                                              <img src={{data.image}} alt="">
                                           </div>
-                                          <div class="whates-caption">
-                                              <h4><a href="#">{{dataFashion[1]}}</a></h4>
-                                              <span>{{dataFashion[2]}}</span>
+                                          <div class="whates-caption" *ngIf="i<2">
+                                              <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                              <span>{{data.time}}</span>
                                           </div>
                                       </div>
-                                      <div class="whats-news-single mb-40">
-                                        <div class="whates-img">
-                                            <img src={{dataFashion[15]}} alt="">
-                                        </div>
-                                        <div class="whates-caption">
-                                            <h4><a href="#">{{dataFashion[16]}}</a></h4>
-                                            <span>{{dataFashion[17]}}</span>
-                                        </div>
-                                    </div>
                                   </div>
                                   <!-- Right single caption -->
                                   <div class="col-xl-6 col-lg-12">
                                       <div class="row">
                                           <!-- single -->
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
+                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" *ngFor="let data of dataFashion; let i=index">
+                                              <div class="whats-right-single mb-20" *ngIf="(i<6) && (i>1)">
                                                   <div class="whats-right-img">
-                                                      <img src={{dataFashion[3]}} alt="">
+                                                      <img src={{data.image}} alt="">
                                                   </div>
                                                   <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataFashion[4]}}</a></h4>
-                                                      <p>{{dataFashion[5]}}</p>
+                                                      <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                                      <p>{{data.time}}</p>
                                                   </div>
                                               </div>
                                           </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataFashion[6]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataFashion[7]}}</a></h4>
-                                                      <p>{{dataFashion[8]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataFashion[9]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataFashion[10]}}</a></h4>
-                                                      <p>{{dataFashion[11]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataFashion[12]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataFashion[13]}}</a></h4>
-                                                      <p>{{dataFashion[14]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
+
                                       </div>
                                   </div>
                               </div>
@@ -286,73 +143,32 @@
                               <div class="row">
                                   <!-- Left Details Caption -->
                                   <div class="col-xl-6">
-                                      <div class="whats-news-single mb-40">
-                                          <div class="whates-img">
-                                              <img src={{dataSport[0]}} alt="">
-                                          </div>
-                                          <div class="whates-caption">
-                                              <h4><a href="#">{{dataSport[4]}}</a></h4>
-                                              <span>{{dataSport[5]}}</span>
-                                          </div>
+                                      <div class="whats-news-single mb-40" *ngFor="let data of dataSport; let i=index">
+                                        <div class="whates-img" *ngIf="i<2">
+                                          <img src={{data.image}} alt="">
                                       </div>
-                                      <div class="whats-news-single mb-40">
-                                        <div class="whates-img">
-                                            <img src={{dataSport[15]}} alt="">
-                                        </div>
-                                        <div class="whates-caption">
-                                            <h4><a href="#">{{dataSport[16]}}</a></h4>
-                                            <span>{{dataSport[17]}}</span>
-                                        </div>
-                                    </div>
+                                      <div class="whates-caption" *ngIf="i<2">
+                                          <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                          <span>{{data.time}}</span>
+                                      </div>
+                                      </div>
                                   </div>
                                   <!-- Right single caption -->
                                   <div class="col-xl-6 col-lg-12">
                                       <div class="row">
                                           <!-- single -->
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataSport[6]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataSport[7]}}</a></h4>
-                                                      <p>{{dataSport[8]}}</p>
-                                                  </div>
+                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" *ngFor="let data of dataSport; let i=index">
+                                              <div class="whats-right-single mb-20" *ngIf="(i<6) && (i>1)">
+                                                <div class="whats-right-img">
+                                                  <img src={{data.image}} alt="">
+                                              </div>
+                                              <div class="whats-right-cap">
+                                                  <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                                  <p>{{data.time}}</p>
+                                              </div>
                                               </div>
                                           </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataSport[9]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataSport[10]}}</a></h4>
-                                                      <p>{{dataSport[11]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataSport[12]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataSport[13]}}</a></h4>
-                                                      <p>{{dataSport[14]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataSport[15]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataSport[16]}}</a></h4>
-                                                      <p>{{dataSport[17]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
+
                                       </div>
                                   </div>
                               </div>
@@ -362,72 +178,30 @@
                               <div class="row">
                                   <!-- Left Details Caption -->
                                   <div class="col-xl-6">
-                                      <div class="whats-news-single mb-40">
-                                          <div class="whates-img">
-                                              <img src={{dataTechnology[0]}} alt="">
-                                          </div>
-                                          <div class="whates-caption">
-                                              <h4><a href="#">{{dataTechnology[1]}}</a></h4>
-                                              <span>{{dataTechnology[2]}}</span>
-                                          </div>
+                                      <div class="whats-news-single mb-40" *ngFor="let data of dataTechnology; let i=index">
+                                        <div class="whates-img" *ngIf="i<2">
+                                          <img src={{data.image}} alt="">
                                       </div>
-                                      <div class="whats-news-single mb-40">
-                                        <div class="whates-img">
-                                            <img src={{dataTechnology[15]}} alt="">
-                                        </div>
-                                        <div class="whates-caption">
-                                            <h4><a href="#">{{dataTechnology[16]}}</a></h4>
-                                            <span>{{dataTechnology[17]}}</span>
-                                        </div>
-                                    </div>
+                                      <div class="whates-caption" *ngIf="i<2">
+                                          <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                          <span>{{data.time}}</span>
+                                      </div>
+                                      </div>
                                   </div>
                                   <!-- Right single caption -->
                                   <div class="col-xl-6 col-lg-12">
                                       <div class="row">
                                           <!-- single -->
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataTechnology[3]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataTechnology[4]}}</a></h4>
-                                                      <p>{{dataTechnology[5]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataTechnology[6]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataTechnology[7]}}</a></h4>
-                                                      <p>{{dataTechnology[8]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataTechnology[9]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataTechnology[10]}}</a></h4>
-                                                      <p>{{dataTechnology[11]}}</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                                              <div class="whats-right-single mb-20">
-                                                  <div class="whats-right-img">
-                                                      <img src={{dataTechnology[12]}} alt="">
-                                                  </div>
-                                                  <div class="whats-right-cap">
-                                                      <h4><a href="latest_news.html">{{dataTechnology[13]}}</a></h4>
-                                                      <p>{{dataTechnology[14]}}</p>
-                                                  </div>
-                                              </div>
+                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" *ngFor="let data of dataTechnology; let i=index">
+                                            <div class="whats-right-single mb-20" *ngIf="(i<6) && (i>1)">
+                                              <div class="whats-right-img">
+                                                <img src={{data.image}} alt="">
+                                            </div>
+                                            <div class="whats-right-cap">
+                                                <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                                <p>{{data.time}}</p>
+                                            </div>
+                                            </div>
                                           </div>
                                       </div>
                                   </div>
