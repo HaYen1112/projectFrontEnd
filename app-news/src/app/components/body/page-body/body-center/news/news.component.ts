@@ -18,7 +18,7 @@ export class NewsComponent implements OnInit {
   private urlLD =' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fsuc-khoe%2Flam-dep.rss';
   private urlKP ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fdu-lich%2Fkham-pha.rss';
   private urlSVK ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fsuc-khoe%2Fsong-vui-khoe.rss';
-  private urlVideo ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fvideo.thanhnien.vn%2Frss%2Fhome.rss'
+  private urlVideo =' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Fvideo%2Fthoi-su.rss'
   constructor(private newBodyCenter: BodyCenterComponent) {
     //Khỏe đẹp mỗi ngày
     this.dataKDMN =[];
@@ -36,8 +36,8 @@ export class NewsComponent implements OnInit {
     this.newBodyCenter.setDatas(this.urlLD, this.dataLD);
     this.newBodyCenter.setDatas(this.urlKP, this.dataKP);
     this.newBodyCenter.setDatas(this.urlSVK, this.dataSVK);
-    this.newBodyCenter.setDatas(this.urlVideo, this.dataVideo);
-    this.newBodyCenter.setLink(this.urlVideo, this.dataLink);
+    this.newBodyCenter.getDatas(this.urlVideo, this.dataVideo);
+    
   }
   ngOnInit(): void {
   }
