@@ -83,16 +83,16 @@
                   <div class="recent-active dot-style d-flex dot-style"  >
                       <!-- Single -->
                       <div class="single-recent" *ngFor="let data of dataVideo; let i = index" >
-                          <div class="what-img" *ngIf="i<4">
+                          <div class="what-img">
                               <img src="{{data.image}}" alt="{{data.title}}">
                           </div>
-                          <div class="what-cap" *ngIf="i<4">
+                          <div class="what-cap">
                               <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
                               <a class="popup-video btn-icon" href="{{data.link}}" target="blank"><span class="flaticon-play-button"><i class="fab fa-youtube"></i></span></a>
                                 <p>{{data.time}}</p>
                           </div>
                       </div>
-                     
+
                   </div>
               </div>
           </div>

@@ -99,6 +99,7 @@
 //tin gần đây
 .most-recent-area:hover{
   overflow-y: scroll;
+  overflow-x: hidden;
   &::-webkit-scrollbar{
     width: 4px;
     background: grey;
@@ -122,6 +123,7 @@
   display: block;
   position: relative;
   overflow-y: hidden;
+  overflow-x: hidden;
   img{
     object-fit: cover;
   }
