@@ -1,165 +1,127 @@
 <div class="cate-list">
     <div class="cate">
         <h3><a href="" class="cate-name">TUYỂN DỤNG</a></h3>
-        <div class="content">
-            <div class="first-new">
-                <img data-src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
-                    alt="CEO Hậu Nguyễn - SexybrowGH xu hướng toàn cầu của ngành phun xăm thẩm mỹ" class="loaded"
-                    src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
+        <div class="content" *ngFor="let data of dataTD; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
                     data-was-processed="true">
                 <div class="title">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
                 </div>
                 <div class="time">
-                    <time>11/12/2000</time>
+                    <time>{{data.time}}</time>
                 </div>
             </div>
-            <div class="new">
+            <div class="new" *ngIf='(i>0) '>
                 <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
-            </div>
-            <div class="new">
-                <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
-                </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time"><time>{{data.time}}</time></div>
             </div>
         </div>
     </div>
     <div class="cate">
-        <h3><a href="" class="cate-name">TUYỂN DỤNG</a></h3>
-        <div class="content">
-            <div class="first-new">
-                <img data-src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
-                    alt="CEO Hậu Nguyễn - SexybrowGH xu hướng toàn cầu của ngành phun xăm thẩm mỹ" class="loaded"
-                    src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
+        <h3><a href="" class="cate-name">SẢN PHẨM</a></h3>
+        <div class="content" *ngFor="let data of dataSP; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
                     data-was-processed="true">
                 <div class="title">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
             </div>
-            <div class="new">
+            <div class="new" *ngIf='(i>0) '>
                 <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
-            </div>
-            <div class="new">
-                <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
-                </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time"><time>{{data.time}}</time></div>
             </div>
         </div>
     </div>
     <div class="cate">
-        <h3><a href="" class="cate-name">TUYỂN DỤNG</a></h3>
-        <div class="content">
-            <div class="first-new">
-                <img data-src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
-                    alt="CEO Hậu Nguyễn - SexybrowGH xu hướng toàn cầu của ngành phun xăm thẩm mỹ" class="loaded"
-                    src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
+        <h3><a href="" class="cate-name">GIẢI TRÍ</a></h3>
+        <div class="content" *ngFor="let data of dataGT; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
                     data-was-processed="true">
                 <div class="title">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
             </div>
-            <div class="new">
+            <div class="new" *ngIf='(i>0) '>
                 <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
-            </div>
-            <div class="new">
-                <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
-                </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time"><time>{{data.time}}</time></div>
             </div>
         </div>
     </div>
     <div class="cate">
-        <h3><a href="" class="cate-name">TUYỂN DỤNG</a></h3>
-        <div class="content">
-            <div class="first-new">
-                <img data-src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
-                    alt="CEO Hậu Nguyễn - SexybrowGH xu hướng toàn cầu của ngành phun xăm thẩm mỹ" class="loaded"
-                    src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
+        <h3><a href="" class="cate-name">DỊCH VỤ</a></h3>
+        <div class="content" *ngFor="let data of dataDV; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
                     data-was-processed="true">
                 <div class="title">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
             </div>
-            <div class="new">
+            <div class="new" *ngIf='(i>0) '>
                 <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
-            </div>
-            <div class="new">
-                <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
-                </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time"><time>{{data.time}}</time></div>
             </div>
         </div>
     </div>
     <div class="cate">
-        <h3><a href="" class="cate-name">TUYỂN DỤNG</a></h3>
-        <div class="content">
-            <div class="first-new">
-                <img data-src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
-                    alt="CEO Hậu Nguyễn - SexybrowGH xu hướng toàn cầu của ngành phun xăm thẩm mỹ" class="loaded"
-                    src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
+        <h3><a href="" class="cate-name">GIẢI THƯỞNG</a></h3>
+        <div class="content" *ngFor="let data of dataGTh; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
                     data-was-processed="true">
                 <div class="title">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
             </div>
-            <div class="new">
+            <div class="new" *ngIf='(i>0) '>
                 <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
-            </div>
-            <div class="new">
-                <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
-                </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time"><time>{{data.time}}</time></div>
             </div>
         </div>
     </div>
     <div class="cate">
-        <h3><a href="" class="cate-name">TUYỂN DỤNG</a></h3>
-        <div class="content">
-            <div class="first-new">
-                <img data-src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
-                    alt="CEO Hậu Nguyễn - SexybrowGH xu hướng toàn cầu của ngành phun xăm thẩm mỹ" class="loaded"
-                    src="https://image.thanhnien.vn/215x140/uploaded/quochung.qc/2021_02_03/sexybrowgh/2_prqk.png"
+        <h3><a href="" class="cate-name">THÔNG BÁO</a></h3>
+        <div class="content" *ngFor="let data of dataTB; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
                     data-was-processed="true">
                 <div class="title">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
             </div>
-            <div class="new">
+            <div class="new" *ngIf='(i>0) '>
                 <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
+                    <a href="{{data.link}}">{{data.title}}</a>
                 </div>
-                <div class="time"><time>11/12/2000</time></div>
-            </div>
-            <div class="new">
-                <div class="title-new">
-                    <a href="">Tất cá chúng ta sẽ có được ngày hôm nay là nhờ vào gia đình</a>
-                </div>
-                <div class="time"><time>11/12/2000</time></div>
+                <div class="time"><time>{{data.time}}</time></div>
             </div>
         </div>
     </div>
