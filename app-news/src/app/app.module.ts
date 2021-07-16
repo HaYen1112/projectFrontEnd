@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -43,7 +43,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormLoginComponent } from './components/login/form-login/form-login.component';
 import { CateListComponent } from './components/you-need-know/under-left/cate-list/cate-list.component';
 import { HotNewComponent } from './components/you-need-know/under-left/hot-new/hot-new.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const route: Routes = [
   { path: 'last-new-readings', component: LastNewReadingsComponent },
@@ -97,14 +97,15 @@ const route: Routes = [
   ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule, AppRoutingModule,
-     RouterModule.forChild(route), HttpClientJsonpModule,
+     RouterModule.forChild(route), HttpClientJsonpModule, NgbModule
 
 
   ],
   providers: [
-    RouterModule,
+    RouterModule
   ],
   bootstrap: [AppComponent],
-  exports: [HttpClientModule]
+  exports: [HttpClientModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
