@@ -6,12 +6,12 @@ import { BodyCenterComponent } from 'src/app/components/body/page-body/body-cent
   styleUrls: ['./cate-list.component.scss']
 })
 export class CateListComponent implements OnInit {
- private urlTD ="https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Ftuyen-dung.rss";
- private urlSP=" https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fsan-pham.rss";
- private urlGT=" https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fgiai-tri.rss";
- private urlDV="  https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fdich-vu.rss";
- private urlGTh=" https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fgiai-thuong.rss";
- private urlTB=" https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fthong-bao.rss"; 
+  urlTD = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Ftuyen-dung.rss&api_key=hjpb9yjc64ebiz3g8uodqlqthop2adx5mkhfwtvq".trim();
+  urlSP = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fsan-pham.rss&api_key=hjpb9yjc64ebiz3g8uodqlqthop2adx5mkhfwtvq".trim();
+  urlGT = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fgiai-tri.rss&api_key=hjpb9yjc64ebiz3g8uodqlqthop2adx5mkhfwtvq".trim();
+  urlDV = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fdich-vu.rss&api_key=hjpb9yjc64ebiz3g8uodqlqthop2adx5mkhfwtvq".trim();
+  urlGTh = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fgiai-thuong.rss&api_key=hjpb9yjc64ebiz3g8uodqlqthop2adx5mkhfwtvq".trim();
+  urlTB = " https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fthong-bao.rss&api_key=hjpb9yjc64ebiz3g8uodqlqthop2adx5mkhfwtvq".trim();
  @Input() dataTD: any[];
  @Input() dataSP: any[];
  @Input() dataGT: any[];

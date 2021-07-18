@@ -7,9 +7,9 @@ import { BodyCenterComponent } from 'src/app/components/body/page-body/body-cent
   styleUrls: ['./hot-new.component.scss']
 })
 export class HotNewComponent implements OnInit {
-   url1 = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fgiai-tri.rss';
-   url2 = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fvan-hoa%2Fcau-chuyen.rss';
-   url3 = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Fthe-thao%2Fbong-ro.rss';
+   url1 = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet.rss&api_key=hjpb9yjc64ebiz3g8uodqlqthop2adx5mkhfwtvq'.trim();
+   url2 = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fmien-bac.rss&api_key=hjpb9yjc64ebiz3g8uodqlqthop2adx5mkhfwtvq'.trim();
+   url3 = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fban-can-biet%2Fmien-nam.rss&api_key=hjpb9yjc64ebiz3g8uodqlqthop2adx5mkhfwtvq'.trim();
    @Input() data: any[];
    @Input() active1 = 'active';
    @Input() active2 = '';
