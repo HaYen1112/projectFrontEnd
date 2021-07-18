@@ -80,9 +80,9 @@
           </div>
           <div class="row">
               <div class="col-12">
-                  <div class="recent-active dot-style d-flex dot-style">
+                  <div class="recent-active dot-style d-flex dot-style" *ngIf="show">
                       <!-- Single -->
-                      <div class="single-recent" *ngFor="let data of dataVideo; let i = index" >
+                      <div class="single-recent" *ngFor="let data of dataVideo; let i = index" [@animationPhoto]="images.length">
                           <div class="what-img">
                               <img src="{{data.image}}" alt="{{data.title}}">
                           </div>
@@ -92,10 +92,15 @@
                                 <p>{{data.time}}</p>
                           </div>
                       </div>
-
                   </div>
               </div>
           </div>
       </div>
   </div>
 </div>
+
+<!-- <div [@animationPhoto]="images.length">
+     <div *ngFor="let i of images">
+       <img src="{{dataVideo[i].image}}" alt="" width="300px">
+     </div>
+</div> -->
