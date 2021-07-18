@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule} from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/header/menu/menu.component';
@@ -44,7 +44,7 @@ import { FormLoginComponent } from './components/login/form-login/form-login.com
 import { CateListComponent } from './components/you-need-know/under-left/cate-list/cate-list.component';
 import { HotNewComponent } from './components/you-need-know/under-left/hot-new/hot-new.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 const route: Routes = [
   { path: 'last-new-readings', component: LastNewReadingsComponent },
   { path: '', component: PageBodyComponent},
@@ -97,7 +97,7 @@ const route: Routes = [
   ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule, AppRoutingModule,
-     RouterModule.forChild(route), HttpClientJsonpModule, NgbModule
+     RouterModule.forChild(route), HttpClientJsonpModule, NgbModule, BrowserAnimationsModule
 
 
   ],
