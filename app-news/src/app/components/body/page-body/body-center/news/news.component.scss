@@ -69,6 +69,7 @@
 //trending new
 .recent-articles{
   overflow-x: scroll;
+  display: inline-block;
   &::-webkit-scrollbar{
     height: 4px;
     background: grey;
@@ -87,6 +88,7 @@
   height: 350px;
   background-color: white;
   margin-bottom: 20px;
+  display: block;
   .recent-wrapper{
       margin-bottom: 23px;
   }
