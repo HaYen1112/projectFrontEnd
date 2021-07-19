@@ -10,15 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.scss']
 
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
+@Injectable({providedIn: 'root'})
 
-=======
-@Injectable({providedIn: 'root'})
->>>>>>> main
-=======
-@Injectable({providedIn: 'root'})
->>>>>>> main
 export class MenuComponent implements OnInit {
   // tìm kiếm;
   item = [
