@@ -92,7 +92,6 @@
     }
   }
 }
-
 .dropdown-menu-ti{
  width: 1270px;
  height:73px;
@@ -464,3 +463,15 @@ $tomatored: #F25C66;
   background-color: $tomatored;
 }
 
+@media screen and (max-width: 2000px) {
+  .site-header__content{
+    width: 1903px;
+    height:auto;
+  }
+  }
+  @media screen and (max-width: 480px) {
+    .site-header__content{
+      width: 203px;
+      height:auto;
+    }
+  }
