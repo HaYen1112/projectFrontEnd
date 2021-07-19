@@ -1,17 +1,14 @@
 
 import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
-import { Router } from '@angular/router';
-
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
-
 })
 @Injectable({providedIn: 'root'})
-
 export class MenuComponent implements OnInit {
   // tìm kiếm;
   item = [
@@ -41,7 +38,7 @@ export class MenuComponent implements OnInit {
    {header: 'DU LỊCH', data: ['KHÁM PHÁ', 'A - Z', 'SĂN TOUR']},
    {header: 'XE', data: ['THỊ TRƯỜNG XE', 'TƯ VẤN XE', 'DIỄN ĐÀN XE', 'ĐÁNH GIÁ XE', 'KHÁM PHÁ XE', 'VIDEO']}
  ];
-
+ navigationExtras?: NavigationExtras;
  routerHome: string = '/';
  routerBCB: string = 'bancanbiet';
  constructor(private menu : AppComponent, private router: Router) {
@@ -81,6 +78,10 @@ export class MenuComponent implements OnInit {
       this.colorTextDN = 'black';
       this.colorBackgroundDN = 'white';
 }
+}
+view(product: any[]): void {
+  this.navigationExtras = {state: product};
+  this.router.navigateByUrl('/product-detail', this.navigationExtras);
 }
 getDisplay(title: string){
       if ((title == 'EURO 2020') || (title == 'SĂN TOUR') || (title == 'CẨM NANG TUYỂN SINH 2021')) return 'block';
