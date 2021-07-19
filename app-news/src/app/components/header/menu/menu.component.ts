@@ -10,8 +10,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.scss']
 
 })
-export class MenuComponent implements OnInit {
 
+export class MenuComponent implements OnInit {
+  // tìm kiếm;
+  item = [
+    {
+      id: 1,
+      text:''
+
+    }
+  ];
  @Input() dataTM: any[];
  private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fhome.rss';
  @Input() dataCM: any[] = [
