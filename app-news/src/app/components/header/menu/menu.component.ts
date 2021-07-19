@@ -11,7 +11,11 @@ import { Router } from '@angular/router';
 
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+@Injectable({providedIn: 'root'})
+>>>>>>> main
 =======
 @Injectable({providedIn: 'root'})
 >>>>>>> main
