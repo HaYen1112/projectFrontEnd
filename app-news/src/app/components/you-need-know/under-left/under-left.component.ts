@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { YouNeedKnowComponent } from '../you-need-know.component';
 
 @Component({
   selector: 'app-under-left',
