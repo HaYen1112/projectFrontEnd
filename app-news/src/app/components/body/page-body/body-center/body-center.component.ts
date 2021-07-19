@@ -87,8 +87,8 @@ export class BodyCenterComponent implements OnInit {
     this.com.getData(urls)
     .subscribe((value: any) => {
       for (let item of value['items']) {
-              datas.push({image: item['thumbnail'], title: item['title'], time: this.getTime(item['pubDate'])});
-            }
+datas.push({image: item['thumbnail'], title: item['title'], time: this.getTime(item['pubDate']), link: item['link']});
+      }
     });
   }
 

@@ -1,44 +1,14 @@
 
-<div id="demo" class="carousel slide" data-ride="carousel" data-interval="4000">
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="news-slider">
-        <div class="slide">
-          <img src="{{dataItem[18]}}">
-          <div class="most-recent-cap">
-            <h4><a href="latest_news.html">{{dataItem[19]}}</a></h4>
-            <p>{{dataItem[20]}}</p>
-        </div>
-        </div>
-      </div>
+
+<ngb-carousel [showNavigationArrows]="true" [showNavigationIndicators]="false">
+  <ng-template ngbSlide *ngFor="let data of dataItem; let i = index">
+    <div class="picsum-img-wrapper">
+      <img src="{{data.image}}" alt="">
     </div>
-    <div class="carousel-item">
-      <div class="news-slider">
-        <div class="slide"><img src="{{dataItem[24]}}">
-          <div class="most-recent-cap">
-            <h4><a href="latest_news.html">{{dataItem[25]}}</a></h4>
-            <p>{{dataItem[26]}}</p>
-        </div>
-        </div>
-      </div>
+    <div class="carousel-caption">
+      <a href="{{data.link}}" target="blank">{{data.title}}</a>
+      <p>{{data.time}}</p>
     </div>
-    <div class="carousel-item">
-      <div class="news-slider">
-        <div class="slide"><img src="{{dataItem[21]}}">
-          <div class="most-recent-cap">
-            <h4><a href="latest_news.html">{{dataItem[22]}}</a></h4>
-            <p>{{dataItem[23]}}</p>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  </ng-template>
+</ngb-carousel>
 

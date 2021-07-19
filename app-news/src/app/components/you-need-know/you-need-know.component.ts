@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable, Input } from '@angular/core';
+import { Component, OnInit, Injectable} from '@angular/core';
 
 @Component({
   selector: 'app-you-need-know',
@@ -9,10 +9,7 @@ export class YouNeedKnowComponent implements OnInit {
 
   constructor() {
   }
-
   ngOnInit(): void {
   }
 
 }
-
-

@@ -7,6 +7,7 @@
       width: 650px;
       height: 630px;
   }
+
   // left
   .whats-news-single{
       margin-left: 15px;
@@ -27,6 +28,8 @@
       .whates-caption{
           h4{
               a{
+                  width: 240px;
+                  margin-left: 10px;
                   font-size: 14px;
                   line-height: 1.2;
                   margin-bottom: 12px;
@@ -41,10 +44,12 @@
               }
           }
           span{
+            margin-left: 10px;
               color: #707b8e;
               font-size: 12px;
               margin-bottom: 14px;
               display: block;
+              margin-top: -10px;
           }
           p{
               margin-bottom: 0;
