@@ -1,17 +1,14 @@
 
 import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
-import { Router } from '@angular/router';
-
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
-
 })
 @Injectable({providedIn: 'root'})
-
 export class MenuComponent implements OnInit {
   // tìm kiếm;
   item = [
@@ -41,6 +38,9 @@ export class MenuComponent implements OnInit {
    {header: 'DU LỊCH', data: ['KHÁM PHÁ', 'A - Z', 'SĂN TOUR']},
    {header: 'XE', data: ['THỊ TRƯỜNG XE', 'TƯ VẤN XE', 'DIỄN ĐÀN XE', 'ĐÁNH GIÁ XE', 'KHÁM PHÁ XE', 'VIDEO']}
  ];
+
+ navigationExtras?: NavigationExtras;
+
 //  linh rss video
  private Video ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fvideo.thanhnien.vn%2Frss%2Fhome.rss';
  private viThoiSu='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Fvideo%2Fthoi-su.rss&api_key=geidhyghyfmctbkyu9epa976k5ofgyqw7mkbuufa';
@@ -182,6 +182,7 @@ private vdx='';
     {header:this.DuLich,data:[this.khamPha,this.az,this.sanTour]},   
     {header:this.Xe,data:[this.ttx,this.tvx,this.dđx,this.đgx,this.kpx,this.vdx]},
   ];
+
  routerHome: string = '/';
  routerBCB: string = 'bancanbiet';
  constructor(private menu : AppComponent, private router: Router) {
@@ -221,6 +222,10 @@ private vdx='';
       this.colorTextDN = 'black';
       this.colorBackgroundDN = 'white';
 }
+}
+view(product: any[]): void {
+  this.navigationExtras = {state: product};
+  this.router.navigateByUrl('/product-detail', this.navigationExtras);
 }
 getDisplay(title: string){
       if ((title == 'EURO 2020') || (title == 'SĂN TOUR') || (title == 'CẨM NANG TUYỂN SINH 2021')) return 'block';
