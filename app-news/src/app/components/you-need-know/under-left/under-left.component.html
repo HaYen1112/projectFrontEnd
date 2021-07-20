@@ -17,14 +17,16 @@
   <div class="content">
     <!-- 1 -->
     <div class="feature">
-      <div class="most-recent-single" *ngFor="let data of Datanew; let i = index">
-        <article class="most-recent-images" *ngIf="i <5">
-            <img src="{{data.image}}">
-        </article>
-          <div class="most-recent-capt" *ngIf="i <5">
+      <div class="most-recent-single-1"*ngFor="let data of Datanew; let i = index;">
+        <div class="most-recent-single" *ngIf="i <5">
+          <article class="most-recent-images">
+              <img src="{{data.image}}">
+          </article>
+          <div class="most-recent-capt">
             <h4><a href="{{data.link}}" target="blank" > {{data.title}}</a></h4>
             <p>{{data.time}}</p>
           </div>
+        </div>
       </div>
   </div>
 <!-- thẻ tin mới -->
