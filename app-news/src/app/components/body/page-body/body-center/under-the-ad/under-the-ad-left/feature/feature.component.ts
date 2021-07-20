@@ -21,18 +21,18 @@ export class FeatureComponent implements OnInit {
   private urlSport = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthethao.thanhnien.vn%2Frss%2Fhome.rss'.trim();
   private urlTechnology = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fcong-nghe.rss'.trim();
   indexs = [0, 1];
-  constructor(private underLeft: BodyCenterComponent) {
+  constructor(private bodyCenter: BodyCenterComponent) {
       this.dataLife = [];
       this.dataFashion = [];
       this.dataSport = [];
       this.dataTechnology = [];
       this.dataTravel = [];
 
-      this.underLeft.getDatas(this.urlLife, this.dataLife);
-      this.underLeft.getDatas(this.urlTravel, this.dataTravel);
-      this.underLeft.getDatas(this.urlFashion, this.dataFashion);
-      this.underLeft.getDatas(this.urlSport, this.dataSport);
-      this.underLeft.getDatas(this.urlTechnology, this.dataTechnology);
+      this.bodyCenter.getDatas(this.urlLife, this.dataLife);
+      this.bodyCenter.getDatas(this.urlTravel, this.dataTravel);
+      this.bodyCenter.getDatas(this.urlFashion, this.dataFashion);
+      this.bodyCenter.getDatas(this.urlSport, this.dataSport);
+      this.bodyCenter.getDatas(this.urlTechnology, this.dataTechnology);
 
      }
 

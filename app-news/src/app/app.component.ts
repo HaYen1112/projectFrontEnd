@@ -9,9 +9,10 @@ import { Observable } from 'rxjs';
 @Injectable({providedIn: 'root'})
 export class AppComponent {
 
+  url = 'https://vnexpress.net/12-000-nguoi-do-ve-cua-lo-4092705.html'
   constructor(private http: HttpClient){
          }
-         
+
   getData(url: string): Observable<any>{
     return this.http.get(url);
   }
