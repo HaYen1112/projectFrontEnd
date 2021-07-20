@@ -18,45 +18,21 @@
                             <div class="col-lg-12">
                                 <div class="weekly2-news-active d-flex">
                                     <!-- Single -->
-                                    <div class="weekly2-single">
-                                        <div class="weekly2-img">
-                                            <img src={{dataKDMN[3]}} alt="">
+                                    <div class="weekly2-single" *ngFor="let data of dataKP; let i=index">
+                                        <div class="weekly2-img" *ngIf="i<4">
+                                            <img src={{data.image}} alt="">
                                         </div>
-                                        <div class="weekly2-caption">
-                                            <h4><a href="#">{{dataKDMN[4]}}</a></h4>
-                                            <p class = "p1">{{dataKDMN[5]}}</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single -->
-                                    <div class="weekly2-single">
-                                        <div class="weekly2-img">
-                                            <img src=  {{dataLD[3]}} alt="">
-                                        </div>
-                                        <div class="weekly2-caption">
-                                            <h4><a href="#"> {{dataLD[4]}}</a></h4>
-                                            <p class="p2">  {{dataLD[5]}}</p>
+                                        <div class="weekly2-caption" *ngIf="i<4">
+                                        <h4><a href="{{data.link}}">{{data.title}}</a></h4>
+                                            <p class = "p1">{{data.time}}</p>
                                         </div>
                                     </div>
                                     <!-- Single -->
-                                    <div class="weekly2-single">
-                                        <div class="weekly2-img">
-                                            <img src= {{dataKP[27]}} alt="">
-                                        </div>
-                                        <div class="weekly2-caption">
-                                            <h4><a href="#"> {{dataKP[28]}}</a></h4>
-                                            <p> {{dataKP[29]}}</p>
-                                        </div>
-                                    </div>
+
                                     <!-- Single -->
-                                    <div class="weekly2-single">
-                                        <div class="weekly2-img">
-                                            <img src={{dataSVK[27]}} alt="">
-                                        </div>
-                                        <div class="weekly2-caption">
-                                            <h4><a href="#"> {{dataSVK[28]}}</a></h4>
-                                            <p> {{dataSVK[29]}}</p>
-                                        </div>
-                                    </div>
+
+                                    <!-- Single -->
+
                                 </div>
                             </div>
                         </div>
