@@ -17,16 +17,20 @@ export class MenuBottomComponent implements OnInit {
        this.dataCMMB = this.menubottom.dataCM;
    }
    navigationExtras?: NavigationExtras;
-view2(index1: number, index2: number): void {
-  const index: any[] = [index1, index2];
-  this.navigationExtras = {state: index};
-  this.router.navigateByUrl('/last-new-readings', this.navigationExtras);
-}
-view1(index1: number): void {
-  const index: any[] = [index1];
-  this.navigationExtras = {state: index};
-  this.router.navigateByUrl('/last-new-readings', this.navigationExtras);
-}
+   view2(index1: number, index2: number, title: string): void {
+    this.router.navigate(['/']).then(() => {
+      const index: any[] = [index1, index2, title];
+      this.navigationExtras = {state: index};
+      this.router.navigateByUrl('/last-new-readings', this.navigationExtras);
+    });
+  }
+  view1(index1: number, title: string): void {
+    this.router.navigate(['/']).then(() => {
+    const index: any[] = [index1, title];
+    this.navigationExtras = {state: index};
+    this.router.navigateByUrl('/last-new-readings', this.navigationExtras);
+  });
+  }
   ngOnInit(): void {
   }
 

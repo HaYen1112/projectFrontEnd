@@ -31,7 +31,7 @@ export class NewsComponent implements OnInit {
   show = true;
 
   urlKP ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Fvideo%2Fthoi-su.rss&api_key=8rhq1qggacg7vqdw0oxezforxw39rfhvlytwallw';
-  urlVideo =' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Fvideo%2Fthoi-su.rss'
+  urlVideo ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fgioi-tre%2Fket-noi.rss&api_key=1k25wgfmjkjyuixk5j6s3l2vabkshvjrpdvzhusf'
   constructor(private newBodyCenter: BodyCenterComponent) {
     //Khám phá
     this.dataKP= [];
