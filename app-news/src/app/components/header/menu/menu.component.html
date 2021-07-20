@@ -11,12 +11,12 @@
         <span>CHUYÊN MỤC</span>
       </a>
       <div class="dropdown-menu-cm" [ngStyle]="{display: displayCM2}">
-        <div class="content" *ngFor="let item of dataCM">
+        <div class="content" *ngFor="let item of dataCM; let h=index">
           <table>
             <tr>
-              <td class="title"> <a href=""> {{item.header}} </a></td>
-              <td class="titleItem" *ngFor="let i of item.data">
-                <a href="">{{i}}<img src="https://static.thanhnien.vn/thethao2021/w/app_themes/img/hot.png" style="margin-top: 0px; float: right;" class="loading" data-was-processed="true" [ngStyle]="{display: getDisplay(i)}"></a>
+              <td class="title"> <a [routerLink]="['/last-new-readings']" (click)="view1(h)"> {{item.header}} </a></td>
+              <td class="titleItem" *ngFor="let i of item.data; let k=index">
+                <a [routerLink]="['/last-new-readings']" (click)="view2(h, k)">{{i}}<img src="https://static.thanhnien.vn/thethao2021/w/app_themes/img/hot.png" style="margin-top: 0px; float: right;" class="loading" data-was-processed="true" [ngStyle]="{display: getDisplay(i)}"></a>
               </td>
             </tr>
           </table>

@@ -4,15 +4,27 @@
     <app-menu-bottom></app-menu-bottom>
   </div>
   <div>
-    <app-body-left></app-body-left>
-    <app-body-right></app-body-right>
+
   </div>
   <div class="body">
-    <app-lastnew-body-reading></app-lastnew-body-reading>
+    <div class="most-recent-area">
+      <!-- Section Tittle -->
+      <div class="small-tittle mb-20">
+          <h4 style="font-weight: bold;margin: 10px 0px 20px 10px;">Tin hot</h4>
+      </div>
+      <!-- Single -->
+      <div class="most-recent-single" *ngFor="let d of dataItem; let i=index">
+          <div class="most-recent-images">
+              <img src="{{d.image}}" alt="">
+          </div>
+          <div class="most-recent-capt">
+              <h4><a href="{{d.link}}" target="blank">{{d.title}}</a></h4>
+              <p>{{d.time}}</p>
+          </div>
+      </div>
+    </div>
+
   </div>
-  <div></div>
-  <div></div>
-  <div></div>
   <div class="footer">
      <app-footer></app-footer>
   </div>

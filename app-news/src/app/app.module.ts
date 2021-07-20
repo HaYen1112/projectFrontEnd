@@ -45,6 +45,7 @@ import { CateListComponent } from './components/you-need-know/under-left/cate-li
 import { HotNewComponent } from './components/you-need-know/under-left/hot-new/hot-new.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const route: Routes = [
   { path: 'last-new-readings', component: LastNewReadingsComponent },
   { path: '', component: PageBodyComponent},
