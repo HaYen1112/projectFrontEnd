@@ -16,14 +16,14 @@
                         <!-- Slider -->
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="weekly2-news-active d-flex">
+                                <div class="weekly2-news-active d-flex" *ngIf="show">
                                     <!-- Single -->
-                                    <div class="weekly2-single" *ngFor="let data of dataKP; let i=index">
-                                        <div class="weekly2-img" *ngIf="i<4">
-                                            <img src={{data.image}} alt="">
+                                    <div class="weekly2-single" *ngFor="let data of dataKP; let i=index" [@animationPhoto]="images.length">
+                                        <div class="weekly2-img">
+                                            <img src={{data.image}} alt="{{data.title}}">
                                         </div>
-                                        <div class="weekly2-caption" *ngIf="i<4">
-                                        <h4><a href="{{data.link}}">{{data.title}}</a></h4>
+                                        <div class="weekly2-caption">
+                                        <h4><a href="{{data.link}}" class="popup-video btn-icon" >{{data.title}}</a></h4>
                                             <p class = "p1">{{data.time}}</p>
                                         </div>
                                     </div>
