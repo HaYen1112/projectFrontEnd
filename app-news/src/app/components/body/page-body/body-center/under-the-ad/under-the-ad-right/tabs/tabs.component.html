@@ -5,103 +5,26 @@
       <h4 style="font-weight: bold;margin: 10px 0px 20px 10px;">Gần đây nhất</h4>
   </div>
   <!-- Details -->
-  <div class="most-recent mb-40">
-      <div class="most-recent-img">
-          <img src={{dataMostRecent[0]}} alt="">
+  <div class="most-recent mb-40" *ngFor="let data of dataMostRecent; let i =index">
+      <div class="most-recent-img" *ngIf="i==0">
+          <img src={{data.image}} alt="">
           <div class="most-recent-cap">
-              <h4><a href="latest_news.html"> {{dataMostRecent[1]}}<br>
-                 </a></h4>
-              <p>{{dataMostRecent[2]}}</p>
+              <h4><a href="{{data.link}}">{{data.title}}</a></h4>
+              <p>{{data.time}}</p>
           </div>
       </div>
   </div>
   <!-- Single -->
-  <div class="most-recent-single">
-      <div class="most-recent-images">
-          <img src={{dataMostRecent[3]}} alt="">
+  <div class="most-recent-single" *ngFor="let data of dataMostRecent; let i =index">
+      <div class="most-recent-images"*ngIf="i>0">
+          <img src={{data.image}} alt="" >
       </div>
-      <div class="most-recent-capt">
-          <h4><a href="latest_news.html">{{dataMostRecent[4]}}</a></h4>
-          <p>{{dataMostRecent[5]}}</p>
-      </div>
-  </div>
-  <!-- Single -->
-  <div class="most-recent-single">
-    <div class="most-recent-images">
-        <img src={{dataQP[0]}} alt="">
-    </div>
-    <div class="most-recent-capt">
-        <h4><a href="latest_news.html">{{dataQP[1]}}</a></h4>
-        <p>{{dataQP[2]}}</p>
-    </div>
-</div>
-  <!-- Single -->
-  <div class="most-recent-single">
-      <div class="most-recent-images">
-          <img src={{dataMostRecent[6]}} alt="">
-      </div>
-      <div class="most-recent-capt">
-          <h4><a href="latest_news.html">{{dataMostRecent[7]}}</a></h4>
-          <p>{{dataMostRecent[8]}}</p>
+      <div class="most-recent-capt" *ngIf="i>0">
+          <h4><a href="{{data.link}}">{{data.title}}</a></h4>
+          <p>{{data.time}}</p>
       </div>
   </div>
-   <!-- Single -->
-  <div class="most-recent-single">
-    <div class="most-recent-images">
-        <img src={{dataQP[3]}} alt="">
-    </div>
-    <div class="most-recent-capt">
-        <h4><a href="latest_news.html">{{dataQP[4]}}</a></h4>
-        <p>{{dataQP[5]}}</p>
-    </div>
-  </div>
-   <!-- Single -->
-   <div class="most-recent-single">
-    <div class="most-recent-images">
-        <img src={{dataMostRecent[9]}} alt="">
-    </div>
-    <div class="most-recent-capt">
-        <h4><a href="latest_news.html">{{dataMostRecent[10]}}</a></h4>
-        <p>{{dataMostRecent[11]}}</p>
-    </div>
-</div>
- <!-- Single -->
- <div class="most-recent-single">
-  <div class="most-recent-images">
-      <img src={{dataQP[6]}} alt="">
-  </div>
-  <div class="most-recent-capt">
-      <h4><a href="latest_news.html">{{dataQP[7]}}</a></h4>
-      <p>{{dataQP[8]}}</p>
-  </div>
-</div>
-<div class="most-recent-single">
-  <div class="most-recent-images">
-      <img src={{dataMostRecent[27]}} alt="">
-  </div>
-  <div class="most-recent-capt">
-      <h4><a href="latest_news.html">{{dataMostRecent[28]}}</a></h4>
-      <p>{{dataMostRecent[29]}}</p>
-  </div>
-</div>
-<div class="most-recent-single">
-  <div class="most-recent-images">
-      <img src={{dataQP[9]}} alt="">
-  </div>
-  <div class="most-recent-capt">
-      <h4><a href="latest_news.html">{{dataQP[10]}}</a></h4>
-      <p>{{dataQP[11]}}</p>
-  </div>
-</div>
-<div class="most-recent-single">
-  <div class="most-recent-images">
-      <img src={{dataMostRecent[24]}} alt="">
-  </div>
-  <div class="most-recent-capt">
-      <h4><a href="latest_news.html">{{dataMostRecent[25]}}</a></h4>
-      <p>{{dataMostRecent[26]}}</p>
-  </div>
-</div>
+
 </div>
 <div class="single-follow mb-45">
   <div class="single-box">
@@ -150,31 +73,15 @@
   <div class="news-container2">
   </div>
   <div class="story--text">
-    <div class="meta">
-      <div class="title">
-        <a href=""> {{dataCN[1]}}</a>
+    <div class="meta"  *ngFor="let data of dataCN; let i =index">
+      <div class="title" *ngIf="i<4">
+        <a href="{{data.link}}"> {{data.title}}</a>
       </div>
-      <div class="time"><time>{{dataCN[2]}}</time></div>
+      <div class="time"  *ngIf="i<4"><time>{{data.time}}</time></div>
     </div>
-    <div class="meta">
 
-      <div class="title">
-        <a href="">  {{dataCN[4]}}</a>
-      </div>
-      <div class="time"><time>{{dataCN[5]}}</time></div>
-    </div>
-    <div class="meta">
-      <div class="title">
-        <a href="">  {{dataCN[7]}}</a>
-      </div>
-      <div class="time"><time>{{dataCN[8]}}</time></div>
-    </div>
-    <div class="meta">
-      <div class="title">
-        <a href="">  {{dataCN[10]}}</a>
-      </div>
-      <div class="time"><time>{{dataCN[11]}}</time></div>
-    </div>
+
+
   </div>
 </div>
 
