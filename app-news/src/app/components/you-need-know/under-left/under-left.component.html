@@ -1,47 +1,17 @@
 <div class="container-under-left">
-  <!--  thẻ đầu tiên -->
-  <div id="demo" class="carousel slide" data-ride="carousel" data-interval="4000">
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#demo" data-slide-to="0" class="active"></li>
-      <li data-target="#demo" data-slide-to="1"></li>
-      <li data-target="#demo" data-slide-to="2"></li>
-    </ul>
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="news-slider">
-          <div class="slide">
-            <img src="https://image2.thanhnien.vn/c660x370/0,8,0,100/Uploaded/dieutrang.qc/2019_03_31/bvu/ava_WYTA.jpg">
-            <div class="most-recent-cap">
-              <h4><a href="latest_news.html">Báo cáo ‘đặc biệt’ tại Hội nghị quốc tế máy tính thế hệ mới lần thứ 4</a></h4>
-              <p>11</p>
-          </div>
-          </div>
-        </div>
+  <ngb-carousel [showNavigationArrows]="true" [showNavigationIndicators]="false">
+    <ng-template ngbSlide *ngFor="let data of DataSlide; let i = index">
+      <div class="picsum-img-wrapper">
+        <img src="{{data.image}}" alt="">
       </div>
-      <div class="carousel-item">
-        <div class="news-slider">
-          <div class="slide"><img src="https://image2.thanhnien.vn/c660x370/0,8,0,100/Uploaded/dieutrang.qc/2019_03_31/bvu/ava_WYTA.jpg">
-            <div class="most-recent-cap">
-              <h4><a href="latest_news.html"></a></h4>
-              <p>12</p>
-          </div>
-          </div>
-        </div>
+      <div class="carousel-caption">
+        <a href="{{data.link}}" target="blank">{{data.title}}</a>
+        <p>{{data.time}}</p>
       </div>
-      <div class="carousel-item">
-        <div class="news-slider">
-          <div class="slide"><img src="https://image2.thanhnien.vn/c660x370/0,8,0,100/Uploaded/dieutrang.qc/2019_03_31/bvu/ava_WYTA.jpg">
-            <div class="most-recent-cap">
-              <h4><a href="latest_news.html">Báo cáo ‘đặc biệt’ tại Hội nghị quốc tế máy tính thế hệ mới lần thứ 4</a></h4>
-              <p>1 tiếng</p>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </ng-template>
+  </ngb-carousel>
+
+
 <!-- hết thẻ đầu tiên  -->
 <!-- thẻ thứ 2  -->
   <div class="content">
@@ -152,4 +122,5 @@
 <div class="hotnew">
  <app-hot-new></app-hot-new>
 </div>
+
 </div>
