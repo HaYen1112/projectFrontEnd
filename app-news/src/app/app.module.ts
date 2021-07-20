@@ -51,7 +51,7 @@ const route: Routes = [
   { path: '', component: PageBodyComponent},
   { path: 'bancanbiet', component: YouNeedKnowComponent},
   { path: 'dangnhap', component: LoginComponent}
-]
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +98,7 @@ const route: Routes = [
   ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule, AppRoutingModule,
-     RouterModule.forChild(route), HttpClientJsonpModule, NgbModule, BrowserAnimationsModule
+     RouterModule.forRoot(route), HttpClientJsonpModule, NgbModule, BrowserAnimationsModule
 
 
   ],
@@ -106,7 +106,7 @@ const route: Routes = [
     RouterModule
   ],
   bootstrap: [AppComponent],
-  exports: [HttpClientModule],
+  exports: [HttpClientModule, RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

@@ -147,24 +147,27 @@ private vdx='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnie
  ];
  @Input() dataItem: any[];
  urlItem = '';
+ @Input() title: string = '';
   constructor(private route: Router, private bodyCenter: BodyCenterComponent) {
-     const navigation = this.route.getCurrentNavigation();
+      const navigation = this.route.getCurrentNavigation();
       this.data = navigation?.extras.state as any[];
       this.dataItem = [];
       this.urlItem ='';
-        if (this.data.length<2){
+      if (typeof this.data !== 'undefined'){
+        if ((this.data.length == 2)){
           var index = this.data[0];
             this.urlItem = this.dataLinkCM[index]['header'];
             this.bodyCenter.getDatas(this.urlItem, this.dataItem);
-            console.log(this.urlItem);
-        } else {
+            this.title = this.data[1];
+        }
+          if ((this.data.length == 3)){
           var index1 = this.data[0];
           var index2 = this.data[1];
           this.urlItem = this.dataLinkCM[index1]['data'][index2];
           this.bodyCenter.getDatas(this.urlItem, this.dataItem);
-          console.log(this.urlItem);
+          this.title = this.data[2];
         }
-
+      }
   }
 
   ngOnInit(): void {
