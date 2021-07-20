@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
     }
   ];
  @Input() dataTM: any[];
- private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fhome.rss';
+ private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fthoi-su.rss&api_key=geidhyghyfmctbkyu9epa976k5ofgyqw7mkbuufa';
  @Input() dataCM: any[] = [
    {header: 'VIDEO', data: ['THỜI SỰ', 'PHÓNG SỰ', 'GIẢI TRÍ', 'MÓN NGON', 'THỂ THAO', 'THẾ GIỚI', 'TRỰC TUYẾN']},
    {header: 'THỜI SỰ', data: ['CHÍNH TRỊ', 'PHÁP LUẬT', 'DÂN SINH', 'LAO ĐỘNG - VIỆC LÀM', 'QUYỀN ĐƯỢC BIẾT', 'PHÓNG SỰ / ĐIỀU TRA', 'QUỐC PHÒNG', 'VƯỢT QUA COVID-19']},
@@ -103,7 +103,7 @@ setDataTM(urls: string){
   this.menu.getData(urls)
   .subscribe((value: any) => {
     for (let item of value['items']) {
-            this.dataTM.push({title: item['title'], time: item['pubDate'].substr(11,5)});
+            this.dataTM.push({title: item['title'], time: item['pubDate'].substr(11,5),link:item['link']});
           }
   });
 }
