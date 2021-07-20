@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Injectable} from '@angular/core';
+import { BodyCenterComponent } from '../../body/page-body/body-center/body-center.component';
 
 @Component({
   selector: 'app-under-right',
