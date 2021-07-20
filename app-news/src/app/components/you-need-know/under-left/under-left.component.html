@@ -35,37 +35,12 @@
       <div class="news-container2">
       </div>
       <div class="story--text">
-        <div class="meta">
+        <div class="meta" *ngFor="let data of Datanewhot; let i=index" >
           <div class="title">
-            <a href="">Pacific Land Việt Nam tặng 3.000 suất quà cho người khó khăn vì Covid-19 </a>
+            <a href="{{data.link}}">{{data.title}}</a>
           </div>
-          <div class="time"><time>11/12/2000</time></div>
+          <div class="time"><time>{{data.time}}</time></div>
         </div>
-        <div class="meta">
-          <div class="title">
-            <a href="">Pacific Land Việt Nam tặng 3.000 suất quà cho người khó khăn vì Covid-19 </a>
-          </div>
-          <div class="time"><time>11/12/2000</time></div>
-        </div>
-        <div class="meta">
-          <div class="title">
-            <a href="">Pacific Land Việt Nam tặng 3.000 suất quà cho người khó khăn vì Covid-19 </a>
-          </div>
-          <div class="time"><time>11/12/2000</time></div>
-        </div>
-        <div class="meta">
-          <div class="title">
-            <a href="">Pacific Land Việt Nam tặng 3.000 suất quà cho người khó khăn vì Covid-19 </a>
-          </div>
-          <div class="time"><time>11/12/2000</time></div>
-        </div>
-        <div class="meta">
-          <div class="title">
-            <a href="">Pacific Land Việt Nam tặng 3.000 suất quà cho người khó khăn vì Covid-19 </a>
-          </div>
-          <div class="time"><time>11/12/2000</time></div>
-        </div>
-
       </div>
     </div>
   </div>
