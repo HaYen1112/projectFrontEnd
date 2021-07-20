@@ -17,58 +17,13 @@
   <div class="content">
     <!-- 1 -->
     <div class="feature">
-      <div class="most-recent-single">
-        <article class="most-recent-images">
-            <img src="https://image.thanhnien.vn/150x100/uploaded/dieutrang.qc/2019_03_25/tram/2_htna.jpg">
+      <div class="most-recent-single" *ngFor="let data of Datanew; let i = index">
+        <article class="most-recent-images" *ngIf="i <5">
+            <img src="{{data.image}}">
         </article>
-
-          <div class="most-recent-capt">
-            <h4><a href="">Giá trị thực của trầm hương - hiểu sao cho đúng</a></h4>
-            <p>1 tiếng</p>
-          </div>
-      </div>
-      <!-- 2 -->
-      <div class="most-recent-single">
-        <article class="most-recent-images">
-            <img src="https://image.thanhnien.vn/150x100/uploaded/dieutrang.qc/2019_03_25/tram/2_htna.jpg">
-        </article>
-
-          <div class="most-recent-capt">
-            <h4><a href="">Giá trị thực của trầm hương - hiểu sao cho đúng</a></h4>
-            <p>1 tiếng</p>
-          </div>
-      </div>
-      <!-- 3 -->
-      <div class="most-recent-single">
-        <article class="most-recent-images">
-            <img src="https://image.thanhnien.vn/150x100/uploaded/dieutrang.qc/2019_03_25/tram/2_htna.jpg">
-        </article>
-
-          <div class="most-recent-capt">
-            <h4><a href="">Giá trị thực của trầm hương - hiểu sao cho đúng</a></h4>
-            <p>1 tiếng</p>
-          </div>
-      </div>
-      <!-- 4 -->
-      <div class="most-recent-single">
-        <article class="most-recent-images">
-            <img src="https://image.thanhnien.vn/150x100/uploaded/dieutrang.qc/2019_03_25/tram/2_htna.jpg">
-        </article>
-
-          <div class="most-recent-capt">
-            <h4><a href="">Giá trị thực của trầm hương - hiểu sao cho đúng</a></h4>
-            <p>1 tiếng</p>
-          </div>
-      </div>
-       <!-- 5 -->
-      <div class="most-recent-single">
-        <article class="most-recent-images">
-            <img src="https://image.thanhnien.vn/150x100/uploaded/dieutrang.qc/2019_03_25/tram/2_htna.jpg">
-        </article>
-
-          <div class="most-recent-capt">
-            <h4><a href="">Giá trị thực của trầm hương - hiểu sao cho đúng</a></h4>
-            <p>1 tiếng</p>
+          <div class="most-recent-capt" *ngIf="i <5">
+            <h4><a href="{{data.link}}" target="blank" > {{data.title}}</a></h4>
+            <p>{{data.time}}</p>
           </div>
       </div>
   </div>
@@ -80,37 +35,12 @@
       <div class="news-container2">
       </div>
       <div class="story--text">
-        <div class="meta">
+        <div class="meta" *ngFor="let data of Datanewhot; let i=index" >
           <div class="title">
-            <a href="">Pacific Land Việt Nam tặng 3.000 suất quà cho người khó khăn vì Covid-19 </a>
+            <a href="{{data.link}}">{{data.title}}</a>
           </div>
-          <div class="time"><time>11/12/2000</time></div>
+          <div class="time"><time>{{data.time}}</time></div>
         </div>
-        <div class="meta">
-          <div class="title">
-            <a href="">Pacific Land Việt Nam tặng 3.000 suất quà cho người khó khăn vì Covid-19 </a>
-          </div>
-          <div class="time"><time>11/12/2000</time></div>
-        </div>
-        <div class="meta">
-          <div class="title">
-            <a href="">Pacific Land Việt Nam tặng 3.000 suất quà cho người khó khăn vì Covid-19 </a>
-          </div>
-          <div class="time"><time>11/12/2000</time></div>
-        </div>
-        <div class="meta">
-          <div class="title">
-            <a href="">Pacific Land Việt Nam tặng 3.000 suất quà cho người khó khăn vì Covid-19 </a>
-          </div>
-          <div class="time"><time>11/12/2000</time></div>
-        </div>
-        <div class="meta">
-          <div class="title">
-            <a href="">Pacific Land Việt Nam tặng 3.000 suất quà cho người khó khăn vì Covid-19 </a>
-          </div>
-          <div class="time"><time>11/12/2000</time></div>
-        </div>
-
       </div>
     </div>
   </div>
