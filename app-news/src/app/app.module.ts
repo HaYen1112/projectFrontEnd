@@ -17,9 +17,7 @@ import { WordsAdLeftComponent } from './components/body/page-body/body-center/un
 import { ImgAdLeftComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/img-ad-left/img-ad-left.component';
 import { TabsComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-right/tabs/tabs.component';
 import { FeatureComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/feature/feature.component';
-import { EditorPickComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/editor-pick/editor-pick.component';
 import { NewsComponent } from './components/body/page-body/body-center/news/news.component';
-import { TopicComponent } from './components/body/page-body/body-center/news/topic/topic.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TechNewsComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/tech-news/tech-news.component';
 import { LastNewReadingsComponent } from './components/last-new-readings/last-new-readings.component';
@@ -70,9 +68,7 @@ const route: Routes = [
     ImgAdLeftComponent,
     TabsComponent,
     FeatureComponent,
-    EditorPickComponent,
     NewsComponent,
-    TopicComponent,
     FooterComponent,
     TechNewsComponent,
     LastNewReadingsComponent,
@@ -93,8 +89,6 @@ const route: Routes = [
     FormLoginComponent,
     CateListComponent,
     HotNewComponent,
-
-
   ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule, AppRoutingModule,
