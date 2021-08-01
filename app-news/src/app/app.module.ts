@@ -45,12 +45,14 @@ import { CateListComponent } from './components/you-need-know/under-left/cate-li
 import { HotNewComponent } from './components/you-need-know/under-left/hot-new/hot-new.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewsDetailComponent } from './components/news-detail/news-detail.component';
 
 const route: Routes = [
   { path: 'last-new-readings', component: LastNewReadingsComponent },
   { path: '', component: PageBodyComponent},
   { path: 'bancanbiet', component: YouNeedKnowComponent},
-  { path: 'dangnhap', component: LoginComponent}
+  { path: 'dangnhap', component: LoginComponent},
+  { path: 'detail', component: NewsDetailComponent}
 ];
 @NgModule({
   declarations: [
@@ -93,6 +95,7 @@ const route: Routes = [
     FormLoginComponent,
     CateListComponent,
     HotNewComponent,
+    NewsDetailComponent,
 
 
   ],
