@@ -107,7 +107,7 @@ setDataTM(urls: string){
   this.menu.getData(urls)
   .subscribe((value: any) => {
     for (let item of value['items']) {
-            this.dataTM.push({title: item['title'], time: item['pubDate'].substr(11,5),link:item['link']});
+            this.dataTM.push({title: item['title'], time: item['pubDate'].substr(11,5), link:item['link']});
           }
   });
 }
@@ -207,12 +207,5 @@ if (index == 'lienhe') {
   ngOnInit(): void {
 
   }
-}
-Injectable();
-class Style {
-    'display': string = 'block';
-}
-class NewStyle {
-  'display': string = 'none';
 }
 
