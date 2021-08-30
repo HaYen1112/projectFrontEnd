@@ -6,7 +6,7 @@ import { AppComponent } from 'src/app/app.component';
   templateUrl: './body-center.component.html',
   styleUrls: ['./body-center.component.scss']
 })
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class BodyCenterComponent implements OnInit {
   @Input() descipt: any[] = [];
   today = new Date();
@@ -23,40 +23,40 @@ export class BodyCenterComponent implements OnInit {
     const months = Number(this.jstoday.substr(5, 2));
     this.com.getData(url)
       .subscribe((value: any) => {
-              // console.log(value['items']);
-             // this.descipt.push((JSON.parse(JSON.stringify(item['description']))));
-             for (let item of value['items']){
-                 dataItem.push(item['thumbnail']);
-                 dataItem.push(item['title']);
-              const day = days - Number(item['pubDate'].substr(8, 2));
-              const minute = minutes - Number(item['pubDate'].substr(14, 2));
-              const hour = hours - Number(item['pubDate'].substr(11, 2));
-              const month = months - Number(item['pubDate'].substr(5, 2));
-              if (month > 0) {
-                dataItem.push(month + ' tháng trước');
-                  } else
-              if (day > 0) {
-                  dataItem.push(day + ' ngày trước');
-                  } else {
+        // console.log(value['items']);
+        // this.descipt.push((JSON.parse(JSON.stringify(item['description']))));
+        for (let item of value['items']) {
+          dataItem.push(item['thumbnail']);
+          dataItem.push(item['title']);
+          const day = days - Number(item['pubDate'].substr(8, 2));
+          const minute = minutes - Number(item['pubDate'].substr(14, 2));
+          const hour = hours - Number(item['pubDate'].substr(11, 2));
+          const month = months - Number(item['pubDate'].substr(5, 2));
+          if (month > 0) {
+            dataItem.push(month + ' tháng trước');
+          } else
+            if (day > 0) {
+              dataItem.push(day + ' ngày trước');
+            } else {
               if (hour > 0) {
-                    dataItem.push(hour + ' giờ trước');
-                  } else {
-              if (minute > 0) { dataItem.push(minute + ' phút trước') }
-                    else { dataItem.push(hour + 5 + ' giờ trước'); }
-                  }
-                }
-             }
+                dataItem.push(hour + ' giờ trước');
+              } else {
+                if (minute > 0) { dataItem.push(minute + ' phút trước') }
+                else { dataItem.push(hour + 5 + ' giờ trước'); }
+              }
+            }
+        }
       });
   }
   setLink(url: string, dataItem: any[]) {
     this.com.getData(url)
       .subscribe((value: any) => {
         for (let item of value['items'])
-           dataItem.push(item['link']);
+          dataItem.push(item['link']);
       });
   }
 
-  getTime(date: string){
+  getTime(date: string) {
     //
     const days = Number(this.jstoday.substr(8, 2));
     const hours = Number(this.jstoday.substr(11, 2));
@@ -69,27 +69,27 @@ export class BodyCenterComponent implements OnInit {
     const month = months - Number(date.substr(5, 2));
 
     if (month > 0) {
-     return (month + ' tháng trước');
-        } else
-    if (day > 0) {
-      return (day + ' ngày trước');
+      return (month + ' tháng trước');
+    } else
+      if (day > 0) {
+        return (day + ' ngày trước');
+      } else {
+        if (hour > 0) {
+          return (hour + ' giờ trước');
         } else {
-    if (hour > 0) {
-      return (hour + ' giờ trước');
-        } else {
-    if (minute > 0) { return (minute + ' phút trước') }
-          else {return(hour + 5 + ' giờ trước'); }
+          if (minute > 0) { return (minute + ' phút trước') }
+          else { return (hour + 5 + ' giờ trước'); }
         }
       }
 
   }
-  getDatas(urls: string, datas: any[]){
+  getDatas(urls: string, datas: any[]) {
     this.com.getData(urls)
-    .subscribe((value: any) => {
-      for (let item of value['items']) {
-datas.push({image: item['thumbnail'], title: item['title'], time: this.getTime(item['pubDate']), link: item['link']});
-      }
-    });
+      .subscribe((value: any) => {
+        for (let item of value['items']) {
+          datas.push({ image: item['thumbnail'], title: item['title'], time: this.getTime(item['pubDate']), link: item['link'] });
+        }
+      });
   }
 
   ngOnInit(): void {
