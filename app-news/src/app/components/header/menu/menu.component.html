@@ -14,9 +14,9 @@
         <div class="content" *ngFor="let item of dataCM; let h=index">
           <table>
             <tr>
-              <td class="title"> <a [routerLink]="['/last-new-readings']" (click)="view1(h, item.header)"> {{item.header}} </a></td>
+              <td class="title"> <a [routerLink]="['/#']"  (click)="view1(h, item.header)"> {{item.header}} </a></td>
               <td class="titleItem" *ngFor="let i of item.data; let k=index">
-                <a [routerLink]="['/last-new-readings']" (click)="view2(h, k, i)">{{i}}<img src="https://static.thanhnien.vn/thethao2021/w/app_themes/img/hot.png" style="margin-top: 0px; float: right;" class="loading" data-was-processed="true" [ngStyle]="{display: getDisplay(i)}"></a>
+                <a [routerLink]="['/#']"  (click)="view2(h, k, i)">{{i}}<img src="https://static.thanhnien.vn/thethao2021/w/app_themes/img/hot.png" style="margin-top: 0px; float: right;" class="loading" data-was-processed="true" [ngStyle]="{display: getDisplay(i)}"></a>
               </td>
             </tr>
           </table>
@@ -153,7 +153,8 @@
         </a>
         <div class="dropdown-menu-tk" [ngStyle]="{display: displayTK2}">
           <div class="content">
-              <input type="text"  class="input-tk" name="search" placeholder="Tìm Kiếm...">
+              <input type="text" [(ngModel)]="keyword" class="input-tk" name="keyword" placeholder="Tìm kiếm...">
+              <button class="icon" (click)="view3()"><i class="fa fa-search"></i></button>
           </div>
         </div>
       </li>
