@@ -67,4 +67,34 @@
         }
     }
   }
+  .content{
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: left;
+    margin-left: -8px;
+    height: 73px;
+    border-bottom: none;
+    background-color:#F5F5F5;
+    border: none;
+     .icon{
+       width: 8%;
+       height: 75%;
+       margin-top: 9px;
+       font-weight: bold;
+       background-color: #00bfc5;
+       font-size: 20px;
+       border: black solid 1.5px;
+       border-left: none;
+     }
+    .input-tk{
+      width: 90%;
+      height: 75%;
+      margin-top: 9px;
+      margin-left: 15px;
+      float: left;
+      border: black solid 1.5px;
+      font-size:18px;
+    }
+
+  }
 }

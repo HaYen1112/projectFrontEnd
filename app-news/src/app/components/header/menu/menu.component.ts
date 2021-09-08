@@ -114,27 +114,6 @@ export class MenuComponent implements OnInit {
         }
       });
   }
-
-  displayBCB = ''; displayHome = ''; displayCM1 = 'block'; displayCM2 = 'none';
-  displayTI1 = 'block'; displayTI2 = 'none'; displayVL1 = 'block'; displayVL2 = 'none';
-  displayTK1 = 'block'; displayTK2 = 'none'; displayTM1 = 'block'; displayTM2 = 'none';
-  displayLH1 = 'block'; displayLH2 = 'none';
-  paddingHome = 0;
-  paddingBCB = 0;
-  titleHome = '';
-  titleBCB = '';
-  fontw = '';
-  size = 0;
-  colorTextDanhMuc = ''; colorBackgroundDanhMuc = '';
-  colorTextTienIch = ''; colorBackgroundTienIch = '';
-  colorTextTimKiem = ''; colorBackgroundTimKiem = '';
-  colorTextDCB = ''; colorBackgroundDCB = '';
-  colorTextVL = ''; colorBackgroundVL = '';
-  colorTextDN = ''; colorBackgroundDN = '';
-  colorTextLH = ''; colorBackgroundLH = '';
-  displayclose = ''; indDM = 0; indTI = 0; indTK = 0;
-  indDCB = 0; indVL = 0; indLH = 0; indDN = 0;
-
   setColor(index: any) {
     this.colorTextDN = ''; this.colorBackgroundDN = '#00bfc5';
     this.colorTextDanhMuc = ''; this.colorBackgroundDanhMuc = '';
@@ -207,6 +186,27 @@ export class MenuComponent implements OnInit {
       this.indDM = 0; this.indTI = 0; this.indDCB = 0; this.indVL = 0; this.indTK = 0;
     }
   }
+  displayBCB = ''; displayHome = ''; displayCM1 = 'block'; displayCM2 = 'none';
+  displayTI1 = 'block'; displayTI2 = 'none'; displayVL1 = 'block'; displayVL2 = 'none';
+  displayTK1 = 'block'; displayTK2 = 'none'; displayTM1 = 'block'; displayTM2 = 'none';
+  displayLH1 = 'block'; displayLH2 = 'none';
+  paddingHome = 0;
+  paddingBCB = 0;
+  titleHome = '';
+  titleBCB = '';
+  fontw = '';
+  size = 0;
+  colorTextDanhMuc = ''; colorBackgroundDanhMuc = '';
+  colorTextTienIch = ''; colorBackgroundTienIch = '';
+  colorTextTimKiem = ''; colorBackgroundTimKiem = '';
+  colorTextDCB = ''; colorBackgroundDCB = '';
+  colorTextVL = ''; colorBackgroundVL = '';
+  colorTextDN = ''; colorBackgroundDN = '';
+  colorTextLH = ''; colorBackgroundLH = '';
+  displayclose = ''; indDM = 0; indTI = 0; indTK = 0;
+  indDCB = 0; indVL = 0; indLH = 0; indDN = 0;
+
+
   ngOnInit(): void {
 
   }
