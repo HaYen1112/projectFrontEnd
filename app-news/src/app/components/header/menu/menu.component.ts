@@ -11,13 +11,7 @@ import { NavigationExtras, Router } from '@angular/router';
 @Injectable({providedIn: 'root'})
 export class MenuComponent implements OnInit {
   // tìm kiếm;
-  item = [
-    {
-      id: 1,
-      text:''
 
-    }
-  ];
  @Input() dataTM: any[];
  private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fhome.rss';
  @Input() dataCM: any[] = [
@@ -127,7 +121,7 @@ private chonTruong='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ft
 private nguoiThay='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fgiao-duc%2Fnguoi-thay.rss&api_key=1k25wgfmjkjyuixk5j6s3l2vabkshvjrpdvzhusf';
 private traCuu='';
 private camNang='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fgiao-duc%2Fcam-nang-tuyen-sinh-2021.rss&api_key=1k25wgfmjkjyuixk5j6s3l2vabkshvjrpdvzhusf';
-// Công nghệ 
+// Công nghệ
 private CongNghe='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fcong-nghe.rss&api_key=1k25wgfmjkjyuixk5j6s3l2vabkshvjrpdvzhusf';
 private xuHuong='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fcong-nghe%2Fxu-huong.rss&api_key=gnndukhk8wcsrve3kal0zgdfm1e34bjbri7o4jjv';
 private spM='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fcong-nghe%2Fsan-pham-moi.rss&api_key=1k25wgfmjkjyuixk5j6s3l2vabkshvjrpdvzhusf';
@@ -179,7 +173,7 @@ private vdx='';
     {header:this.CongNghe,data:[this.xuHuong,this.spM,this.kinhNgh,this.yTuong,this.cđs]},
     {header:this.Game,data:[this.eSport,this.thuThuat,this.phongM,this.CnG,this.congĐ,this.vd]},
     {header:this.SucKhoe,data:[this.lamDep,this.kđmn,this.gioiTinh,this.songVk]},
-    {header:this.DuLich,data:[this.khamPha,this.az,this.sanTour]},   
+    {header:this.DuLich,data:[this.khamPha,this.az,this.sanTour]},
     {header:this.Xe,data:[this.ttx,this.tvx,this.dđx,this.đgx,this.kpx,this.vdx]},
   ];
 
