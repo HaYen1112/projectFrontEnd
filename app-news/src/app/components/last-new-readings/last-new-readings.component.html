@@ -15,11 +15,13 @@
       <div class="small-tittle mb-20">
           <h4 style="font-weight: bold;margin: 30px 0px 20px 40px;">{{title}}</h4>
       </div>
+      
       <!-- Single -->
       <div class="most-recent-single" *ngFor="let d of dataItem; let i=index">
           <div class="most-recent-images">
               <img src="{{d.image}}" alt="">
           </div>
+
           <div class="most-recent-capt">
               <h4><a href="{{d.link}}" target="blank">{{d.title}}</a></h4>
               <p>{{d.time}}</p>

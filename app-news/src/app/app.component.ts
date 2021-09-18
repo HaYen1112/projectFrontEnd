@@ -1,7 +1,9 @@
 import { Component, Injectable} from '@angular/core';
-import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { parseCommandLine } from 'typescript';
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +11,6 @@ import { parseCommandLine } from 'typescript';
 })
 @Injectable({providedIn: 'root'})
 export class AppComponent {
-  url = 'https://thanhnien.vn/video/thoi-su/ha-noi-dinh-chi-hieu-thuoc-95-lang-ha-dang-la-o-dich-lay-nhiem-covid-19-164221v.html'
   constructor(private http: HttpClient){
         }
 
@@ -17,6 +18,19 @@ export class AppComponent {
     return this.http.get(url);
   }
   }
-  // meet.google.com/inu-umyr-hqz
-  // Số điện thoại: (US) +1 612-504-9580
-  // Mã PIN: 986 487 527#
+
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyArvmRgn824XxpVIUPMoACvJqQJSYuQcps",
+    authDomain: "frontend-d1626.firebaseapp.com",
+    projectId: "frontend-d1626",
+    storageBucket: "frontend-d1626.appspot.com",
+    messagingSenderId: "763064103774",
+    appId: "1:763064103774:web:833cf9c29fc7ffb36115cf",
+    measurementId: "G-EDD1X84TS7"
+  };
+
+  // Initialize Firebase
+  // const app = initializeApp(firebaseConfig);
+  // const analytics = getAnalytics(app);
+

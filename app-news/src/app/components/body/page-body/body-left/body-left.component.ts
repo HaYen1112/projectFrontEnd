@@ -22,7 +22,7 @@ export class BodyLeftComponent implements OnInit {
       this.dataImg = [];
       this.dataTitle = [];
       this.datas=[];
-      component.getData(this.url)
+      this.component.getData(this.url)
       .subscribe(value => {
         for (const [k, v] of Object.entries(value)) {
           this.index++;
