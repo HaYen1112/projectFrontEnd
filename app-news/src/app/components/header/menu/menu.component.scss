@@ -154,26 +154,35 @@
   padding: 0;
   top: 60px;
   left: 0px;
-  margin-left: 0px;
   display: block;
   position: fixed;
-  box-shadow: none;
 .content{
   text-decoration: none;
-  display: block;
   text-align: left;
-  height: 75%;
+  height: 100%;
   border-bottom: none;
-  background-color:white;
-
+  background-color:#F5F5F5;
+  border: none;
+   .icon{
+     width: 8%;
+     height: 75%;
+     margin-top: 9px;
+     font-weight: bold;
+     background-color: #00bfc5;
+     font-size: 20px;
+     border: black solid 1.5px;
+     border-left: none;
+   }
   .input-tk{
-    width: 99%;
-    height: 100%;
+    width: 90%;
+    height: 75%;
     margin-top: 9px;
-    margin-left: 6px;
-    border: #00bfc5 solid 2px;
+    margin-left: 15px;
+    float: left;
+    border: black solid 1.5px;
     font-size:18px;
   }
+
 }
 
 }
@@ -463,15 +472,3 @@ $tomatored: #F25C66;
   background-color: $tomatored;
 }
 
-@media screen and (max-width: 2000px) {
-  .site-header__content{
-    width: 1903px;
-    height:auto;
-  }
-  }
-  @media screen and (max-width: 480px) {
-    .site-header__content{
-      width: 203px;
-      height:auto;
-    }
-  }

@@ -9,7 +9,7 @@
       <div class="most-recent-img" *ngIf="i==0">
           <img src={{data.image}} alt="">
           <div class="most-recent-cap">
-              <h4><a href="{{data.link}}">{{data.title}}</a></h4>
+              <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
               <p>{{data.time}}</p>
           </div>
       </div>
@@ -20,7 +20,7 @@
           <img src={{data.image}} alt="" >
       </div>
       <div class="most-recent-capt" *ngIf="i>0">
-          <h4><a href="{{data.link}}">{{data.title}}</a></h4>
+          <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
           <p>{{data.time}}</p>
       </div>
   </div>
@@ -75,7 +75,7 @@
   <div class="story--text">
     <div class="meta"  *ngFor="let data of dataCN; let i =index">
       <div class="title" *ngIf="i<4">
-        <a href="{{data.link}}"> {{data.title}}</a>
+        <a href="{{data.link}}" target="blank"> {{data.title}}</a>
       </div>
       <div class="time"  *ngIf="i<4"><time>{{data.time}}</time></div>
     </div>
