@@ -32,18 +32,14 @@ import { CateListComponent } from './components/you-need-know/under-left/cate-li
 import { HotNewComponent } from './components/you-need-know/under-left/hot-new/hot-new.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { FormsModule } from '@angular/forms';
-
-import { NewsDetailComponent } from './components/news-detail/news-detail.component';
 
 
 const route: Routes = [
   { path: 'search', component: LastNewReadingsComponent },
   { path: '', component: PageBodyComponent},
   { path: 'bancanbiet', component: YouNeedKnowComponent},
-  { path: 'dangnhap', component: LoginComponent},
-  { path: 'detail', component: NewsDetailComponent}
+  { path: 'dangnhap', component: LoginComponent}
 ];
 @NgModule({
   declarations: [
@@ -75,16 +71,10 @@ const route: Routes = [
     CateListComponent,
     HotNewComponent,
 
-    NewsDetailComponent,
-
-
-
-
   ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule,
      RouterModule.forRoot(route), HttpClientJsonpModule, NgbModule, BrowserAnimationsModule, FormsModule
-
 
   ],
   providers: [
@@ -95,3 +85,4 @@ const route: Routes = [
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
+

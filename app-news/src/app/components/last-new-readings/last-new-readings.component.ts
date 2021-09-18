@@ -2,6 +2,7 @@ import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppComponent } from 'src/app/app.component';
 import { BodyCenterComponent } from '../body/page-body/body-center/body-center.component';
+import { MenuComponent } from '../header/menu/menu.component';
 
 @Component({
   selector: 'app-last-new-readings',
@@ -17,19 +18,21 @@ export class LastNewReadingsComponent implements OnInit {
   display = 'none';
   keySearch = '';
   @Input() title: string = '';
+  @Input() dataCM: any[];
   public keyword: string;
-  constructor(private route: Router, private bodyCenter: BodyCenterComponent, private com: AppComponent) {
+  constructor(private route: Router, private bodyCenter: BodyCenterComponent, private com: AppComponent, private menu: MenuComponent) {
     this.keyword = "";
+    this.dataCM = this.menu.dataCM;
     const navigation = this.route.getCurrentNavigation();
     this.data = navigation?.extras.state as any[];
     this.urlItem = '';
     if (typeof this.data !== 'undefined') {
       if ((this.data.length == 1)) {
           this.search(this.data[0]);
+          this.searchByIndex(this.data[0]);
           this.display = '';
       }
       if ((this.data.length == 2)) {
-
         this.display = 'none';
         var index = this.data[0];
         this.urlItem = this.dataLinkCM[index]['header'];
@@ -50,7 +53,37 @@ export class LastNewReadingsComponent implements OnInit {
     this.dataLinkSearch = [];
     this.dataItem = [];
       this.search(this.keyword);
+      this.searchByIndex(this.keyword);
       this.keyword = '';
+  }
+  a: String = "dsfjhfkds";
+  searchByIndex(keyw: string): void{
+    var i = 0;
+    var j = 0;
+      for(let item of this.dataCM){
+        for(let key of item.data){
+            if (keyw.trim().toLocaleLowerCase().match(key.trim().toLocaleLowerCase()) != null){
+                var urlItem = this.dataLinkCM[i]['data'][j];
+                this.bodyCenter.getDatas(urlItem, this.dataItem);
+                this.title = 'Kết quả tìm kiếm: ' + '"' + keyw + '"';
+                break;
+            }
+            if (keyw.trim().toLocaleLowerCase().match(item['header'].trim().toLocaleLowerCase()) != null){
+              var urlItem = this.dataLinkCM[i]['header'];
+              this.bodyCenter.getDatas(urlItem, this.dataItem);
+             for(let k = 0; k < item.data.length; k++){
+              var urlItem = this.dataLinkCM[i]['data'][k];
+              this.bodyCenter.getDatas(urlItem, this.dataItem);
+             }
+             this.title = 'Kết quả tìm kiếm: ' + '"' + keyw + '"';
+              break;
+          }
+            j++
+        }
+        j = 0;
+        i++;
+      }
+
   }
   search(keyw: string): void {
     this.title = 'Kết quả tìm kiếm: ' + '"' + keyw + '" không tìm thấy kết quả nào?';
@@ -59,7 +92,8 @@ export class LastNewReadingsComponent implements OnInit {
         this.com.getData(this.dataLinkCM[index]['data'][j])
           .subscribe((value: any) => {
             for (let item of value['items']) {
-              this.dataLinkSearch.push({ image: item['thumbnail'], title: item['title'], time: this.bodyCenter.getTime(item['pubDate']), link: item['link'] });
+              this.dataLinkSearch.push({ image: item['thumbnail'], title: item['title'],
+                    time: this.bodyCenter.getTime(item['pubDate']), link: item['link'] });
               this.dataLinkSearch.filter((res: any) => {
                 if (res['title'].toLocaleLowerCase().match(keyw.toLocaleLowerCase()) != null) {
                   this.dataItem.push({ image: res.image, title: res.title, time: res.time, link: res.link });
@@ -69,7 +103,6 @@ export class LastNewReadingsComponent implements OnInit {
               this.dataLinkSearch = [];
             }
           });
-
       }
     }
   }

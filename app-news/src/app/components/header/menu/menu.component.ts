@@ -185,7 +185,7 @@ private vdx='';
   public keyword: string;
   @Input() dataTM: any[];
   private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fthoi-su.rss&api_key=geidhyghyfmctbkyu9epa976k5ofgyqw7mkbuufa';
-  @Input() dataCM: any[] = [
+  dataCM: any[] = [
     { header: 'VIDEO', data: ['THỜI SỰ', 'PHÓNG SỰ', 'GIẢI TRÍ', 'MÓN NGON', 'THỂ THAO', 'THẾ GIỚI', 'TRỰC TUYẾN'] },
     { header: 'THỜI SỰ', data: ['CHÍNH TRỊ', 'PHÁP LUẬT', 'DÂN SINH', 'LAO ĐỘNG - VIỆC LÀM', 'QUYỀN ĐƯỢC BIẾT', 'PHÓNG SỰ / ĐIỀU TRA', 'QUỐC PHÒNG', 'VƯỢT QUA COVID-19'] },
     { header: 'THẾ GIỚI', data: ['KINH TẾ THẾ GIỚI', 'QUÂN SỰ', 'GÓC NHÌN', 'HỒ SƠ', 'NGƯỜI VIỆT NĂM CHÂU', 'CHUYỆN LẠ'] },
@@ -253,13 +253,6 @@ private vdx='';
   }
 
   navigationExtras?: NavigationExtras;
-  view3(): void {
-    this.router.navigate(['/']).then(() => {
-      const index: any[] = [this.keyword];
-      this.navigationExtras = { state: index };
-      this.router.navigateByUrl('/search', this.navigationExtras);
-    });
-  }
   view2(index1: number, index2: number, title: string): void {
     this.router.navigate(['/']).then(() => {
       const index: any[] = [index1, index2, title];
@@ -272,7 +265,14 @@ private vdx='';
       const index: any[] = [index1, title];
       this.navigationExtras = { state: index };
       this.router.navigateByUrl('/search', this.navigationExtras);
-      console.log(index);
+     // console.log(index);
+    });
+  }
+  view3(): void {
+    this.router.navigate(['/']).then(() => {
+      const index: any[] = [this.keyword];
+      this.navigationExtras = { state: index };
+      this.router.navigateByUrl('/search', this.navigationExtras);
     });
   }
   getDisplay(title: string) {
